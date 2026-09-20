@@ -71,9 +71,9 @@ async function open(){
 
   const brand=intro.querySelector('.intro-brand');
   const caption=[...intro.querySelectorAll('.intro-caption span')];
-  const revealDuration=1800;
-  const handoffDuration=520;
-  video.style.cssText='inset:0;width:100%;height:100%;opacity:0;object-fit:cover;transform-origin:50% 100%;clip-path:inset(100% 0 0 0);border:0;border-radius:0';
+  const revealDuration=1450;
+  const handoffDuration=420;
+  video.style.cssText='inset:0;width:100%;height:100%;opacity:0;object-fit:cover;object-position:center;transform-origin:50% 100%;clip-path:inset(58% 0 0 0);border:0;border-radius:0';
   video.play().catch(()=>{});
   root.dataset.opening='brand';
 
@@ -88,7 +88,7 @@ async function open(){
     {opacity:0,transform:'translateY(8px)',clipPath:'inset(100% 0 0 0)'},
     {opacity:1,transform:'translateY(0)',clipPath:'inset(0 0 0 0)'}
   ],{delay:index*170,duration:520,easing:'cubic-bezier(.22,1,.36,1)'}));
-  await Promise.all([wait(1150),criticalReady]);
+  await Promise.all([wait(650),criticalReady]);
   if(done)return;
 
   root.dataset.opening='reveal';
@@ -100,13 +100,13 @@ async function open(){
   ],{duration:revealDuration,easing:'cubic-bezier(.4,0,.2,1)'});
   animate(intro.querySelector('.intro-caption'),[{opacity:1,transform:'translateY(0)'},{opacity:0,transform:'translateY(-12px)'}],{duration:620,easing:'ease-in'});
   const heroScale=getComputedStyle(hero).getPropertyValue('--hero-media-scale').trim()||'1';
-  const revealStartScale=(Number.parseFloat(heroScale)||1)+.12;
+  const revealStartScale=(Number.parseFloat(heroScale)||1)+.045;
   // Bring the playing film up from the bottom so the hero enters as a rising
   // motion rather than a crossfade.
   const videoReveal=animate(video,[
-    {opacity:1,transform:`translateY(18%) scale(${revealStartScale})`,clipPath:'inset(100% 0 0 0)'},
-    {opacity:1,transform:`translateY(4%) scale(${revealStartScale * .985})`,clipPath:'inset(24% 0 0 0)',offset:.54},
-    {opacity:1,transform:`scale(${heroScale})`,clipPath:'inset(0 0 0 0)'}
+    {opacity:1,transform:`translateY(7%) scale(${revealStartScale})`,clipPath:'inset(58% 0 0 0)'},
+    {opacity:1,transform:`translateY(2%) scale(${revealStartScale * .992})`,clipPath:'inset(16% 0 0 0)',offset:.5},
+    {opacity:1,transform:`translateY(0) scale(${heroScale})`,clipPath:'inset(0 0 0 0)'}
   ],{duration:revealDuration,easing:'cubic-bezier(.22,1,.36,1)'});
   // Crossfade to the real navigation during the final part of the reveal so
   // the handoff does not add another pause after the video fills the screen.
