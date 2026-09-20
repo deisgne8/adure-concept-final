@@ -2803,3 +2803,41 @@ body.customers-page main .customers-closing .customers-closing-card h2#closing-t
     row-gap:3.2rem!important;
   }
 }
+
+/* Browser request: remove blue testimonial avatar; keep one white avatar style. */
+.customers-page main .testimonials-section .perspectives-thumb,
+.customers-page main .testimonials-section .perspectives-thumb.is-active{
+  background:#fff!important;
+  border:1px solid #d5e0ec!important;
+  box-shadow:none!important;
+}
+.customers-page main .testimonials-section .perspectives-thumb.is-active{
+  width:3.6rem!important;
+  height:3.6rem!important;
+}
+.customers-page main .testimonials-section .perspectives-thumb .testimonial-avatar-image,
+.customers-page main .testimonials-section .perspectives-thumb.is-active .testimonial-avatar-image,
+.customers-page main .testimonials-section .perspectives-thumb:not(.is-active) .testimonial-avatar-image{
+  width:72%!important;
+  height:72%!important;
+  object-fit:contain!important;
+  filter:none!important;
+  opacity:.55!important;
+}
+.customers-page main .testimonials-section .perspectives-thumb.is-active .testimonial-avatar-image{
+  opacity:.72!important;
+}
+
+/* Browser comment: show avatar image only on the active testimonial thumbnail. */
+.customers-page main .testimonials-section .perspectives-thumb:not(.is-active) .testimonial-avatar-image{
+  display:none!important;
+}
+.customers-page main .testimonials-section .perspectives-thumb:not(.is-active){
+  width:3.6rem!important;
+  height:3.6rem!important;
+  background:#fff!important;
+  border:1px solid #d5e0ec!important;
+}
+.customers-page main .testimonials-section .perspectives-thumb.is-active .testimonial-avatar-image{
+  display:block!important;
+}
