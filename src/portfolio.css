@@ -2175,7 +2175,7 @@ body.contact-page main .contact-details h2{
   text-decoration:none!important;
 }
 .portfolio-popup-copy:not(:has(.portfolio-contact-block))::after{
-  content:'Abu Dhabi Office\A Abu Dhabi,\A United Arab Emirates\A +971 50 532 1440\A Abudhabileasing@adu-re.com';
+  content:'Abu Dhabi Office\A Abu Dhabi,\A United Arab Emirates\A +971 50 532 1440\A abudhabileasing@adu-re.com';
   position:absolute!important;
   left:clamp(2rem,3.4vw,3.2rem)!important;
   right:clamp(2rem,3.4vw,3.2rem)!important;
@@ -2272,7 +2272,7 @@ body.contact-page main .contact-details h2{
   text-decoration:none!important;
 }
 .portfolio-popup-copy::after{
-  content:'Abu Dhabi Office\A Abu Dhabi, United Arab Emirates\A +971 50 532 1440\A Abudhabileasing@adu-re.com';
+  content:'Abu Dhabi Office\A Abu Dhabi, United Arab Emirates\A +971 50 532 1440\A abudhabileasing@adu-re.com';
   display:none;
 }
 .portfolio-popup-copy:not(:has(.portfolio-contact-block))::after{

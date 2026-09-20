@@ -158,7 +158,7 @@ function popupMarkup(project){
         <h4>Abu Dhabi Office</h4>
         <p>Abu Dhabi,<br>United Arab Emirates</p>
         <p><a href="tel:+971505321440">+971 50 532 1440</a></p>
-        <p><a href="mailto:Abudhabileasing@adu-re.com">Abudhabileasing@adu-re.com</a></p>
+        <p><a href="mailto:abudhabileasing@adu-re.com">abudhabileasing@adu-re.com</a></p>
       </div>
       <div class="portfolio-action-buttons">
         <a class="btn primary" href="properties.html">Explore properties</a>

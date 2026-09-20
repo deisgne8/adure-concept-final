@@ -1,7 +1,7 @@
 // Public, editable content. Source/approval decisions live in ../content-approvals.json.
 export const site = {
   name: 'Abu Dhabi United Real Estate',
-  email: 'Inquiries@adu-re.com',
+  email: 'inquiries@adu-re.com',
   cities: ['Abu Dhabi', 'Dubai', 'Al Ain'],
   year: '2026',
   links: {find:'#discover', sell:'#contact', manage:'#management', enquiry:'#contact'},

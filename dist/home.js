@@ -172,5 +172,5 @@ if(sellForm)sellForm.addEventListener('submit',event=>{
     `Phone: ${details.get('phone')}`,
     `Email: ${details.get('email')}`
   ].join('\n');
-  location.href=`mailto:Inquiries@adu-re.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  location.href=`mailto:inquiries@adu-re.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 });
