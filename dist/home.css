@@ -10,7 +10,7 @@
 @import url('./section-spacing.css');
 @import url('./discovery-search.css');
 @import url('./type-system.css');
-@import url('./transition-carousel.css?v=panel-fit-1');
+@import url('./transition-carousel.css?v=no-overlap-1');
 @import url('./arrow-system.css');
 @import url('./section-copy-reveal.css');
 @import url('./hero-transition.css');
@@ -2926,4 +2926,18 @@ body.contact-page main .contact-details h2{
   body.contact-page main .contact-details h2{
     font-size:18px!important;
   }
+}
+
+/* Browser request: prevent transition stage headings and copy from overlapping. */
+.home-v2 #transition .timeline-step{
+  min-height:12rem!important;
+  overflow:visible!important;
+}
+.home-v2 #transition .timeline-step h3{
+  margin-bottom:1rem!important;
+  line-height:1.04!important;
+}
+.home-v2 #transition .timeline-step p{
+  margin-top:0!important;
+  clear:both!important;
 }

@@ -89,3 +89,69 @@
 #home > #transition.has-transition-carousel .timeline-v2{
   min-height:0;
 }
+
+/* Browser request: prevent active transition stage text from overlapping. */
+#home > #transition.has-transition-carousel .transition-carousel{
+  min-height:clamp(760px,56vw,900px)!important;
+}
+#home > #transition.has-transition-carousel .transition-content{
+  height:auto!important;
+  max-height:none!important;
+  min-height:clamp(760px,56vw,900px)!important;
+  padding-bottom:clamp(96px,8vw,140px)!important;
+}
+#home > #transition.has-transition-carousel .transition-head{
+  margin-bottom:clamp(34px,3vw,48px)!important;
+}
+#home > #transition.has-transition-carousel .timeline-v2{
+  flex:0 0 auto!important;
+  min-height:clamp(190px,16vw,250px)!important;
+  margin-top:clamp(18px,2vw,34px)!important;
+}
+#home > #transition.has-transition-carousel .timeline-step,
+#home > #transition.has-transition-carousel .timeline-step.is-current{
+  min-height:clamp(190px,16vw,250px)!important;
+  overflow:visible!important;
+}
+#home > #transition.has-transition-carousel .transition-panel-inner{
+  height:auto!important;
+  min-height:clamp(190px,16vw,250px)!important;
+  gap:clamp(16px,1.6vw,24px)!important;
+}
+#home #transition.has-transition-carousel .timeline-step h3{
+  max-width:100%!important;
+  margin:0!important;
+  font-size:clamp(40px,4.2vw,74px)!important;
+  line-height:1.02!important;
+}
+#home #transition.has-transition-carousel .timeline-step p{
+  max-width:470px!important;
+  margin:0!important;
+}
+#home > #transition.has-transition-carousel .transition-footer{
+  margin-top:clamp(34px,4vw,58px)!important;
+}
+@media(max-width:1100px) and (min-width:768px){
+  #home > #transition.has-transition-carousel .transition-carousel,
+  #home > #transition.has-transition-carousel .transition-content{
+    min-height:760px!important;
+  }
+  #home #transition.has-transition-carousel .timeline-step h3{
+    font-size:clamp(34px,4vw,52px)!important;
+  }
+}
+@media(max-width:767.98px){
+  #home > #transition.has-transition-carousel .transition-content{
+    min-height:680px!important;
+    padding-bottom:52px!important;
+  }
+  #home > #transition.has-transition-carousel .timeline-v2,
+  #home > #transition.has-transition-carousel .timeline-step,
+  #home > #transition.has-transition-carousel .timeline-step.is-current,
+  #home > #transition.has-transition-carousel .transition-panel-inner{
+    min-height:220px!important;
+  }
+  #home #transition.has-transition-carousel .timeline-step h3{
+    font-size:clamp(34px,10vw,52px)!important;
+  }
+}
