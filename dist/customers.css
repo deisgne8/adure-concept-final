@@ -1,0 +1,2795 @@
+.customers-page{background:var(--white);color:var(--ink)}
+.customers-page h1,.customers-page h2,.customers-page h3{font-family:var(--font-display);font-weight:600;text-transform:none;letter-spacing:-.045em}
+.customers-page p{font-family:var(--font-body)}
+.customers-header{position:absolute;top:0;left:0;right:0;z-index:20;background:transparent;border-bottom:1px solid rgba(255,255,255,.18);box-shadow:none}
+.customers-header .site-logo img{filter:brightness(0) invert(1)}
+.customers-header .desktop-nav a,.customers-header .desktop-nav span,.customers-header .menu-toggle{color:#fff!important}
+.customers-header .desktop-nav .is-current{color:#fff!important}
+.customers-header .menu-toggle span{background:#fff!important}
+.customers-header .header-cta{background:var(--accent)!important;color:#fff!important;border-color:var(--accent)!important}
+.customers-page .desktop-nav span,.customers-page .mobile-menu nav span{display:block;color:inherit;font-size:.95rem;line-height:1.2;padding:.5rem 0;cursor:default}
+.customers-page .mobile-menu nav span{padding:17px 0}
+.customers-hero{position:relative;min-height:clamp(31rem,43vw,37rem);display:flex;align-items:flex-end;overflow:hidden;background:#082b46;color:#fff}
+.customers-hero>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 38%;transform:scale(1.015)}
+.customers-hero-shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(3,22,38,.88) 0%,rgba(3,22,38,.62) 46%,rgba(3,22,38,.18) 80%),linear-gradient(0deg,rgba(1,20,35,.66),rgba(1,20,35,.18) 56%,rgba(1,20,35,.42))}
+.customers-hero-inner{position:relative;z-index:2;padding-top:calc(var(--nav-height) + 3rem);padding-bottom:clamp(3.5rem,5.5vw,5rem)}
+.customers-hero h1{max-width:38rem;margin:0;color:#fff;font-size:clamp(2.7rem,4.35vw,4.25rem);font-weight:600;line-height:.98;letter-spacing:-.055em}
+.customers-hero p{max-width:62rem;margin:clamp(1.25rem,2vw,1.6rem) 0 0;color:rgba(255,255,255,.88);font-size:clamp(1rem,1.18vw,1.13rem);font-weight:400;line-height:1.5}
+.customers-hero p+p{max-width:58rem;margin-top:.7rem}
+.customers-hero-cta{display:inline-flex;align-items:center;gap:2rem;margin-top:1.55rem;min-height:3.55rem;padding:0 1.45rem;background:var(--accent);color:#fff;font-family:var(--font-body);font-size:.78rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase}
+.customer-groups{padding:clamp(5rem,8vw,8rem) 0;background:#f4f8fa}
+.customer-groups-head{display:grid;grid-template-columns:minmax(0,.95fr) minmax(0,1fr);gap:clamp(3rem,8vw,8rem);align-items:end;margin-bottom:clamp(3rem,5vw,5rem)}
+.customer-groups-head h2,.customer-section-intro h2,.perspectives-card h2,.customers-closing-card h2{margin:0;color:var(--accent);font-size:clamp(2.4rem,4vw,4.4rem);line-height:1.05;font-weight:600;letter-spacing:-.045em}
+.customer-groups-head p,.customer-section-intro p,.perspectives-card p,.customers-closing-card p{margin:0;color:#526476;font-size:clamp(1rem,1.2vw,1.18rem);line-height:1.6}
+.customer-group-grid{display:grid;gap:1.2rem}
+.customer-logo-panel{display:grid;grid-template-columns:1fr;gap:clamp(2rem,4vw,3.4rem);padding:clamp(2rem,4vw,3.6rem);background:#fff;border:1px solid rgba(185,198,207,.75);box-shadow:0 1.4rem 3.4rem rgba(0,45,83,.06)}
+.customer-panel-copy>span,.perspectives-card>span{display:block;margin-bottom:1rem;color:var(--accent);font-size:.72rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase}
+.customer-panel-copy h3{margin:0 0 1.1rem;color:var(--accent);font-size:clamp(1.65rem,2.2vw,2.45rem);line-height:1.08}
+.customer-panel-copy p{margin:0;color:#526476;font-size:1rem;line-height:1.62;max-width:44rem}.customer-panel-copy p+p{margin-top:.8rem}
+.customer-logo-grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:1px;margin:0;padding:0;list-style:none;background:#d8e2e9;border:1px solid #d8e2e9}
+.customer-logo-grid li{min-height:6.8rem;display:grid;place-items:center;background:#fff;padding:1rem}
+.customer-logo-grid img{max-width:100%;max-height:3.8rem;object-fit:contain;filter:grayscale(1);opacity:.84;transition:filter .2s ease,opacity .2s ease,transform .2s ease}
+.customer-logo-grid li:hover img{filter:none;opacity:1;transform:translateY(-2px)}
+.customer-sectors{position:relative;overflow:hidden;padding:clamp(5rem,8vw,8rem) 0;background:#fff}
+.customer-sectors-layout{position:relative;z-index:1;display:grid;grid-template-columns:1fr;gap:clamp(2.6rem,5vw,4.5rem);align-items:start}.customer-sectors .customer-section-intro{position:relative;top:auto;max-width:31rem}.commitment-layout{display:grid;grid-template-columns:minmax(17rem,.75fr) minmax(0,1.35fr);gap:clamp(3rem,7vw,7rem);align-items:start}
+.customer-section-intro{position:sticky;top:calc(var(--nav-height) + 2rem)}
+.customer-section-intro p{margin-top:1.5rem}.asset-carousel{--asset-index:0;position:relative;max-width:min(100%,86rem)}
+.asset-carousel-viewport{overflow:hidden;padding:.2rem 0 1.2rem}
+.asset-carousel-track{display:flex;gap:1rem;transform:translateX(calc(var(--asset-index) * -1 * (min(22rem, calc(100vw - (var(--page-gutter) * 2))) + 1rem)));transition:transform .72s cubic-bezier(.16,1,.3,1);will-change:transform}
+.asset-story-card{position:relative;flex:0 0 min(22rem,calc(100vw - (var(--page-gutter) * 2)));min-height:20rem;overflow:hidden;border:1px solid rgba(185,198,207,.9);border-radius:1.65rem;background:#fff;box-shadow:0 1.4rem 3rem rgba(0,45,83,.08);opacity:.72;transform:scale(.975);transition:opacity .45s ease,transform .45s ease,box-shadow .45s ease}
+.asset-story-card.is-active{opacity:1;transform:scale(1);box-shadow:0 1.6rem 3.4rem rgba(0,45,83,.11)}
+.asset-story-card-copy{flex-basis:min(32rem,calc(100vw - (var(--page-gutter) * 2)));display:flex;flex-direction:column;justify-content:flex-end;padding:clamp(1.8rem,3.2vw,2.5rem)}
+.asset-story-card-copy::before{content:"";position:absolute;right:1.45rem;bottom:1.45rem;width:4.7rem;height:4.7rem;border-radius:999px;background:rgba(23,77,142,.08)}
+.asset-story-card-copy span{position:relative;z-index:1;display:block;margin-bottom:auto;color:#7f91a1;font-size:.75rem;letter-spacing:.14em}.asset-story-card-copy h3{position:relative;z-index:1;margin:3.4rem 0 0;color:var(--accent);font-size:clamp(1.25rem,1.6vw,1.65rem);line-height:1.12}.asset-story-card-copy p{position:relative;z-index:1;margin:1rem 0 0;color:#526476;font-size:1.06rem;line-height:1.56;max-width:25rem}
+.asset-story-card-image{background:#082033}
+.asset-story-card-image img{position:absolute;inset:0;width:100%;height:100%;display:block;object-fit:cover;filter:saturate(.98);transition:transform .45s ease}
+.asset-story-card-image::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,26,45,0) 38%,rgba(0,26,45,.62) 100%)}
+.asset-story-card-image div{position:absolute;left:1.25rem;right:1.25rem;bottom:1.2rem;z-index:1;color:#fff}.asset-story-card-image span{display:block;margin-bottom:.55rem;color:rgba(255,255,255,.78);font-size:.75rem;letter-spacing:.14em}.asset-story-card-image h3{margin:0;color:#fff;font-size:clamp(1.25rem,1.55vw,1.55rem);line-height:1.12}.asset-story-card-image:hover img,.asset-story-card-image.is-active img{transform:scale(1.045)}
+.asset-carousel-controls{display:flex;align-items:center;gap:.85rem;margin-top:.4rem}
+.asset-carousel-arrow{width:3rem;height:3rem;border:1px solid rgba(23,77,142,.2);border-radius:999px;background:#fff;color:var(--accent);font:inherit;font-weight:700;cursor:pointer;transition:background .2s ease,color .2s ease,transform .2s ease}
+.asset-carousel-arrow:hover{background:var(--accent);color:#fff;transform:translateY(-1px)}
+.asset-carousel-dots{display:flex;align-items:center;gap:.5rem}
+.asset-carousel-dot{width:.55rem;height:.55rem;border:0;border-radius:999px;background:#b8c6d1;padding:0;cursor:pointer;transition:width .28s ease,background .28s ease}
+.asset-carousel-dot.is-active{width:2rem;background:var(--accent)}
+.customer-commitment{padding:clamp(5rem,8vw,8rem) 0;background:#082033;color:#fff}.customer-commitment .customer-section-intro h2{color:#fff}.customer-commitment .customer-section-intro p{color:rgba(255,255,255,.72)}
+.commitment-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.18)}
+.commitment-grid article{min-height:14rem;padding:clamp(1.6rem,3vw,2.5rem);background:#102e47}.commitment-grid h3{margin:0;color:#fff;font-size:clamp(1.35rem,1.8vw,1.9rem);line-height:1.12}.commitment-grid p{margin:1rem 0 0;color:rgba(255,255,255,.74);line-height:1.6}
+.customer-perspectives{padding:clamp(5rem,8vw,8rem) 0;background:#f4f8fa}.perspectives-card{max-width:58rem;margin-inline:auto;padding:clamp(2.2rem,5vw,4rem);background:#fff;border-left:6px solid var(--accent);box-shadow:0 1.4rem 3.4rem rgba(0,45,83,.06)}.perspectives-card p{margin-top:1.4rem}.perspectives-card ul{display:grid;gap:.65rem;margin:1.6rem 0 0;padding-left:1.1rem;color:#526476;line-height:1.55}
+.customers-closing{position:relative;min-height:clamp(34rem,47vw,42rem);display:flex;align-items:center;overflow:hidden;color:#fff;background:#061827}.customers-closing>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center}.customers-closing-shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(3,22,38,.9),rgba(3,22,38,.48)),linear-gradient(0deg,rgba(3,22,38,.75),rgba(3,22,38,.12))}.customers-closing-card{position:relative;z-index:2}.customers-closing-card h2{max-width:40rem;color:#fff}.customers-closing-card p{max-width:43rem;margin-top:1.4rem;color:rgba(255,255,255,.78)}.customers-actions{display:flex;gap:.8rem;flex-wrap:wrap;margin-top:2rem}.customers-secondary{border:1px solid rgba(255,255,255,.52);background:transparent;color:#fff}
+@media(max-width:980px){.customer-groups-head,.customer-logo-panel,.customer-sectors-layout,.commitment-layout{grid-template-columns:1fr}.customer-section-intro{position:static}.customer-logo-grid{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:760px){.customers-header{position:absolute}.customers-hero{min-height:38rem}.customers-hero-inner{padding-top:8rem;padding-bottom:4rem}.customers-hero h1{font-size:clamp(2.7rem,12vw,4rem)}.customers-hero p{font-size:1rem}.customer-logo-panel{padding:1.4rem}.customer-logo-grid,.commitment-grid{grid-template-columns:1fr}.customer-logo-grid li{min-height:6.4rem}.asset-story-card{min-height:18rem}.asset-story-card-copy{flex-basis:min(24rem,calc(100vw - (var(--page-gutter) * 2)))}.customers-actions .btn{width:100%}}
+
+/* Browser comment: make the first asset card a split image/text story card. */
+.customers-page .asset-carousel{
+  --asset-offset:0px;
+  max-width:min(100%,88rem)!important;
+}
+.customers-page .asset-carousel-track{
+  transform:translateX(calc(var(--asset-offset) * -1))!important;
+  align-items:stretch!important;
+}
+.customers-page .asset-story-card-feature{
+  flex:0 0 min(57rem,calc(100vw - (var(--page-gutter) * 2)))!important;
+  display:grid!important;
+  grid-template-columns:minmax(0,1.06fr) minmax(17rem,.9fr)!important;
+  min-height:25rem!important;
+  padding:.35rem!important;
+  border-radius:1.7rem!important;
+  background:#fff!important;
+  overflow:hidden!important;
+}
+.customers-page .asset-story-feature-copy{
+  position:relative;
+  display:flex;
+  flex-direction:column;
+  min-height:100%;
+  padding:clamp(1.9rem,3.5vw,2.9rem);
+  color:var(--ink);
+}
+.customers-page .asset-story-feature-copy>span{
+  display:block;
+  color:#7f91a1;
+  font-size:.75rem;
+  letter-spacing:.14em;
+}
+.customers-page .asset-story-feature-copy h3{
+  margin:auto 0 1rem;
+  max-width:24rem;
+  color:var(--accent);
+  font-size:clamp(1.25rem,1.6vw,1.65rem);
+  line-height:1.12;
+  letter-spacing:-.04em;
+}
+.customers-page .asset-story-feature-copy p{
+  max-width:27rem;
+  margin:0;
+  color:#526476;
+  font-size:1.06rem;
+  line-height:1.56;
+}
+.customers-page .asset-story-actions{
+  display:flex;
+  align-items:center;
+  gap:.08rem;
+  margin-top:auto;
+  align-self:flex-end;
+}
+.customers-page .asset-story-actions span,
+.customers-page .asset-story-actions i{
+  display:grid;
+  place-items:center;
+  min-height:2.6rem;
+  border-radius:999px;
+  background:#8cf2ad;
+  color:#061827;
+  font-family:var(--font-body);
+  font-size:.88rem;
+  font-style:normal;
+  line-height:1;
+}
+.customers-page .asset-story-actions span{padding:0 1.2rem}.customers-page .asset-story-actions i{width:2.6rem}
+.customers-page .asset-story-feature-image{
+  position:relative;
+  min-height:100%;
+  margin:0;
+  overflow:hidden;
+  border-radius:1.45rem;
+  background:#082033;
+}
+.customers-page .asset-story-feature-image img{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  filter:saturate(.98);
+  transition:transform .45s ease;
+}
+.customers-page .asset-story-card-feature:hover .asset-story-feature-image img,
+.customers-page .asset-story-card-feature.is-active .asset-story-feature-image img{
+  transform:scale(1.035);
+}
+.customers-page .asset-story-feature-image:after{
+  content:'';
+  position:absolute;
+  inset:auto 0 0;
+  height:44%;
+  background:linear-gradient(180deg,rgba(0,26,45,0),rgba(0,26,45,.56));
+}
+.customers-page .asset-story-feature-image figcaption{
+  position:absolute;
+  left:1.15rem;
+  right:1.15rem;
+  bottom:1rem;
+  z-index:1;
+  margin:0;
+  color:#fff;
+  font-size:.78rem;
+  font-weight:700;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+}
+
+.customers-page .asset-carousel .asset-story-card{
+  min-height:19.125rem!important;
+}
+@media(max-width:760px){
+  .customers-page .asset-story-card-feature{
+    grid-template-columns:1fr!important;
+    min-height:auto!important;
+  }
+  .customers-page .asset-story-feature-image{
+    min-height:18rem;
+  }
+  .customers-page .asset-story-feature-copy h3{
+    margin:3rem 0 1rem;
+  }
+  .customers-page .asset-story-actions{
+    align-self:flex-start;
+    margin-top:2rem;
+  }
+}
+
+/* Browser comment: reduce the first carousel card and keep only title, paragraph and image. */
+.customers-page .asset-story-card-feature{
+  flex-basis:min(29.5rem,calc(100vw - (var(--page-gutter) * 2)))!important;
+  grid-template-columns:minmax(0,1.08fr) minmax(12.7rem,.92fr)!important;
+  min-height:19.125rem!important;
+  padding:.25rem!important;
+  border-radius:1.25rem!important;
+  box-shadow:none!important;
+}
+.customers-page .asset-story-feature-copy{
+  justify-content:center!important;
+  padding:clamp(1.25rem,2vw,1.9rem)!important;
+}
+.customers-page .asset-story-feature-copy>span,
+.customers-page .asset-story-actions,
+.customers-page .asset-story-feature-image figcaption,
+.customers-page .asset-story-feature-image:after{
+  display:none!important;
+}
+.customers-page .asset-story-feature-copy h3{
+  margin:0 0 .82rem!important;
+  max-width:15rem!important;
+  font-size:clamp(1rem,1.15vw,1.2rem)!important;
+  line-height:1.14!important;
+}
+.customers-page .asset-story-feature-copy p{
+  max-width:16rem!important;
+  font-size:.84rem!important;
+  line-height:1.45!important;
+}
+.customers-page .asset-story-feature-image{
+  border-radius:1.05rem!important;
+}
+.customers-page .asset-story-feature-image img{
+  object-position:center!important;
+}
+
+.customers-page .asset-carousel .asset-story-card{
+  min-height:19.125rem!important;
+}
+@media(max-width:760px){
+  .customers-page .asset-story-card-feature{
+    grid-template-columns:1fr!important;
+    min-height:auto!important;
+  }
+  .customers-page .asset-story-feature-image{
+    min-height:14rem!important;
+  }
+}
+
+
+/* Browser comment: make every asset card expand into the split text/image card when selected. */
+.customers-page .asset-carousel-track{
+  align-items:stretch!important;
+}
+.customers-page .asset-story-card-feature{
+  cursor:pointer;
+}
+.customers-page .asset-story-card-feature:not(.is-active){
+  flex:0 0 min(22rem,calc(100vw - (var(--page-gutter) * 2)))!important;
+  display:block!important;
+  min-height:19.125rem!important;
+  padding:0!important;
+  border-radius:1.25rem!important;
+  background:#082033!important;
+  box-shadow:0 1.2rem 2.8rem rgba(0,45,83,.08)!important;
+}
+.customers-page .asset-story-card-feature:not(.is-active) .asset-story-feature-copy{
+  display:none!important;
+}
+.customers-page .asset-story-card-feature:not(.is-active) .asset-story-feature-image{
+  position:absolute!important;
+  inset:0!important;
+  min-height:100%!important;
+  border-radius:inherit!important;
+}
+.customers-page .asset-story-card-feature:not(.is-active) .asset-story-feature-image:after{
+  display:block!important;
+  content:'';
+  position:absolute;
+  inset:auto 0 0;
+  height:58%;
+  background:linear-gradient(180deg,rgba(0,26,45,0),rgba(0,26,45,.58));
+}
+.customers-page .asset-story-card-feature:not(.is-active) .asset-story-teaser{
+  position:absolute;
+  left:1.05rem;
+  right:1.05rem;
+  bottom:1.05rem;
+  z-index:2;
+  color:#fff;
+}
+.customers-page .asset-story-card-feature:not(.is-active) .asset-story-teaser span{
+  display:block;
+  margin-bottom:.42rem;
+  color:rgba(255,255,255,.78);
+  font-size:.72rem;
+  letter-spacing:.14em;
+}
+.customers-page .asset-story-card-feature:not(.is-active) .asset-story-teaser h3{
+  margin:0;
+  color:#fff;
+  font-size:clamp(1.2rem,1.55vw,1.52rem);
+  line-height:1.12;
+  letter-spacing:-.04em;
+}
+.customers-page .asset-story-card-feature.is-active{
+  flex:0 0 min(29.5rem,calc(100vw - (var(--page-gutter) * 2)))!important;
+}
+.customers-page .asset-story-card-feature.is-active .asset-story-teaser{
+  display:none!important;
+}
+.customers-page .asset-story-card-feature:focus-visible{
+  outline:3px solid rgba(23,77,142,.45);
+  outline-offset:4px;
+}
+@media(max-width:760px){
+  .customers-page .asset-story-card-feature:not(.is-active){
+    flex-basis:min(18rem,calc(100vw - (var(--page-gutter) * 2)))!important;
+  }
+}
+
+
+.customers-page .asset-story-select{
+  position:absolute;
+  inset:0;
+  z-index:3;
+  display:block;
+  width:100%;
+  height:100%;
+  padding:0;
+  border:0;
+  border-radius:inherit;
+  background:rgba(255,255,255,.001);
+  cursor:pointer;
+}
+.customers-page .asset-story-card-feature.is-active .asset-story-select{
+  z-index:4;
+}
+.customers-page .asset-story-select:focus-visible{
+  outline:3px solid rgba(23,77,142,.45);
+  outline-offset:4px;
+}
+
+
+/* Browser comments: remove customer section eyebrows and boxed wrappers. */
+.customers-page .customer-logo-panel{
+  padding:0!important;
+  background:transparent!important;
+  border:0!important;
+  box-shadow:none!important;
+}
+.customers-page .customer-panel-copy>span,
+.customers-page .perspectives-card>span{
+  display:none!important;
+}
+.customers-page .customer-group-grid{
+  gap:clamp(4rem,7vw,6rem)!important;
+}
+.customers-page .customer-logo-grid{
+  margin-top:clamp(2rem,4vw,3.2rem)!important;
+  background:#d8e2e9!important;
+}
+.customers-page .perspectives-card{
+  padding-top:clamp(2.2rem,5vw,4rem)!important;
+}
+
+
+
+
+/* Commitment section: pinned scroll cards inspired by the Transform9 reference. */
+.customers-page .customer-commitment{
+  position:relative!important;
+  min-height:260vh!important;
+  padding:0!important;
+  background:#071d30!important;
+  color:#fff!important;
+  overflow:visible!important;
+}
+.customers-page .commitment-layout{
+  position:sticky!important;
+  top:0!important;
+  width:100%!important;
+  max-width:none!important;
+  height:100vh!important;
+  min-height:42rem!important;
+  display:grid!important;
+  grid-template-columns:minmax(22rem,.82fr) minmax(0,1.06fr)!important;
+  gap:0!important;
+  padding:0!important;
+  overflow:hidden!important;
+}
+.customers-page .customer-commitment .customer-section-intro{
+  position:relative!important;
+  top:auto!important;
+  display:flex!important;
+  flex-direction:column!important;
+  justify-content:space-between!important;
+  min-height:100%!important;
+  padding:clamp(3rem,5.5vw,5rem) clamp(2rem,4.8vw,4.2rem)!important;
+  background:#071d30!important;
+  border-right:1px solid rgba(255,255,255,.14)!important;
+}
+.customers-page .customer-commitment .customer-section-intro h2{
+  max-width:9ch!important;
+  margin:0!important;
+  color:#fff!important;
+  font-size:clamp(4.2rem,7vw,6.4rem)!important;
+  font-weight:500!important;
+  line-height:.93!important;
+  letter-spacing:-.075em!important;
+}
+.customers-page .customer-commitment .customer-section-intro p{
+  max-width:23rem!important;
+  margin:clamp(3rem,20vw,14rem) 0 0!important;
+  color:rgba(255,255,255,.82)!important;
+  font-size:clamp(1rem,1.25vw,1.16rem)!important;
+  line-height:1.55!important;
+}
+.customers-page .commitment-grid{
+  --closed-row:clamp(6.35rem,12vh,7.25rem);
+  --active-row:clamp(18rem,41vh,24rem);
+  position:relative!important;
+  display:block!important;
+  min-height:100%!important;
+  background:#06152c!important;
+  border:0!important;
+  border-radius:0!important;
+  overflow:hidden!important;
+}
+.customers-page .commitment-grid article{
+  position:absolute!important;
+  left:0!important;
+  right:0!important;
+  top:0!important;
+  display:grid!important;
+  grid-template-columns:minmax(0,1fr) 4rem!important;
+  align-items:start!important;
+  gap:clamp(1.5rem,3vw,3rem)!important;
+  height:var(--closed-row)!important;
+  min-height:0!important;
+  max-height:none!important;
+  padding:clamp(1.35rem,2.4vw,2rem) clamp(1.8rem,4vw,3.5rem)!important;
+  border:0!important;
+  border-bottom:1px solid rgba(255,255,255,.14)!important;
+  cursor:pointer;
+  overflow:hidden!important;
+  transform:translateY(calc(var(--row) * var(--closed-row)))!important;
+  transition:transform .86s cubic-bezier(.16,1,.3,1),height .86s cubic-bezier(.16,1,.3,1),background .34s ease,padding .86s cubic-bezier(.16,1,.3,1)!important;
+  will-change:transform,height;
+  border-radius:0!important;
+}
+.customers-page .commitment-grid.is-start article.is-after{
+  transform:translateY(105vh)!important;
+  opacity:0!important;
+  pointer-events:none;
+}
+.customers-page .commitment-grid:not(.is-start) article{
+  opacity:1!important;
+}
+.customers-page .commitment-grid:not(.is-start) article.is-after{
+  pointer-events:auto;
+}
+.customers-page .commitment-grid article:nth-child(1){--row:0;background:#174d8e!important;}
+.customers-page .commitment-grid article:nth-child(2){--row:1;background:#123675!important;}
+.customers-page .commitment-grid article:nth-child(3){--row:2;background:#0d2a62!important;}
+.customers-page .commitment-grid article:nth-child(4){--row:3;background:#06152c!important;}
+.customers-page .commitment-grid article.is-active{
+  height:var(--active-row)!important;
+  padding-top:clamp(1.8rem,3vw,2.8rem)!important;
+  padding-bottom:clamp(2.6rem,5vw,4.6rem)!important;
+  background:#2636d8!important;
+  z-index:5!important;
+}
+.customers-page .commitment-grid article.is-before{
+  transform:translateY(calc(var(--row) * var(--closed-row)))!important;
+  z-index:2!important;
+}
+.customers-page .commitment-grid article.is-after{
+  transform:translateY(calc((var(--row) * var(--closed-row)) + (var(--active-row) - var(--closed-row))))!important;
+  z-index:3!important;
+}
+.customers-page .commitment-grid h3{
+  grid-column:1;
+  margin:0!important;
+  color:#fff!important;
+  font-size:clamp(1.9rem,3vw,3.2rem)!important;
+  font-weight:500!important;
+  line-height:1.05!important;
+  letter-spacing:-.055em!important;
+  transition:transform .55s cubic-bezier(.16,1,.3,1),opacity .35s ease;
+}
+.customers-page .commitment-grid p{
+  grid-column:1;
+  max-width:30rem!important;
+  margin:clamp(1.2rem,4vw,4rem) 0 0!important;
+  color:rgba(255,255,255,.86)!important;
+  font-size:clamp(.98rem,1.2vw,1.12rem)!important;
+  line-height:1.45!important;
+  opacity:0!important;
+  max-height:0!important;
+  transform:translateY(-.35rem);
+  transition:opacity .45s ease .12s,max-height .86s cubic-bezier(.16,1,.3,1),margin .86s cubic-bezier(.16,1,.3,1),transform .45s ease .12s!important;
+}
+.customers-page .commitment-grid article.is-active p{
+  opacity:1!important;
+  max-height:9rem!important;
+  transform:translateY(0)!important;
+}
+.customers-page .commitment-grid article:after{
+  content:counter(commitment,decimal-leading-zero);
+  counter-increment:commitment;
+  justify-self:end;
+  color:rgba(255,255,255,.9);
+  font-size:clamp(.95rem,1.3vw,1.2rem);
+  line-height:1;
+}
+.customers-page .commitment-grid{counter-reset:commitment;}
+.customers-page .commitment-grid article:before{
+  content:'';
+  position:absolute;
+  right:clamp(2rem,4vw,3.4rem);
+  bottom:clamp(1.3rem,2.6vw,2rem);
+  width:clamp(3rem,5vw,4.7rem);
+  height:clamp(3rem,5vw,4.7rem);
+  border:2px solid rgba(255,255,255,.78);
+  opacity:0;
+  transform:translateY(.7rem) scale(.9);
+  transition:opacity .4s ease,transform .5s cubic-bezier(.16,1,.3,1);
+}
+.customers-page .commitment-grid article.is-active:before{
+  opacity:1;
+  transform:translateY(0) scale(1);
+}
+.customers-page .commitment-grid article:focus-visible{
+  outline:3px solid rgba(255,255,255,.65);
+  outline-offset:-6px;
+}
+@media(max-width:980px){
+  .customers-page .customer-commitment{
+    min-height:auto!important;
+  }
+  .customers-page .commitment-layout{
+    position:relative!important;
+    height:auto!important;
+    min-height:auto!important;
+    grid-template-columns:1fr!important;
+  }
+  .customers-page .customer-commitment .customer-section-intro{
+    border-right:0!important;
+    border-bottom:1px solid rgba(255,255,255,.14)!important;
+    min-height:auto!important;
+  }
+  .customers-page .customer-commitment .customer-section-intro h2{
+    font-size:clamp(3.4rem,15vw,6.5rem)!important;
+  }
+  .customers-page .customer-commitment .customer-section-intro p{
+    margin-top:2rem!important;
+  }
+  .customers-page .commitment-grid{
+    display:grid!important;
+    overflow:visible!important;
+    min-height:auto!important;
+  }
+  .customers-page .commitment-grid article,
+  .customers-page .commitment-grid article.is-active,
+  .customers-page .commitment-grid article.is-before,
+  .customers-page .commitment-grid article.is-after{
+    position:relative!important;
+    transform:none!important;
+    height:auto!important;
+    max-height:none!important;
+  }
+  .customers-page .commitment-grid article p,
+  .customers-page .commitment-grid article.is-active p{
+    opacity:1!important;
+    max-height:none!important;
+    margin-top:.75rem!important;
+    transform:none!important;
+  }
+  .customers-page .commitment-grid article:before{
+    display:none!important;
+  }
+}
+@media(max-width:640px){
+  .customers-page .commitment-grid article{
+    grid-template-columns:1fr!important;
+  }
+  .customers-page .commitment-grid article:after{
+    position:absolute;
+    top:1.5rem;
+    right:1.5rem;
+  }
+  .customers-page .commitment-grid h3{
+    padding-right:3.5rem;
+  }
+}
+
+/* Browser comments: keep customer logos in colour. */
+.customers-page .customer-logo-grid img{
+  filter:none!important;
+  opacity:1!important;
+}
+.customers-page .customer-logo-grid li:hover img{
+  filter:none!important;
+}
+
+
+/* Visual consistency QA: align major surfaces, radii and rhythm with the site system. */
+:where(.about-page,.customers-page,.properties-page) img{
+  border-radius:inherit;
+}
+:where(.about-page,.customers-page,.properties-page) :where(.image-frame,figure,.property-card,.asset-story-card,.customer-logo-grid,.commitment-grid,.guides-values,.story-feature-card,.property-card-media,.map-view,.hero-search-box){
+  border-radius:var(--radius-large,16px);
+}
+:where(.about-page,.customers-page,.properties-page) :where(.property-card,.asset-story-card,.customer-logo-grid,.guides-values,.map-drawer-card){
+  border-color:var(--color-border,#d5e0ec)!important;
+}
+:where(.about-page,.customers-page,.properties-page) :where(.property-card,.asset-story-card,.map-drawer-card){
+  box-shadow:var(--shadow-card,0 1.2rem 2.8rem rgba(0,45,83,.08));
+}
+:where(.about-page,.customers-page,.properties-page) :where(.property-card,.asset-story-card,.map-drawer-card):hover{
+  box-shadow:var(--shadow-card-hover,0 1.4rem 3.2rem rgba(0,45,83,.12));
+}
+:where(.about-page,.customers-page,.properties-page) :where(h1,h2,h3){
+  text-wrap:balance;
+}
+:where(.about-page,.customers-page,.properties-page) :where(p){
+  max-width:68ch;
+}
+
+/* Dropdown panel readability: keep hero navigation white, but dropdown links dark. */
+.customers-header .nav-dropdown-menu a,
+.customers-header .nav-dropdown-menu .is-current,
+.customers-page .desktop-nav .nav-dropdown-menu a{
+  color:var(--ink)!important;
+}
+.customers-header .nav-dropdown-menu a:hover,
+.customers-header .nav-dropdown-menu a:focus-visible,
+.customers-page .desktop-nav .nav-dropdown-menu a:hover,
+.customers-page .desktop-nav .nav-dropdown-menu a:focus-visible{
+  color:var(--accent)!important;
+  background:rgba(0,71,137,.08)!important;
+}
+/* Match major Customers headings to About reference scale. */
+.customers-page :where(.customer-groups-head h2,.customer-section-intro h2,.perspectives-card h2,.customers-closing-card h2){
+  font-size:clamp(36px,3.2vw,54px)!important;
+  font-weight:700!important;
+  line-height:1.08!important;
+  letter-spacing:-.055em!important;
+}
+@media(max-width:760px){
+  .customers-page :where(.customer-groups-head h2,.customer-section-intro h2,.perspectives-card h2,.customers-closing-card h2){
+    font-size:clamp(34px,10vw,48px)!important;
+  }
+}
+
+
+/* Commitment stacking refinement: active card stays fixed; lower cards stack beneath it. */
+.customers-page .commitment-grid article,
+.customers-page .commitment-grid.is-start article.is-after,
+.customers-page .commitment-grid article.is-before,
+.customers-page .commitment-grid article.is-after{
+  opacity:1!important;
+  pointer-events:auto!important;
+  transform:translateY(calc(var(--active-row) + (var(--stack-index,0) * var(--closed-row))))!important;
+}
+.customers-page .commitment-grid article.is-active{
+  transform:translateY(0)!important;
+  opacity:1!important;
+  pointer-events:auto!important;
+  z-index:8!important;
+}
+.customers-page .commitment-grid article.is-before,
+.customers-page .commitment-grid article.is-after{
+  z-index:3!important;
+}
+/* Commitment section design-system color reset. */
+.customers-page .customer-commitment{
+  background:var(--surface-alt)!important;
+  color:var(--ink)!important;
+}
+.customers-page .commitment-layout{
+  background:var(--surface-alt)!important;
+}
+.customers-page .customer-commitment .customer-section-intro{
+  background:var(--surface-alt)!important;
+  color:var(--ink)!important;
+  border-right:1px solid var(--border-strong)!important;
+}
+.customers-page .customer-commitment .customer-section-intro:after{
+  color:var(--muted)!important;
+}
+.customers-page .customer-commitment .customer-section-intro h2{
+  color:var(--accent)!important;
+}
+.customers-page .customer-commitment .customer-section-intro p{
+  color:var(--ink)!important;
+}
+.customers-page .commitment-grid{
+  background:var(--white)!important;
+}
+.customers-page .commitment-grid article,
+.customers-page .commitment-grid article:nth-child(1),
+.customers-page .commitment-grid article:nth-child(2),
+.customers-page .commitment-grid article:nth-child(3),
+.customers-page .commitment-grid article:nth-child(4){
+  background:var(--white)!important;
+  border-bottom:1px solid var(--border-strong)!important;
+  color:var(--ink)!important;
+}
+.customers-page .commitment-grid article.is-active{
+  background:#f3f7fa!important;
+  box-shadow:inset 0 0 0 1px rgba(23,77,142,.08);
+}
+.customers-page .commitment-grid h3{
+  color:var(--accent)!important;
+}
+.customers-page .commitment-grid p{
+  color:var(--ink)!important;
+}
+.customers-page .commitment-grid article:after{
+  color:var(--accent)!important;
+}
+.customers-page .commitment-grid article:before{
+  border-color:var(--accent)!important;
+  opacity:.14;
+}
+.customers-page .commitment-grid article.is-active:before{
+  opacity:.38;
+}
+.customers-page .commitment-grid article:focus-visible{
+  outline:3px solid rgba(23,77,142,.32)!important;
+}
+@media(max-width:980px){
+  .customers-page .customer-commitment .customer-section-intro{
+    border-right:0!important;
+    border-bottom:1px solid var(--border-strong)!important;
+  }
+}
+
+
+/* Commitment reference motion: previous cards stay stacked above; active card opens in sequence. */
+.customers-page .commitment-grid article,
+.customers-page .commitment-grid.is-start article.is-after,
+.customers-page .commitment-grid article.is-before,
+.customers-page .commitment-grid article.is-after{
+  opacity:1!important;
+  pointer-events:auto!important;
+  transform:translateY(calc(var(--stack-offset,0) * var(--closed-row)))!important;
+}
+.customers-page .commitment-grid article.is-active{
+  transform:translateY(calc(var(--stack-offset,0) * var(--closed-row)))!important;
+  opacity:1!important;
+  pointer-events:auto!important;
+  z-index:8!important;
+}
+.customers-page .commitment-grid article.is-before{
+  height:var(--closed-row)!important;
+  z-index:6!important;
+}
+.customers-page .commitment-grid article.is-after{
+  height:var(--closed-row)!important;
+  z-index:3!important;
+}
+
+
+/* Commitment ordered accordion motion: cards keep order while the active row expands. */
+.customers-page .commitment-grid article,
+.customers-page .commitment-grid.is-start article.is-after,
+.customers-page .commitment-grid article.is-before{
+  opacity:1!important;
+  pointer-events:auto!important;
+  transform:translateY(calc(var(--stack-offset,0) * var(--closed-row)))!important;
+}
+.customers-page .commitment-grid article.is-active{
+  transform:translateY(calc(var(--stack-offset,0) * var(--closed-row)))!important;
+  opacity:1!important;
+  pointer-events:auto!important;
+  z-index:8!important;
+}
+.customers-page .commitment-grid article.is-after{
+  opacity:1!important;
+  pointer-events:auto!important;
+  transform:translateY(calc((var(--stack-offset,0) * var(--closed-row)) + (var(--active-row) - var(--closed-row))))!important;
+  z-index:3!important;
+}
+.customers-page .commitment-grid article.is-before{
+  height:var(--closed-row)!important;
+  z-index:6!important;
+}
+/* Browser comment cleanup: customer hero, panel spacing, commitment heading scale. */
+.customers-page .customers-hero h1{
+  max-width:38rem!important;
+  font-size:clamp(36px,3.2vw,54px)!important;
+  font-weight:700!important;
+  line-height:1.08!important;
+  letter-spacing:-.055em!important;
+}
+.customers-page .customer-panel-copy h3{
+  margin-bottom:.75rem!important;
+}
+.customers-page .customer-panel-copy p{
+  max-width:43rem!important;
+  line-height:1.52!important;
+}
+.customers-page .customer-panel-copy p+p{
+  margin-top:.55rem!important;
+}
+.customers-page .customer-logo-grid{
+  margin-top:clamp(1rem,2vw,1.6rem)!important;
+}
+.customers-page .customer-group-grid{
+  gap:clamp(2.6rem,5vw,4rem)!important;
+}
+.customers-page .customer-commitment .customer-section-intro h2{
+  max-width:14ch!important;
+  font-size:clamp(36px,3.2vw,54px)!important;
+  font-weight:700!important;
+  line-height:1.08!important;
+  letter-spacing:-.055em!important;
+}
+@media(max-width:760px){
+  .customers-page .customers-hero h1,
+  .customers-page .customer-commitment .customer-section-intro h2{
+    font-size:clamp(34px,10vw,48px)!important;
+  }
+}
+
+/* Commitment cleanup: remove decorative row numbers and square icon. */
+.customers-page .commitment-grid article:before,
+.customers-page .commitment-grid article:after{
+  content:none!important;
+  display:none!important;
+}
+.customers-page .commitment-grid article{
+  grid-template-columns:1fr!important;
+}
+/* Tighten customer logo panel copy-to-grid spacing. */
+.customers-page .customer-logo-panel{
+  gap:0!important;
+}
+.customers-page .customer-logo-grid{
+  margin-top:clamp(.9rem,1.7vw,1.35rem)!important;
+}
+
+/* Customer logo section headings: match the larger commitment-card heading scale. */
+.customers-page .customer-logo-panel .customer-panel-copy h3{
+  max-width:18ch;
+  color:var(--accent)!important;
+  font-size:clamp(2.15rem,3.1vw,3.2rem)!important;
+  font-weight:700!important;
+  line-height:1.05!important;
+  letter-spacing:-.065em!important;
+}
+
+/* Customers hero title: keep desktop headline on one line. */
+@media(min-width:981px){
+  .customers-page .customers-hero h1{
+    max-width:none!important;
+    white-space:nowrap!important;
+    font-size:clamp(3rem,5.15vw,4.55rem)!important;
+  }
+}
+/* Customer logo panel subsection heading scale. */
+.customers-page .customer-panel-copy h3{
+  font-size:clamp(1.8rem,2.45vw,2.85rem)!important;
+  font-weight:700!important;
+  line-height:1.08!important;
+  letter-spacing:-.055em!important;
+}
+@media(max-width:760px){
+  .customers-page .customer-panel-copy h3{
+    font-size:clamp(1.7rem,8vw,2.4rem)!important;
+  }
+}
+/* Customer perspectives card update. */
+.customers-page .customer-perspectives{
+  padding:clamp(4.8rem,7vw,6.8rem) 0!important;
+  background:var(--surface-alt)!important;
+}
+.customers-page .perspectives-card{
+  width:min(calc(100% - (var(--page-gutter) * 2)),930px)!important;
+  max-width:none!important;
+  margin-inline:auto!important;
+  padding:clamp(3rem,5vw,4.25rem) clamp(2.6rem,6vw,4.25rem)!important;
+  background:var(--white)!important;
+  border:0!important;
+  border-left:5px solid var(--accent)!important;
+  border-radius:18px!important;
+  box-shadow:none!important;
+}
+.customers-page .perspectives-card h2{
+  max-width:20ch!important;
+  font-size:clamp(36px,3.2vw,54px)!important;
+  font-weight:700!important;
+  line-height:1.08!important;
+  letter-spacing:-.055em!important;
+}
+.customers-page .perspectives-card p{
+  max-width:44rem!important;
+  margin-top:1.45rem!important;
+  color:#40566d!important;
+}
+.customers-page .perspectives-card ul{
+  display:grid!important;
+  gap:.9rem!important;
+  margin:1.9rem 0 0!important;
+  padding-left:1.15rem!important;
+  color:#40566d!important;
+  font-size:clamp(.98rem,1.15vw,1.08rem)!important;
+  line-height:1.55!important;
+}
+.customers-page .perspectives-card li::marker{
+  color:var(--accent);
+}
+@media(max-width:760px){
+  .customers-page .perspectives-card{
+    width:calc(100% - (var(--page-gutter) * 2))!important;
+    padding:2.35rem 1.5rem!important;
+    border-radius:16px!important;
+  }
+}
+
+/* Customers section/card subheadings requested at 30px. */
+.customers-page .customer-logo-panel .customer-panel-copy h3,
+.customers-page .commitment-grid h3{
+  font-size:30px!important;
+  line-height:1.08!important;
+  letter-spacing:-.055em!important;
+}
+/* Commitment overlap fix: deterministic accordion row positions. */
+@media(min-width:981px){
+  .customers-page .commitment-grid article{
+    opacity:1!important;
+    pointer-events:auto!important;
+  }
+  .customers-page .commitment-grid article:nth-child(1){--slot-before:0;--slot-after:0;}
+  .customers-page .commitment-grid article:nth-child(2){--slot-before:1;--slot-after:0;}
+  .customers-page .commitment-grid article:nth-child(3){--slot-before:2;--slot-after:1;}
+  .customers-page .commitment-grid article:nth-child(4){--slot-before:3;--slot-after:2;}
+  .customers-page .commitment-grid article.is-before,
+  .customers-page .commitment-grid article.is-active{
+    transform:translateY(calc(var(--slot-before) * var(--closed-row)))!important;
+  }
+  .customers-page .commitment-grid article.is-after{
+    transform:translateY(calc(var(--active-row) + (var(--slot-after) * var(--closed-row))))!important;
+  }
+  .customers-page .commitment-grid article.is-active{
+    height:var(--active-row)!important;
+    z-index:8!important;
+  }
+  .customers-page .commitment-grid article.is-before,
+  .customers-page .commitment-grid article.is-after{
+    height:var(--closed-row)!important;
+    z-index:3!important;
+  }
+}
+
+/* Commitment overlap fix: include start-state rows. */
+@media(min-width:981px){
+  .customers-page .commitment-grid.is-start article.is-after{
+    transform:translateY(calc(var(--active-row) + (var(--slot-after) * var(--closed-row))))!important;
+    height:var(--closed-row)!important;
+    opacity:1!important;
+    pointer-events:auto!important;
+    z-index:3!important;
+  }
+}
+
+/* Homepage navigation parity for inner pages. */
+body.about-page .site-header,
+body.properties-page .site-header,
+body.customers-page .site-header,
+body.portfolio-page .site-header{
+  position:fixed!important;
+  inset:0 0 auto!important;
+  height:var(--nav-height)!important;
+  color:var(--white)!important;
+  background:transparent!important;
+  border-bottom-color:transparent!important;
+  box-shadow:none!important;
+}
+body.about-page .site-header.is-glass,
+body.properties-page .site-header.is-glass,
+body.customers-page .site-header.is-glass,
+body.portfolio-page .site-header.is-glass,
+body.property-detail-page .site-header{
+  color:var(--ink)!important;
+  background:rgba(255,255,255,.5)!important;
+  border-bottom-color:rgba(231,230,227,.72)!important;
+  box-shadow:0 .25rem 2rem rgba(0,0,0,.06)!important;
+  -webkit-backdrop-filter:blur(.9375rem) saturate(130%)!important;
+  backdrop-filter:blur(.9375rem) saturate(130%)!important;
+}
+body.about-page .site-header:not(.is-glass) .site-logo img,
+body.properties-page:not(.property-detail-page) .site-header:not(.is-glass) .site-logo img,
+body.customers-page .site-header:not(.is-glass) .site-logo img,
+body.portfolio-page .site-header:not(.is-glass) .site-logo img{
+  filter:brightness(0) invert(1)!important;
+}
+body.about-page .site-header.is-glass .site-logo img,
+body.properties-page .site-header.is-glass .site-logo img,
+body.customers-page .site-header.is-glass .site-logo img,
+body.portfolio-page .site-header.is-glass .site-logo img,
+body.property-detail-page .site-header .site-logo img{
+  filter:none!important;
+}
+body.about-page .desktop-nav,
+body.properties-page .desktop-nav,
+body.customers-page .desktop-nav,
+body.portfolio-page .desktop-nav{
+  gap:var(--s125)!important;
+  margin-left:auto!important;
+  font-size:var(--text-nav)!important;
+  line-height:1.33333!important;
+}
+body.about-page .desktop-nav > a,
+body.about-page .desktop-nav > span,
+body.about-page .nav-dropdown-toggle,
+body.properties-page .desktop-nav > a,
+body.properties-page .desktop-nav > span,
+body.properties-page .nav-dropdown-toggle,
+body.customers-page .desktop-nav > a,
+body.customers-page .desktop-nav > span,
+body.customers-page .nav-dropdown-toggle,
+body.portfolio-page .desktop-nav > a,
+body.portfolio-page .desktop-nav > span,
+body.portfolio-page .nav-dropdown-toggle{
+  color:currentColor!important;
+  border:0!important;
+  border-bottom:0!important;
+  padding:0!important;
+  font-family:var(--font-body)!important;
+  font-size:var(--text-nav)!important;
+  font-weight:400!important;
+  letter-spacing:0!important;
+  line-height:1.33333!important;
+  text-transform:none!important;
+}
+body.about-page .nav-dropdown-toggle,
+body.properties-page .nav-dropdown-toggle,
+body.customers-page .nav-dropdown-toggle,
+body.portfolio-page .nav-dropdown-toggle{
+  padding:var(--s075) 0!important;
+}
+body.about-page .desktop-nav .is-current,
+body.about-page .desktop-nav [aria-current="page"],
+body.properties-page .desktop-nav .is-current,
+body.properties-page .desktop-nav [aria-current="page"],
+body.customers-page .desktop-nav .is-current,
+body.customers-page .desktop-nav [aria-current="page"],
+body.portfolio-page .desktop-nav .is-current,
+body.portfolio-page .desktop-nav [aria-current="page"]{
+  color:currentColor!important;
+  border:0!important;
+  border-bottom:0!important;
+}
+body.property-detail-page .desktop-nav .is-current,
+body.property-detail-page .desktop-nav [aria-current="page"]{
+  color:var(--accent)!important;
+  border:0!important;
+}
+body.about-page .desktop-nav a:hover,
+body.about-page .desktop-nav a:focus-visible,
+body.properties-page .desktop-nav a:hover,
+body.properties-page .desktop-nav a:focus-visible,
+body.customers-page .desktop-nav a:hover,
+body.customers-page .desktop-nav a:focus-visible,
+body.portfolio-page .desktop-nav a:hover,
+body.portfolio-page .desktop-nav a:focus-visible{
+  color:var(--accent)!important;
+}
+body.about-page .site-header:not(.is-glass) .desktop-nav a:hover,
+body.about-page .site-header:not(.is-glass) .desktop-nav a:focus-visible,
+body.properties-page:not(.property-detail-page) .site-header:not(.is-glass) .desktop-nav a:hover,
+body.properties-page:not(.property-detail-page) .site-header:not(.is-glass) .desktop-nav a:focus-visible,
+body.customers-page .site-header:not(.is-glass) .desktop-nav a:hover,
+body.customers-page .site-header:not(.is-glass) .desktop-nav a:focus-visible,
+body.portfolio-page .site-header:not(.is-glass) .desktop-nav a:hover,
+body.portfolio-page .site-header:not(.is-glass) .desktop-nav a:focus-visible{
+  color:var(--brand-highlight)!important;
+}
+body.about-page .header-cta,
+body.about-page .header-cta.btn.primary,
+body.properties-page .header-cta,
+body.properties-page .header-cta.btn.primary,
+body.customers-page .header-cta,
+body.customers-page .header-cta.btn.primary,
+body.portfolio-page .header-cta,
+body.portfolio-page .header-cta.btn.primary{
+  min-height:var(--button-small)!important;
+  height:auto!important;
+  padding:var(--s075) var(--s1)!important;
+  border-color:var(--accent)!important;
+  background:var(--accent)!important;
+  color:#fff!important;
+  font-family:var(--font-body)!important;
+  font-size:13px!important;
+  font-weight:400!important;
+  letter-spacing:0!important;
+  line-height:1.2!important;
+  text-transform:none!important;
+}
+body.about-page .menu-toggle,
+body.properties-page .menu-toggle,
+body.customers-page .menu-toggle,
+body.portfolio-page .menu-toggle{
+  color:currentColor!important;
+}
+body.about-page .site-header:not(.is-glass) .menu-toggle span,
+body.properties-page:not(.property-detail-page) .site-header:not(.is-glass) .menu-toggle span,
+body.customers-page .site-header:not(.is-glass) .menu-toggle span,
+body.portfolio-page .site-header:not(.is-glass) .menu-toggle span{
+  background:currentColor!important;
+}
+body.about-page .site-header.is-glass .menu-toggle span,
+body.properties-page .site-header.is-glass .menu-toggle span,
+body.customers-page .site-header.is-glass .menu-toggle span,
+body.portfolio-page .site-header.is-glass .menu-toggle span,
+body.property-detail-page .menu-toggle span{
+  background:currentColor!important;
+}
+body.about-page .nav-dropdown-menu,
+body.properties-page .nav-dropdown-menu,
+body.customers-page .nav-dropdown-menu,
+body.portfolio-page .nav-dropdown-menu{
+  top:calc(100% + .85rem)!important;
+  border-radius:var(--radius-large,16px)!important;
+  background:rgba(255,255,255,.96)!important;
+  border-color:var(--border)!important;
+  box-shadow:var(--shadow-soft)!important;
+  overflow:visible!important;
+}
+body.about-page .desktop-nav .nav-dropdown-menu a,
+body.properties-page .desktop-nav .nav-dropdown-menu a,
+body.customers-page .desktop-nav .nav-dropdown-menu a,
+body.portfolio-page .desktop-nav .nav-dropdown-menu a,
+body.about-page .desktop-nav .nav-dropdown-menu .is-current,
+body.properties-page .desktop-nav .nav-dropdown-menu .is-current,
+body.customers-page .desktop-nav .nav-dropdown-menu .is-current,
+body.portfolio-page .desktop-nav .nav-dropdown-menu .is-current{
+  display:block!important;
+  color:var(--ink)!important;
+  border:0!important;
+  padding:.65rem .75rem!important;
+  font-size:var(--text-nav)!important;
+  font-weight:400!important;
+  line-height:1.33333!important;
+}
+body.about-page .desktop-nav .nav-dropdown-menu a:hover,
+body.about-page .desktop-nav .nav-dropdown-menu a:focus-visible,
+body.properties-page .desktop-nav .nav-dropdown-menu a:hover,
+body.properties-page .desktop-nav .nav-dropdown-menu a:focus-visible,
+body.customers-page .desktop-nav .nav-dropdown-menu a:hover,
+body.customers-page .desktop-nav .nav-dropdown-menu a:focus-visible,
+body.portfolio-page .desktop-nav .nav-dropdown-menu a:hover,
+body.portfolio-page .desktop-nav .nav-dropdown-menu a:focus-visible{
+  color:var(--accent)!important;
+  background:rgba(0,71,137,.08)!important;
+}
+
+/* Browser comment: keep customer group headers on heading font and weight. */
+.customers-page .customer-logo-panel .customer-panel-copy h3{
+  font-family:var(--font-display)!important;
+  font-size:30px!important;
+  font-weight:700!important;
+  line-height:1.08!important;
+  letter-spacing:-.055em!important;
+}
+
+/* Browser comment: show commitment intro paragraph directly below heading. */
+.customers-page .customer-commitment .customer-section-intro{
+  justify-content:flex-start!important;
+}
+.customers-page .customer-commitment .customer-section-intro p{
+  display:block!important;
+  max-width:25rem!important;
+  margin:1.5rem 0 0!important;
+  color:#40566d!important;
+  font-size:clamp(1rem,1.15vw,1.12rem)!important;
+  line-height:1.58!important;
+}
+
+/* Browser comment: client perspectives uses reference layout with ADURE design system. */
+.customers-page .customer-perspectives{
+  position:relative!important;
+  overflow:hidden!important;
+  padding:clamp(5rem,8vw,7.5rem) 0!important;
+  background:linear-gradient(135deg,#edf4f8 0%,#f8fbfd 52%,#e8f1f6 100%)!important;
+}
+.customers-page .customer-perspectives::before{
+  content:""!important;
+  position:absolute!important;
+  inset:auto auto -24% -12%!important;
+  width:42rem!important;
+  height:42rem!important;
+  border-radius:50%!important;
+  background:radial-gradient(circle,rgba(23,77,142,.13),rgba(23,77,142,0) 66%)!important;
+  pointer-events:none!important;
+}
+.customers-page .perspectives-layout{
+  position:relative!important;
+  display:grid!important;
+  grid-template-columns:minmax(18rem,.82fr) minmax(25rem,1.18fr)!important;
+  gap:clamp(3rem,7vw,6.5rem)!important;
+  align-items:center!important;
+}
+.customers-page .perspectives-intro{
+  max-width:31rem!important;
+}
+.customers-page .perspectives-kicker,
+.customers-page .perspectives-card-kicker{
+  margin:0 0 1.1rem!important;
+  color:#7b8fa3!important;
+  font:700 .72rem/1 var(--font-body)!important;
+  letter-spacing:.24em!important;
+  text-transform:uppercase!important;
+}
+.customers-page .perspectives-intro h2{
+  max-width:15ch!important;
+  margin:0!important;
+  color:var(--accent)!important;
+  font-family:var(--font-display)!important;
+  font-size:clamp(38px,4.1vw,64px)!important;
+  font-weight:700!important;
+  line-height:1.02!important;
+  letter-spacing:-.06em!important;
+}
+.customers-page .perspectives-intro>p:not(.perspectives-kicker){
+  max-width:29rem!important;
+  margin:1.45rem 0 0!important;
+  color:#526476!important;
+  font-size:clamp(1rem,1.1vw,1.08rem)!important;
+  line-height:1.58!important;
+}
+.customers-page .perspectives-approved-note{
+  margin-top:clamp(2.4rem,4vw,3.4rem)!important;
+  padding-top:1.25rem!important;
+  border-top:2px solid rgba(23,77,142,.28)!important;
+}
+.customers-page .perspectives-approved-note>span{
+  display:block!important;
+  width:3.8rem!important;
+  height:2px!important;
+  margin-top:-1.35rem!important;
+  background:var(--accent)!important;
+}
+.customers-page .perspectives-approved-note h3{
+  margin:1.1rem 0 0!important;
+  color:var(--accent)!important;
+  font:700 .78rem/1.1 var(--font-body)!important;
+  letter-spacing:.18em!important;
+  text-transform:uppercase!important;
+}
+.customers-page .perspectives-approved-note p{
+  margin:.75rem 0 0!important;
+  color:#526476!important;
+  font-size:.95rem!important;
+  line-height:1.55!important;
+}
+.customers-page .perspectives-quote-card{
+  position:relative!important;
+  overflow:hidden!important;
+  padding:clamp(2.25rem,4vw,3.6rem)!important;
+  border:1px solid rgba(185,198,207,.72)!important;
+  border-radius:18px!important;
+  background:rgba(255,255,255,.82)!important;
+  box-shadow:0 2rem 4.2rem rgba(0,45,83,.08)!important;
+  backdrop-filter:blur(16px)!important;
+}
+.customers-page .perspectives-quote-card::after{
+  content:"”"!important;
+  position:absolute!important;
+  right:1.25rem!important;
+  top:-3.6rem!important;
+  color:rgba(23,77,142,.08)!important;
+  font-family:Georgia,serif!important;
+  font-size:13rem!important;
+  line-height:1!important;
+  pointer-events:none!important;
+}
+.customers-page .perspectives-quote-card blockquote{
+  position:relative!important;
+  z-index:1!important;
+  margin:0!important;
+  max-width:33rem!important;
+  color:#173047!important;
+  font-family:var(--font-display)!important;
+  font-size:clamp(1.85rem,3vw,3.1rem)!important;
+  font-weight:700!important;
+  line-height:1.06!important;
+  letter-spacing:-.055em!important;
+}
+.customers-page .perspectives-quote-card>p:not(.perspectives-card-kicker){
+  position:relative!important;
+  z-index:1!important;
+  margin:1.35rem 0 0!important;
+  color:#526476!important;
+  font-size:.98rem!important;
+  line-height:1.55!important;
+}
+.customers-page .perspectives-customer-meta{
+  position:relative!important;
+  z-index:1!important;
+  display:flex!important;
+  align-items:center!important;
+  gap:1rem!important;
+  margin-top:2rem!important;
+  padding-top:1.5rem!important;
+  border-top:1px solid rgba(23,77,142,.16)!important;
+}
+.customers-page .perspectives-logo-placeholder{
+  display:grid!important;
+  place-items:center!important;
+  width:3.4rem!important;
+  height:3.4rem!important;
+  border-radius:50%!important;
+  background:#edf3f7!important;
+  color:var(--accent)!important;
+}
+.customers-page .perspectives-logo-placeholder::before{
+  content:""!important;
+  width:1.35rem!important;
+  height:1.35rem!important;
+  background:currentColor!important;
+  -webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='black' stroke-width='1.7'%3E%3Cpath d='M5 20V9l7-4 7 4v11'/%3E%3Cpath d='M9 20v-7h6v7M4 20h16'/%3E%3C/svg%3E") center/contain no-repeat!important;
+  mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='black' stroke-width='1.7'%3E%3Cpath d='M5 20V9l7-4 7 4v11'/%3E%3Cpath d='M9 20v-7h6v7M4 20h16'/%3E%3C/svg%3E") center/contain no-repeat!important;
+}
+.customers-page .perspectives-customer-meta strong{
+  display:block!important;
+  color:#173047!important;
+  font-family:var(--font-display)!important;
+  font-size:1.05rem!important;
+  line-height:1.1!important;
+}
+.customers-page .perspectives-customer-meta span{
+  display:block!important;
+  margin-top:.25rem!important;
+  color:#6a7c8d!important;
+  font-size:.72rem!important;
+  font-weight:700!important;
+  letter-spacing:.16em!important;
+  text-transform:uppercase!important;
+}
+@media(max-width:900px){
+  .customers-page .perspectives-layout{
+    grid-template-columns:1fr!important;
+  }
+  .customers-page .perspectives-intro{
+    max-width:none!important;
+  }
+}
+@media(max-width:620px){
+  .customers-page .perspectives-quote-card{
+    padding:2rem 1.45rem!important;
+  }
+}
+
+/* Browser comments: clean perspectives labels and use white section background. */
+.customers-page .customer-perspectives{
+  background:#fff!important;
+}
+.customers-page .customer-perspectives::before{
+  content:none!important;
+}
+.customers-page .perspectives-kicker,
+.customers-page .perspectives-card-kicker,
+.customers-page .perspectives-approved-note{
+  display:none!important;
+}
+
+/* Browser comment: align perspectives typography with ADURE hierarchy. */
+.customers-page .perspectives-intro h2{
+  font-family:var(--font-display)!important;
+  font-size:30px!important;
+  font-weight:700!important;
+  line-height:1.08!important;
+  letter-spacing:-.055em!important;
+}
+.customers-page .perspectives-intro>p{
+  max-width:31rem!important;
+  margin-top:1.35rem!important;
+  color:#40566d!important;
+  font-size:clamp(.98rem,1.08vw,1.06rem)!important;
+  line-height:1.58!important;
+}
+.customers-page .perspectives-quote-card blockquote{
+  max-width:30rem!important;
+  font-family:var(--font-display)!important;
+  font-size:clamp(1.55rem,2.25vw,2.25rem)!important;
+  font-weight:700!important;
+  line-height:1.1!important;
+  letter-spacing:-.052em!important;
+}
+.customers-page .perspectives-quote-card>p:not(.perspectives-card-kicker){
+  max-width:35rem!important;
+  color:#40566d!important;
+  font-size:clamp(.96rem,1.04vw,1.02rem)!important;
+  line-height:1.58!important;
+}
+
+/* Browser comment: customers hero follows About page banner style. */
+.customers-page .customers-hero{
+  min-height:50svh!important;
+  align-items:center!important;
+}
+.customers-page .customers-hero-inner{
+  min-height:50svh!important;
+  display:flex!important;
+  flex-direction:column!important;
+  justify-content:center!important;
+  align-items:flex-start!important;
+  padding-block:calc(var(--nav-height) + 2rem) 3rem!important;
+}
+.customers-page .customers-hero h1{
+  max-width:12em!important;
+  font-size:clamp(44px,5.5vw,78px)!important;
+  font-weight:500!important;
+  line-height:.96!important;
+  letter-spacing:-.045em!important;
+  text-transform:none!important;
+}
+.customers-page .customers-hero p{
+  max-width:var(--reading)!important;
+  margin-top:var(--s2)!important;
+  font-size:var(--text-body-lg)!important;
+  line-height:var(--line-body-lg)!important;
+  color:var(--inverse-muted)!important;
+}
+.customers-page .customers-hero p+p{
+  max-width:var(--reading)!important;
+  margin-top:.75rem!important;
+}
+.customers-page .customers-hero-cta{
+  margin-top:1.75rem!important;
+}
+@media(max-width:640px){
+  .customers-page .customers-hero,
+  .customers-page .customers-hero-inner{
+    min-height:52svh!important;
+  }
+  .customers-page .customers-hero h1{
+    font-size:clamp(40px,12vw,58px)!important;
+    line-height:1!important;
+  }
+}
+
+/* Browser comment: customer group headings match section heading hierarchy and stay one line. */
+.customers-page .customer-logo-panel .customer-panel-copy h3{
+  max-width:none!important;
+  font-family:var(--font-display)!important;
+  font-size:clamp(2.4rem,4vw,4.4rem)!important;
+  font-weight:600!important;
+  line-height:1.05!important;
+  letter-spacing:-.045em!important;
+  white-space:nowrap!important;
+}
+@media(max-width:760px){
+  .customers-page .customer-logo-panel .customer-panel-copy h3{
+    font-size:clamp(2.1rem,10vw,3rem)!important;
+    white-space:normal!important;
+  }
+}
+
+/* Browser comment: customers banner font and hero button follow About page. */
+.customers-page .customers-hero h1{
+  max-width:12em!important;
+  font-size:clamp(44px,5.5vw,78px)!important;
+  font-weight:600!important;
+  line-height:.96!important;
+  letter-spacing:-.055em!important;
+  color:#fff!important;
+  text-transform:none!important;
+}
+.customers-page .customers-hero p{
+  max-width:var(--reading)!important;
+  margin-top:var(--s2)!important;
+  font-family:var(--font-body)!important;
+  font-weight:var(--about-body-weight,400)!important;
+  font-size:var(--text-body-lg)!important;
+  line-height:var(--line-body-lg)!important;
+  letter-spacing:0!important;
+  color:var(--inverse-muted)!important;
+}
+.customers-page .customers-hero-cta{
+  display:none!important;
+}
+@media(max-width:640px){
+  .customers-page .customers-hero h1{
+    font-size:clamp(40px,12vw,58px)!important;
+    line-height:1!important;
+  }
+}
+
+/* Align Customers typography with the homepage scale. */
+.customers-page .customers-hero h1{
+  font-size:clamp(3.8rem,7.2vw,6.6rem)!important;
+  line-height:.92!important;
+  letter-spacing:-.075em!important;
+  font-weight:700!important;
+  max-width:52rem!important;
+}
+.customers-page .customers-hero p{
+  font-size:clamp(1rem,1.25vw,1.18rem)!important;
+  line-height:1.55!important;
+  max-width:48rem!important;
+}
+.customers-page .customer-groups-head h2,
+.customers-page .customer-section-intro h2,
+.customers-page .perspectives-card h2,
+.customers-page .customers-closing-card h2,
+.customers-page .customer-commitment .customer-section-intro h2{
+  font-size:clamp(3rem,5.4vw,5.4rem)!important;
+  line-height:.95!important;
+  letter-spacing:-.07em!important;
+  font-weight:700!important;
+}
+.customers-page .customer-groups-head p,
+.customers-page .customer-section-intro p,
+.customers-page .perspectives-card p,
+.customers-page .customers-closing-card p,
+.customers-page .customer-commitment .customer-section-intro p{
+  font-size:clamp(1rem,1.18vw,1.14rem)!important;
+  line-height:1.62!important;
+}
+.customers-page .customer-panel-copy h3,
+.customers-page .commitment-grid h3,
+.customers-page .asset-story-feature-copy h3,
+.customers-page .asset-story-card-feature:not(.is-active) .asset-story-teaser h3{
+  font-size:clamp(1.45rem,2vw,2.25rem)!important;
+  line-height:1.08!important;
+  letter-spacing:-.045em!important;
+  font-weight:700!important;
+}
+.customers-page .customer-panel-copy p,
+.customers-page .commitment-grid p,
+.customers-page .asset-story-feature-copy p{
+  font-size:clamp(.98rem,1.08vw,1.06rem)!important;
+  line-height:1.6!important;
+}
+@media(max-width:760px){
+  .customers-page .customers-hero h1{
+    font-size:clamp(3rem,13vw,4.5rem)!important;
+  }
+  .customers-page .customer-groups-head h2,
+  .customers-page .customer-section-intro h2,
+  .customers-page .perspectives-card h2,
+  .customers-page .customers-closing-card h2,
+  .customers-page .customer-commitment .customer-section-intro h2{
+    font-size:clamp(2.65rem,11vw,4rem)!important;
+  }
+}
+
+/* Final card heading normalization to homepage card scale. */
+.customers-page .customer-logo-panel .customer-panel-copy h3,
+.customers-page .commitment-grid article h3,
+.customers-page .asset-story-card-feature .asset-story-feature-copy h3,
+.customers-page .asset-story-card-feature:not(.is-active) .asset-story-teaser h3{
+  font-size:clamp(1.45rem,2vw,2.25rem)!important;
+  line-height:1.08!important;
+  letter-spacing:-.045em!important;
+  font-weight:700!important;
+}
+
+/* Browser comment: site page headings use the About reference size and weight. */
+:where(body) main :where(h1,h2){
+  font-family:var(--font-display,var(--display))!important;
+  font-size:clamp(36px,3.2vw,54px)!important;
+  font-weight:600!important;
+  line-height:1.05!important;
+  letter-spacing:-.04em!important;
+  text-transform:none!important;
+}
+@media(max-width:640px){
+  :where(body) main :where(h1,h2){
+    font-size:clamp(32px,9vw,42px)!important;
+  }
+}
+
+/* Browser comment: customers page h3 headings also use the About reference size and weight. */
+.customers-page main :where(.customer-panel-copy h3,.commitment-grid h3,.asset-story-feature-copy h3,.asset-story-teaser h3){
+  font-family:var(--font-display,var(--display))!important;
+  font-size:clamp(36px,3.2vw,54px)!important;
+  font-weight:600!important;
+  line-height:1.05!important;
+  letter-spacing:-.04em!important;
+  text-transform:none!important;
+}
+.customers-page main .customer-panel-copy h3{
+  white-space:nowrap!important;
+}
+@media(max-width:640px){
+  .customers-page main :where(.customer-panel-copy h3,.commitment-grid h3,.asset-story-feature-copy h3,.asset-story-teaser h3){
+    font-size:clamp(32px,9vw,42px)!important;
+  }
+  .customers-page main .customer-panel-copy h3{
+    white-space:normal!important;
+  }
+}
+
+/* Browser comment: final customers heading override wins over legacy page-specific rules. */
+.customers-page main .customers-hero h1,
+.customers-page main .customer-groups h3,
+.customers-page main .customer-sectors h2,
+.customers-page main .customer-sectors h3,
+.customers-page main .customer-commitment h2,
+.customers-page main .customer-commitment h3,
+.customers-page main .customer-perspectives h2,
+.customers-page main .customer-perspectives h3,
+.customers-page main .customers-closing h2,
+.customers-page main .customers-closing h3{
+  font-family:var(--font-display,var(--display))!important;
+  font-size:clamp(36px,3.2vw,54px)!important;
+  font-weight:600!important;
+  line-height:1.05!important;
+  letter-spacing:-.04em!important;
+  text-transform:none!important;
+}
+.customers-page main .customer-groups .customer-panel-copy h3{
+  white-space:nowrap!important;
+}
+@media(max-width:640px){
+  .customers-page main .customers-hero h1,
+  .customers-page main .customer-groups h3,
+  .customers-page main .customer-sectors h2,
+  .customers-page main .customer-sectors h3,
+  .customers-page main .customer-commitment h2,
+  .customers-page main .customer-commitment h3,
+  .customers-page main .customer-perspectives h2,
+  .customers-page main .customer-perspectives h3,
+  .customers-page main .customers-closing h2,
+  .customers-page main .customers-closing h3{
+    font-size:clamp(32px,9vw,42px)!important;
+  }
+  .customers-page main .customer-groups .customer-panel-copy h3{
+    white-space:normal!important;
+  }
+}
+
+/* Browser comment: exact customers heading override for legacy selectors. */
+.customers-page main .customers-hero h1,
+.customers-page main .customer-logo-panel .customer-panel-copy h3,
+.customers-page main .customer-sectors .customer-section-intro h2,
+.customers-page main .customer-sectors .asset-story-card-feature .asset-story-feature-copy h3,
+.customers-page main .customer-sectors .asset-story-card-feature .asset-story-teaser h3,
+.customers-page main .customer-sectors .asset-story-card h3,
+.customers-page main .customer-commitment .customer-section-intro h2,
+.customers-page main .customer-commitment .commitment-grid article h3,
+.customers-page main .customer-perspectives .perspectives-intro h2,
+.customers-page main .customer-perspectives .perspectives-quote-card blockquote,
+.customers-page main .customers-closing .customers-closing-card h2{
+  font-family:var(--font-display,var(--display))!important;
+  font-size:clamp(36px,3.2vw,54px)!important;
+  font-weight:600!important;
+  line-height:1.05!important;
+  letter-spacing:-.04em!important;
+  text-transform:none!important;
+}
+.customers-page main .customer-logo-panel .customer-panel-copy h3{
+  white-space:nowrap!important;
+}
+@media(max-width:640px){
+  .customers-page main .customers-hero h1,
+  .customers-page main .customer-logo-panel .customer-panel-copy h3,
+  .customers-page main .customer-sectors .customer-section-intro h2,
+  .customers-page main .customer-sectors .asset-story-card-feature .asset-story-feature-copy h3,
+  .customers-page main .customer-sectors .asset-story-card-feature .asset-story-teaser h3,
+  .customers-page main .customer-sectors .asset-story-card h3,
+  .customers-page main .customer-commitment .customer-section-intro h2,
+  .customers-page main .customer-commitment .commitment-grid article h3,
+  .customers-page main .customer-perspectives .perspectives-intro h2,
+  .customers-page main .customer-perspectives .perspectives-quote-card blockquote,
+  .customers-page main .customers-closing .customers-closing-card h2{
+    font-size:clamp(32px,9vw,42px)!important;
+  }
+  .customers-page main .customer-logo-panel .customer-panel-copy h3{
+    white-space:normal!important;
+  }
+}
+
+/* Customer sector card headings match property card heading size. */
+.customers-page main .customer-sectors .asset-story-card-feature .asset-story-feature-copy h3,
+.customers-page main .customer-sectors .asset-story-card-feature .asset-story-teaser h3,
+.customers-page main .customer-sectors .asset-story-card h3{
+  font-family:var(--font-display,var(--display))!important;
+  font-size:clamp(1.28rem,1.42vw,1.62rem)!important;
+  line-height:1.12!important;
+  letter-spacing:-.025em!important;
+  font-weight:500!important;
+  text-transform:none!important;
+}
+@media(max-width:640px){
+  .customers-page main .customer-sectors .asset-story-card-feature .asset-story-feature-copy h3,
+  .customers-page main .customer-sectors .asset-story-card-feature .asset-story-teaser h3,
+  .customers-page main .customer-sectors .asset-story-card h3{
+    font-size:clamp(1.28rem,5.6vw,1.62rem)!important;
+  }
+}
+
+/* Customer sector card headings requested size. */
+.customers-page main .customer-sectors .asset-story-card-feature .asset-story-feature-copy h3,
+.customers-page main .customer-sectors .asset-story-card-feature .asset-story-teaser h3,
+.customers-page main .customer-sectors .asset-story-card h3{
+  font-size:24px!important;
+  font-weight:700!important;
+  line-height:1.15!important;
+  color:#004789!important;
+}
+
+/* Hide sector card numbering and keep image-card headings white. */
+.customers-page main .customer-sectors .asset-story-teaser span{
+  display:none!important;
+}
+.customers-page main .customer-sectors .asset-story-card-feature:not(.is-active) .asset-story-teaser h3{
+  color:#fff!important;
+}
+
+/* Dark overlay on customer sector image cards. */
+.customers-page .asset-story-card-feature:not(.is-active) .asset-story-feature-image:after{
+  inset:0!important;
+  height:auto!important;
+  background:linear-gradient(180deg,rgba(3,22,38,.28) 0%,rgba(3,22,38,.48) 48%,rgba(3,22,38,.78) 100%)!important;
+}
+.customers-page .asset-story-card-feature:not(.is-active) .asset-story-feature-image img{
+  filter:none!important;
+}
+.customers-page main .customer-sectors .asset-story-card-feature:not(.is-active) .asset-story-teaser h3{
+  color:#fff!important;
+  text-shadow:0 .08rem .5rem rgba(0,0,0,.35)!important;
+}
+
+/* Blend customer sector image overlays with a layered gradient. */
+.customers-page .asset-story-card-feature:not(.is-active) .asset-story-feature-image:after{
+  background:
+    linear-gradient(180deg,rgba(0,71,137,.10) 0%,rgba(3,22,38,.28) 48%,rgba(3,22,38,.72) 100%),
+    radial-gradient(circle at 28% 18%,rgba(255,255,255,.16),rgba(255,255,255,0) 42%)!important;
+  mix-blend-mode:multiply!important;
+}
+.customers-page .asset-story-card-feature:not(.is-active) .asset-story-feature-image:before{
+  content:''!important;
+  position:absolute!important;
+  inset:0!important;
+  z-index:1!important;
+  pointer-events:none!important;
+  background:linear-gradient(0deg,rgba(0,71,137,.22),rgba(0,71,137,.04))!important;
+  mix-blend-mode:soft-light!important;
+}
+.customers-page .asset-story-card-feature:not(.is-active) .asset-story-teaser{
+  z-index:3!important;
+}
+
+/* Match commitment stack card headings to the sector card heading size. */
+.customers-page main .customer-commitment .commitment-grid article h3{
+  font-family:var(--font-display,var(--display))!important;
+  font-size:24px!important;
+  font-weight:700!important;
+  line-height:1.15!important;
+  letter-spacing:-.025em!important;
+  color:#004789!important;
+}
+
+
+
+
+
+/* Browser comment: perspectives section is testimonial content, not an explanatory placeholder. */
+.customers-page .perspectives-layout{
+  grid-template-columns:minmax(18rem,.78fr) minmax(25rem,1.22fr)!important;
+  align-items:center!important;
+}
+.customers-page main .customer-perspectives .perspectives-intro h2{
+  font-family:var(--font-display,var(--display))!important;
+  font-size:clamp(36px,3.2vw,54px)!important;
+  font-weight:600!important;
+  line-height:1.05!important;
+  letter-spacing:-.04em!important;
+  text-transform:none!important;
+}
+.customers-page .perspectives-intro>p{
+  display:none!important;
+}
+.customers-page .perspectives-quote-card{
+  background:#fff!important;
+}
+.customers-page main .customer-perspectives .perspectives-quote-card blockquote{
+  max-width:36rem!important;
+  font-size:clamp(28px,2.8vw,44px)!important;
+  font-weight:600!important;
+  line-height:1.08!important;
+  letter-spacing:-.045em!important;
+}
+.customers-page .perspectives-quote-card>p:not(.perspectives-card-kicker){
+  max-width:40rem!important;
+  margin-top:1.45rem!important;
+}
+@media(max-width:640px){
+  .customers-page main .customer-perspectives .perspectives-intro h2{
+    font-size:clamp(32px,9vw,42px)!important;
+  }
+  .customers-page main .customer-perspectives .perspectives-quote-card blockquote{
+    font-size:clamp(28px,8vw,36px)!important;
+  }
+}
+
+/* Reduce active commitment card internal spacing by half. */
+.customers-page .commitment-grid article.is-active{
+  padding-top:clamp(.9rem,1.5vw,1.4rem)!important;
+  padding-bottom:clamp(1.3rem,2.4vw,2.3rem)!important;
+}
+.customers-page .commitment-grid p{
+  margin:clamp(.6rem,2vw,2rem) 0 0!important;
+}
+.customers-page .commitment-grid article.is-active p{
+  max-height:7rem!important;
+}
+
+/* Reduce active commitment row height to remove the large middle gap. */
+.customers-page .commitment-grid{
+  --active-row:clamp(11rem,23vh,14rem)!important;
+}
+.customers-page .commitment-grid article.is-active{
+  align-content:start!important;
+}
+
+/* Directly tighten heading-to-copy gap in the active commitment card. */
+.customers-page .commitment-grid article.is-active{
+  row-gap:clamp(.7rem,1vw,1rem)!important;
+}
+.customers-page .commitment-grid article.is-active p{
+  margin:.45rem 0 0!important;
+}
+
+/* Final active commitment paragraph margin override. */
+.customers-page main .customer-commitment .commitment-grid article.is-active p{
+  margin-top:.45rem!important;
+}
+
+/* Pixel-tight active commitment paragraph gap. */
+.customers-page main .customer-commitment .commitment-grid article.is-active p{
+  margin-top:8px!important;
+}
+
+/* Remove spacing animation so reduced commitment gap applies immediately. */
+.customers-page main .customer-commitment .commitment-grid article.is-active p{
+  transition:opacity .45s ease .12s,max-height .45s ease,transform .45s ease .12s!important;
+}
+
+/* Keep commitment section height to the visible card stack. */
+.customers-page .customer-commitment{
+  min-height:0!important;
+  height:auto!important;
+}
+.customers-page .commitment-layout,
+.customers-page .commitment-grid{
+  --closed-row:clamp(6.35rem,12vh,7.25rem)!important;
+  --active-row:clamp(11rem,23vh,14rem)!important;
+  --stack-height:calc(var(--active-row) + var(--closed-row) + var(--closed-row) + var(--closed-row));
+}
+.customers-page .commitment-layout{
+  height:var(--stack-height)!important;
+  min-height:0!important;
+}
+.customers-page .commitment-grid{
+  height:var(--stack-height)!important;
+  min-height:0!important;
+}
+
+/* Customers closing banner matches the homepage final banner style. */
+.customers-page .customers-closing{
+  position:relative!important;
+  display:grid!important;
+  align-items:center!important;
+  min-height:min(78vh,820px)!important;
+  margin-top:var(--section-space,clamp(4rem,8vw,8rem))!important;
+  padding-block:clamp(64px,10vw,140px)!important;
+  background:#08182e!important;
+  color:var(--ink)!important;
+  overflow:hidden!important;
+  isolation:isolate!important;
+}
+.customers-page .customers-closing>img{
+  position:absolute!important;
+  z-index:-2!important;
+  inset:-5% 0!important;
+  width:100%!important;
+  height:110%!important;
+  object-fit:cover!important;
+  object-position:center 54%!important;
+}
+.customers-page .customers-closing-shade{
+  display:none!important;
+}
+.customers-page .customers-closing-card{
+  position:relative!important;
+  z-index:2!important;
+  width:min(calc(100% - 2 * var(--gutter,clamp(1rem,4vw,3rem))),1540px)!important;
+  padding:clamp(30px,4vw,60px)!important;
+  display:grid!important;
+  grid-template-columns:1fr 1fr!important;
+  grid-template-rows:auto auto!important;
+  column-gap:clamp(60px,10vw,170px)!important;
+  row-gap:clamp(56px,8vw,110px)!important;
+  background:rgba(237,242,248,.78)!important;
+  border:1px solid rgba(255,255,255,.42)!important;
+  border-radius:16px!important;
+  box-shadow:0 24px 70px rgba(3,17,34,.18)!important;
+  backdrop-filter:blur(22px)!important;
+  -webkit-backdrop-filter:blur(22px)!important;
+}
+.customers-page main .customers-closing .customers-closing-card h2{
+  grid-column:1!important;
+  max-width:650px!important;
+  margin:0!important;
+  color:var(--accent)!important;
+  font-size:clamp(42px,4.5vw,72px)!important;
+  line-height:1!important;
+  letter-spacing:-.035em!important;
+  font-weight:700!important;
+}
+.customers-page .customers-closing-card p{
+  grid-column:2!important;
+  align-self:start!important;
+  max-width:620px!important;
+  margin:0!important;
+  color:var(--muted)!important;
+  font-size:var(--text-body-lg,1.125rem)!important;
+  line-height:var(--line-body-lg,1.65)!important;
+}
+.customers-page .customers-actions{
+  grid-column:1!important;
+  grid-row:2!important;
+  display:grid!important;
+  grid-template-columns:1fr 1fr!important;
+  align-content:end!important;
+  gap:0 var(--s2,2rem)!important;
+  margin:0!important;
+}
+.customers-page .customers-actions .btn,
+.customers-page .customers-actions a{
+  display:flex!important;
+  justify-content:space-between!important;
+  align-items:center!important;
+  gap:var(--s1,1rem)!important;
+  padding:var(--s15,1.5rem) 0!important;
+  border:0!important;
+  border-top:1px solid rgba(0,71,137,.24)!important;
+  border-radius:0!important;
+  background:transparent!important;
+  color:var(--accent)!important;
+  box-shadow:none!important;
+  font-family:var(--font-display,var(--display))!important;
+  text-transform:none!important;
+  font-size:var(--text-body,1rem)!important;
+  font-weight:500!important;
+  line-height:var(--line-h4,1.2)!important;
+  text-decoration:none!important;
+}
+.customers-page .customers-actions .btn:hover,
+.customers-page .customers-actions a:hover{
+  color:var(--accent)!important;
+}
+@media(max-width:760px){
+  .customers-page .customers-closing{
+    min-height:auto!important;
+    padding-block:var(--s4,4rem)!important;
+  }
+  .customers-page .customers-closing-card{
+    width:calc(100% - 2 * var(--s1,1rem))!important;
+    grid-template-columns:1fr!important;
+    gap:var(--s35,3.5rem)!important;
+    padding:var(--s2,2rem)!important;
+  }
+  .customers-page main .customers-closing .customers-closing-card h2,
+  .customers-page .customers-closing-card p,
+  .customers-page .customers-actions{
+    grid-column:1!important;
+  }
+  .customers-page main .customers-closing .customers-closing-card h2{
+    font-size:clamp(38px,12vw,56px)!important;
+  }
+  .customers-page .customers-actions{
+    grid-row:auto!important;
+    grid-template-columns:1fr!important;
+  }
+}
+
+/* Testimonial quote uses reference card heading scale. */
+.customers-page main .customer-perspectives .perspectives-quote-card blockquote{
+  font-size:24px!important;
+  font-weight:700!important;
+  line-height:1.15!important;
+  letter-spacing:-.025em!important;
+}
+
+/* Align testimonial heading with the top of the testimonial card and preserve closing banner heading font. */
+.customers-page .perspectives-layout{
+  align-items:start!important;
+}
+.customers-page .perspectives-intro{
+  align-self:start!important;
+  padding-top:0!important;
+}
+.customers-page main .customers-closing .customers-closing-card h2,
+.customers-page main .customers-closing h2#closing-title{
+  font-family:var(--font-display,var(--display))!important;
+  font-size:clamp(42px,4.5vw,72px)!important;
+  font-weight:700!important;
+  line-height:1!important;
+  letter-spacing:-.035em!important;
+  color:var(--accent)!important;
+}
+
+/* Browser comment: keep the header List your property CTA in the rounded mixed-case format. */
+.site-header .header-cta.btn.primary{
+  min-height:42px!important;
+  width:150px!important;
+  height:42px!important;
+  padding:0 22px!important;
+  border-radius:999px!important;
+  background:var(--accent)!important;
+  border-color:var(--accent)!important;
+  color:#fff!important;
+  font-size:14px!important;
+  font-weight:600!important;
+  line-height:1!important;
+  letter-spacing:0!important;
+  text-transform:none!important;
+  box-shadow:none!important;
+}
+.site-header .header-cta.btn.primary:hover,
+.site-header .header-cta.btn.primary:focus-visible{
+  background:var(--accent-hover)!important;
+  border-color:var(--accent-hover)!important;
+  color:#fff!important;
+}
+/* Header CTA consistency: List your property button. */
+body .site-header .header-cta.btn.primary{
+  min-height:42px!important;
+  width:150px!important;
+  height:42px!important;
+  padding:0 22px!important;
+  border-radius:999px!important;
+  background:var(--accent)!important;
+  border:1px solid var(--accent)!important;
+  color:#fff!important;
+  font-family:var(--font-body)!important;
+  font-size:14px!important;
+  font-weight:600!important;
+  line-height:1!important;
+  letter-spacing:0!important;
+  text-transform:none!important;
+  white-space:nowrap!important;
+  box-shadow:none!important;
+}
+body .site-header .header-cta.btn.primary:hover,
+body .site-header .header-cta.btn.primary:focus-visible{
+  background:var(--accent-hover)!important;
+  border-color:var(--accent-hover)!important;
+  color:#fff!important;
+}
+/* Heading consistency: page headings stay title case, same size and weight. */
+body main h1,
+body main h2{
+  font-family:var(--font-display,var(--display))!important;
+  font-size:clamp(36px,3.2vw,54px)!important;
+  font-weight:600!important;
+  line-height:1.05!important;
+  letter-spacing:-.04em!important;
+  text-transform:none!important;
+}
+body main h1::before,
+body main h1::after,
+body main h2::before,
+body main h2::after{
+  content:none!important;
+  display:none!important;
+}
+body.contact-page main .contact-details h2{
+  font-family:var(--font-body,var(--body))!important;
+  font-size:20px!important;
+  font-weight:800!important;
+  line-height:1.2!important;
+  letter-spacing:0!important;
+  color:var(--ink)!important;
+}
+@media(max-width:640px){
+  body main h1,
+  body main h2{
+    font-size:clamp(32px,9vw,42px)!important;
+  }
+  body.contact-page main .contact-details h2{
+    font-size:18px!important;
+  }
+}
+
+/* Final heading parity guard: override older page-specific heading rules. */
+body main :is(h1,h2),
+body.properties-page main :is(h1,h2,#owner-title),
+body.portfolio-page main :is(h1,h2,#portfolio-intro-title,#portfolio-explorer-title,#portfolio-cta-title),
+body.customers-page main :is(h1,h2,#closing-title),
+body.about-page main :is(h1,h2),
+body.contact-page main #contact-title{
+  font-family:var(--font-display,var(--display))!important;
+  font-size:clamp(36px,3.2vw,54px)!important;
+  font-weight:600!important;
+  line-height:1.05!important;
+  letter-spacing:-.04em!important;
+  text-transform:none!important;
+}
+body.contact-page main .contact-details h2{
+  font-family:var(--font-body,var(--body))!important;
+  font-size:20px!important;
+  font-weight:800!important;
+  line-height:1.2!important;
+  letter-spacing:0!important;
+  color:var(--ink)!important;
+}
+@media(max-width:640px){
+  body main :is(h1,h2),
+  body.properties-page main :is(h1,h2,#owner-title),
+  body.portfolio-page main :is(h1,h2,#portfolio-intro-title,#portfolio-explorer-title,#portfolio-cta-title),
+  body.customers-page main :is(h1,h2,#closing-title),
+  body.about-page main :is(h1,h2),
+  body.contact-page main #contact-title{
+    font-size:clamp(32px,9vw,42px)!important;
+  }
+  body.contact-page main .contact-details h2{
+    font-size:18px!important;
+  }
+}
+/* Exact override for Customers closing heading parity. */
+body.customers-page main .customers-closing h2#closing-title,
+body.customers-page main .customers-closing .customers-closing-card h2#closing-title{
+  font-family:var(--font-display,var(--display))!important;
+  font-size:clamp(36px,3.2vw,54px)!important;
+  font-weight:600!important;
+  line-height:1.05!important;
+  letter-spacing:-.04em!important;
+  text-transform:none!important;
+}
+@media(max-width:640px){
+  body.customers-page main .customers-closing h2#closing-title,
+  body.customers-page main .customers-closing .customers-closing-card h2#closing-title{
+    font-size:clamp(32px,9vw,42px)!important;
+  }
+}
+
+/* Customer logos: fixed bordered grid, no carousel. */
+.customers-page .customer-groups{
+  background:#f4f8fa!important;
+  padding:clamp(4.5rem,7vw,6.5rem) 0!important;
+}
+.customers-page .customer-group-grid{
+  gap:clamp(3rem,5vw,4.25rem)!important;
+}
+.customers-page main .customer-logo-panel{
+  display:grid!important;
+  gap:clamp(1.4rem,2.4vw,2rem)!important;
+  padding:0!important;
+  background:transparent!important;
+  border:0!important;
+  box-shadow:none!important;
+}
+.customers-page main .customer-logo-panel .customer-panel-copy{
+  text-align:center!important;
+}
+.customers-page main .customer-logo-panel .customer-panel-copy h3{
+  max-width:none!important;
+  margin:0!important;
+  color:var(--accent)!important;
+  font-family:var(--font-body, Arial, sans-serif)!important;
+  font-size:clamp(.72rem,.78vw,.86rem)!important;
+  font-weight:600!important;
+  line-height:1.2!important;
+  letter-spacing:.32em!important;
+  text-transform:uppercase!important;
+  white-space:normal!important;
+}
+.customers-page main .customer-logo-panel .customer-panel-copy p{
+  display:none!important;
+}
+.customers-page main .customer-logo-grid{
+  display:grid!important;
+  grid-template-columns:repeat(6,minmax(0,1fr))!important;
+  gap:1px!important;
+  width:100%!important;
+  margin:0!important;
+  padding:0!important;
+  list-style:none!important;
+  overflow:visible!important;
+  background:#d6e2eb!important;
+  border:1px solid #d6e2eb!important;
+  border-radius:0!important;
+  box-shadow:none!important;
+}
+.customers-page main .customer-logo-grid li{
+  min-height:110px!important;
+  height:110px!important;
+  display:grid!important;
+  place-items:center!important;
+  padding:1rem 1.35rem!important;
+  background:#fff!important;
+  border:0!important;
+  border-radius:0!important;
+  box-shadow:none!important;
+}
+.customers-page main .customer-logo-grid img{
+  width:auto!important;
+  max-width:min(145px,86%)!important;
+  max-height:62px!important;
+  object-fit:contain!important;
+  filter:none!important;
+  opacity:1!important;
+  transform:none!important;
+}
+.customers-page main .customer-logo-grid li:hover img{
+  filter:none!important;
+  opacity:1!important;
+  transform:none!important;
+}
+@media(max-width:980px){
+  .customers-page main .customer-logo-grid{
+    grid-template-columns:repeat(3,minmax(0,1fr))!important;
+  }
+}
+@media(max-width:640px){
+  .customers-page main .customer-logo-grid{
+    grid-template-columns:repeat(2,minmax(0,1fr))!important;
+  }
+  .customers-page main .customer-logo-grid li{
+    min-height:92px!important;
+    height:92px!important;
+  }
+}
+
+/* Customer logos: separated rounded cards with consistent spacing. */
+.customers-page main .customer-logo-grid{
+  gap:16px!important;
+  background:transparent!important;
+  border:0!important;
+}
+.customers-page main .customer-logo-grid li{
+  border:1px solid #d6e2eb!important;
+  border-radius:12px!important;
+}
+
+/* Customer logos: restore section copy while keeping card-style logo grids. */
+.customers-page main .customer-logo-panel .customer-panel-copy{
+  text-align:left!important;
+}
+.customers-page main .customer-logo-panel .customer-panel-copy h3{
+  max-width:18ch!important;
+  margin:0 0 .75rem!important;
+  font-family:var(--font-display,var(--display))!important;
+  font-size:clamp(36px,3.2vw,54px)!important;
+  font-weight:600!important;
+  line-height:1.05!important;
+  letter-spacing:-.04em!important;
+  text-transform:none!important;
+  white-space:nowrap!important;
+}
+.customers-page main .customer-logo-panel .customer-panel-copy p{
+  display:block!important;
+  max-width:43rem!important;
+  color:#526476!important;
+  font-size:1rem!important;
+  line-height:1.52!important;
+}
+.customers-page main .customer-logo-panel .customer-panel-copy p+p{
+  margin-top:.55rem!important;
+}
+@media(max-width:640px){
+  .customers-page main .customer-logo-panel .customer-panel-copy h3{
+    font-size:clamp(32px,9vw,42px)!important;
+    white-space:normal!important;
+  }
+}
+
+/* Customer logo copy: align government/private headings and paragraphs to the reference layout. */
+.customers-page main .customer-logo-panel .customer-panel-copy{
+  text-align:left!important;
+  max-width:min(100%,68rem)!important;
+}
+.customers-page main .customer-logo-panel .customer-panel-copy h3{
+  max-width:none!important;
+  margin:0 0 1.05rem!important;
+  color:var(--accent)!important;
+  font-family:var(--font-display,var(--display))!important;
+  font-size:clamp(36px,3.2vw,54px)!important;
+  font-weight:700!important;
+  line-height:1.08!important;
+  letter-spacing:-.055em!important;
+  text-transform:none!important;
+  white-space:normal!important;
+}
+.customers-page main .customer-logo-panel .customer-panel-copy p{
+  display:block!important;
+  max-width:68rem!important;
+  margin:0!important;
+  color:#42566c!important;
+  font-size:clamp(1rem,1.05vw,1.12rem)!important;
+  line-height:1.62!important;
+}
+.customers-page main .customer-logo-panel .customer-panel-copy p+p{
+  margin-top:.75rem!important;
+}
+
+/* Customer logo copy: two-column heading and paragraph layout. */
+.customers-page main .customer-logo-panel .customer-panel-copy{
+  display:grid!important;
+  grid-template-columns:minmax(18rem,.78fr) minmax(0,1.22fr)!important;
+  gap:clamp(3rem,7vw,7rem)!important;
+  align-items:start!important;
+  max-width:none!important;
+  text-align:left!important;
+}
+.customers-page main .customer-logo-panel .customer-panel-copy h3{
+  margin:0!important;
+  max-width:12ch!important;
+}
+.customers-page main .customer-logo-panel .customer-panel-copy p{
+  max-width:62rem!important;
+  margin:.15rem 0 0!important;
+}
+.customers-page main .customer-logo-panel .customer-panel-copy p+p{
+  margin-top:.75rem!important;
+}
+@media(max-width:820px){
+  .customers-page main .customer-logo-panel .customer-panel-copy{
+    grid-template-columns:1fr!important;
+    gap:1rem!important;
+  }
+  .customers-page main .customer-logo-panel .customer-panel-copy h3{
+    max-width:none!important;
+  }
+}
+
+/* Customer logo copy: keep Government & Semi-Government on one line. */
+.customers-page main .customer-logo-panel .customer-panel-copy{
+  grid-template-columns:minmax(34rem,.92fr) minmax(0,1.08fr)!important;
+  gap:clamp(2.5rem,5vw,5.5rem)!important;
+}
+.customers-page main .customer-logo-panel .customer-panel-copy h3{
+  max-width:none!important;
+  white-space:nowrap!important;
+}
+@media(max-width:1100px){
+  .customers-page main .customer-logo-panel .customer-panel-copy{
+    grid-template-columns:1fr!important;
+    gap:1rem!important;
+  }
+  .customers-page main .customer-logo-panel .customer-panel-copy h3{
+    white-space:normal!important;
+  }
+}
+
+/* Customer logo copy: force Government heading to two lines as requested. */
+.customers-page main #government .customer-panel-copy h3{
+  white-space:normal!important;
+  max-width:13ch!important;
+}
+
+/* Customer logo copy: keep private heading split and all private copy on the right. */
+.customers-page main #private-sector .customer-panel-copy h3{
+  white-space:normal!important;
+  max-width:12ch!important;
+}
+.customers-page main #private-sector .customer-panel-copy p{
+  grid-column:2!important;
+}
+.customers-page main #private-sector .customer-panel-copy p:first-of-type{
+  grid-row:1!important;
+}
+.customers-page main #private-sector .customer-panel-copy p + p{
+  grid-row:2!important;
+  margin-top:0!important;
+}
+@media(max-width:820px){
+  .customers-page main #private-sector .customer-panel-copy p{
+    grid-column:1!important;
+  }
+  .customers-page main #private-sector .customer-panel-copy p:first-of-type,
+  .customers-page main #private-sector .customer-panel-copy p + p{
+    grid-row:auto!important;
+  }
+  .customers-page main #private-sector .customer-panel-copy p + p{
+    margin-top:.75rem!important;
+  }
+}
+
+/* Browser comment: reduce spacing between private-sector paragraphs. */
+.customers-page main #private-sector .customer-panel-copy p + p{
+  margin-top:.75rem!important;
+  grid-row:auto!important;
+}
+
+/* Browser comment: tighten private-sector copy grid row gap. */
+.customers-page main #private-sector .customer-panel-copy{
+  row-gap:.75rem!important;
+}
+
+/* Browser comment: match private-sector paragraph spacing to hero copy rhythm. */
+.customers-page main #private-sector .customer-panel-copy{
+  row-gap:0!important;
+}
+.customers-page main #private-sector .customer-panel-copy p + p{
+  margin-top:.7rem!important;
+}
+
+/* Browser request: testimonial section updated to reference split layout. */
+.customers-page main .testimonials-section{
+  padding:0!important;
+  min-height:clamp(560px,50vw,720px)!important;
+  display:flex!important;
+  align-items:stretch!important;
+  background:linear-gradient(90deg,#fff 0 40.25%,#eef4f7 40.25% 100%)!important;
+  overflow:hidden!important;
+}
+.customers-page main .testimonials-section::before,
+.customers-page main .testimonials-section .perspectives-quote-card::after{
+  content:none!important;
+}
+.customers-page main .testimonials-section .perspectives-layout{
+  width:100%!important;
+  min-height:clamp(560px,50vw,720px)!important;
+  display:grid!important;
+  grid-template-columns:minmax(20rem,.78fr) minmax(0,1.22fr)!important;
+  gap:clamp(3rem,8vw,8.5rem)!important;
+  align-items:center!important;
+  padding-top:clamp(4.5rem,7vw,7.25rem)!important;
+  padding-bottom:clamp(4.5rem,7vw,7.25rem)!important;
+}
+.customers-page main .testimonials-section .perspectives-intro{
+  max-width:28rem!important;
+  align-self:start!important;
+  padding-top:clamp(1.25rem,3vw,2.7rem)!important;
+}
+.customers-page main .testimonials-section .perspectives-intro h2{
+  max-width:12ch!important;
+  margin:0!important;
+  color:var(--accent)!important;
+  font-family:var(--font-display,var(--display))!important;
+  font-size:clamp(42px,4.1vw,62px)!important;
+  font-weight:700!important;
+  line-height:1.06!important;
+  letter-spacing:-.055em!important;
+}
+.customers-page main .testimonials-section .perspectives-intro p{
+  max-width:27rem!important;
+  margin:1.55rem 0 0!important;
+  color:#3f3f3f!important;
+  font-size:clamp(1rem,1.03vw,1.14rem)!important;
+  line-height:1.55!important;
+}
+.customers-page main .testimonials-section .perspectives-stage{
+  position:relative!important;
+  min-height:clamp(430px,35vw,520px)!important;
+  padding:0!important;
+  background:transparent!important;
+  border:0!important;
+  box-shadow:none!important;
+  color:var(--accent)!important;
+}
+.customers-page main .testimonials-section .perspectives-quote-mark{
+  display:block!important;
+  margin:0 0 1.35rem!important;
+  color:var(--accent)!important;
+  font-family:Georgia,serif!important;
+  font-size:clamp(78px,7vw,112px)!important;
+  font-weight:700!important;
+  line-height:.55!important;
+}
+.customers-page main .testimonials-section .perspectives-slides{
+  position:relative!important;
+  max-width:min(100%,52rem)!important;
+}
+.customers-page main .testimonials-section .perspectives-testimonial{
+  display:none!important;
+}
+.customers-page main .testimonials-section .perspectives-testimonial.is-active{
+  display:block!important;
+}
+.customers-page main .testimonials-section .perspectives-testimonial blockquote{
+  margin:0!important;
+  max-width:51rem!important;
+  color:var(--accent)!important;
+  font-family:var(--font-body,var(--body))!important;
+  font-size:clamp(25px,2.25vw,38px)!important;
+  font-style:italic!important;
+  font-weight:400!important;
+  line-height:1.38!important;
+  letter-spacing:.02em!important;
+}
+.customers-page main .testimonials-section .perspectives-customer-meta{
+  display:block!important;
+  margin:clamp(2.5rem,4.6vw,4.6rem) 0 0!important;
+  color:var(--accent)!important;
+}
+.customers-page main .testimonials-section .perspectives-customer-meta strong{
+  display:block!important;
+  color:var(--accent)!important;
+  font-family:var(--font-display,var(--display))!important;
+  font-size:clamp(22px,1.7vw,30px)!important;
+  font-weight:700!important;
+  line-height:1.1!important;
+  letter-spacing:-.035em!important;
+}
+.customers-page main .testimonials-section .perspectives-customer-meta span{
+  display:block!important;
+  margin-top:.7rem!important;
+  color:#4f5f6d!important;
+  font-size:.98rem!important;
+  line-height:1!important;
+  text-transform:none!important;
+  letter-spacing:0!important;
+}
+.customers-page main .testimonials-section .perspectives-controls{
+  position:absolute!important;
+  right:clamp(1rem,5vw,6.6rem)!important;
+  top:clamp(15rem,22vw,19.2rem)!important;
+  display:flex!important;
+  gap:.85rem!important;
+  z-index:3!important;
+}
+.customers-page main .testimonials-section .perspectives-arrow{
+  width:40px!important;
+  height:40px!important;
+  display:grid!important;
+  place-items:center!important;
+  border:0!important;
+  border-radius:0!important;
+  background:#fff!important;
+  color:var(--accent)!important;
+  font-size:1.2rem!important;
+  line-height:1!important;
+  cursor:pointer!important;
+}
+.customers-page main .testimonials-section .perspectives-arrow.is-primary{
+  background:var(--accent)!important;
+  color:#fff!important;
+}
+.customers-page main .testimonials-section .perspectives-thumbs{
+  display:flex!important;
+  align-items:end!important;
+  gap:clamp(.7rem,1.1vw,1rem)!important;
+  margin-top:clamp(3.1rem,5.4vw,5rem)!important;
+}
+.customers-page main .testimonials-section .perspectives-thumb{
+  width:58px!important;
+  height:58px!important;
+  padding:0!important;
+  border:0!important;
+  border-radius:0!important;
+  background:#dce4e9!important;
+  opacity:.78!important;
+  overflow:hidden!important;
+  cursor:pointer!important;
+  transition:width .2s ease,height .2s ease,opacity .2s ease,transform .2s ease!important;
+}
+.customers-page main .testimonials-section .perspectives-thumb.is-active{
+  width:118px!important;
+  height:118px!important;
+  opacity:1!important;
+}
+.customers-page main .testimonials-section .perspectives-thumb img{
+  width:100%!important;
+  height:100%!important;
+  object-fit:cover!important;
+  object-position:center top!important;
+  display:block!important;
+  filter:grayscale(1)!important;
+}
+.customers-page main .testimonials-section .perspectives-thumb.is-active img{
+  filter:none!important;
+}
+@media(max-width:980px){
+  .customers-page main .testimonials-section{
+    background:#eef4f7!important;
+  }
+  .customers-page main .testimonials-section .perspectives-layout{
+    grid-template-columns:1fr!important;
+    gap:2.75rem!important;
+  }
+  .customers-page main .testimonials-section .perspectives-intro{
+    max-width:42rem!important;
+    padding-top:0!important;
+  }
+  .customers-page main .testimonials-section .perspectives-controls{
+    position:static!important;
+    margin-top:1.75rem!important;
+  }
+  .customers-page main .testimonials-section .perspectives-thumb.is-active{
+    width:92px!important;
+    height:92px!important;
+  }
+}
+@media(max-width:620px){
+  .customers-page main .testimonials-section .perspectives-layout{
+    padding-top:4rem!important;
+    padding-bottom:4rem!important;
+  }
+  .customers-page main .testimonials-section .perspectives-intro h2{
+    font-size:clamp(36px,12vw,48px)!important;
+  }
+  .customers-page main .testimonials-section .perspectives-testimonial blockquote{
+    font-size:clamp(22px,7vw,30px)!important;
+  }
+  .customers-page main .testimonials-section .perspectives-thumbs{
+    flex-wrap:wrap!important;
+  }
+}
+
+/* Browser request: testimonial content update with avatar icons instead of photos. */
+.customers-page main .testimonials-section .perspectives-intro h2{
+  max-width:11ch!important;
+}
+.customers-page main .testimonials-section .perspectives-customer-meta{
+  margin-top:clamp(2rem,3.5vw,3.25rem)!important;
+  padding-top:0!important;
+  border-top:0!important;
+}
+.customers-page main .testimonials-section .perspectives-customer-meta span{
+  display:none!important;
+}
+.customers-page main .testimonials-section .perspectives-thumb{
+  display:grid!important;
+  place-items:center!important;
+  border:1px solid rgba(0,71,137,.16)!important;
+  background:#fff!important;
+}
+.customers-page main .testimonials-section .perspectives-thumb img{
+  display:none!important;
+}
+.customers-page main .testimonials-section .testimonial-avatar-icon{
+  width:56%!important;
+  height:56%!important;
+  display:block!important;
+  border-radius:50%!important;
+  background:
+    radial-gradient(circle at 50% 31%, currentColor 0 19%, transparent 20%),
+    radial-gradient(ellipse at 50% 83%, currentColor 0 34%, transparent 35%)!important;
+  color:rgba(0,71,137,.42)!important;
+}
+.customers-page main .testimonials-section .perspectives-thumb.is-active .testimonial-avatar-icon{
+  color:#fff!important;
+}
+.customers-page main .testimonials-section .perspectives-thumb.is-active{
+  background:var(--accent)!important;
+  border-color:var(--accent)!important;
+}
+
+/* Browser request: keep testimonial controls clear of longer quotes. */
+.customers-page main .testimonials-section .perspectives-stage{
+  padding-bottom:clamp(1rem,2vw,2rem)!important;
+}
+.customers-page main .testimonials-section .perspectives-controls{
+  top:auto!important;
+  bottom:clamp(11.8rem,14vw,15.5rem)!important;
+}
+.customers-page main .testimonials-section .perspectives-thumbs{
+  margin-top:clamp(2.4rem,4vw,3.5rem)!important;
+}
+@media(max-width:980px){
+  .customers-page main .testimonials-section .perspectives-controls{
+    bottom:auto!important;
+  }
+}
+
+/* Browser request: match testimonial typography to CEO message scale. */
+.customers-page main .testimonials-section .perspectives-intro h2{
+  font-size:clamp(32px,3vw,44px)!important;
+  line-height:1.05!important;
+  font-weight:600!important;
+  letter-spacing:-.055em!important;
+}
+.customers-page main .testimonials-section .perspectives-intro p,
+.customers-page main .testimonials-section .perspectives-testimonial blockquote{
+  font-size:18px!important;
+  line-height:1.55!important;
+  letter-spacing:0!important;
+}
+.customers-page main .testimonials-section .perspectives-testimonial blockquote{
+  max-width:46rem!important;
+  font-style:italic!important;
+}
+.customers-page main .testimonials-section .perspectives-customer-meta{
+  margin-top:clamp(1.35rem,2.4vw,2.2rem)!important;
+}
+.customers-page main .testimonials-section .perspectives-customer-meta strong{
+  font-family:var(--font-body,var(--body))!important;
+  font-size:18px!important;
+  line-height:1.35!important;
+  font-weight:700!important;
+  letter-spacing:0!important;
+}
+.customers-page main .testimonials-section .perspectives-quote-mark{
+  font-size:clamp(58px,5vw,78px)!important;
+  margin-bottom:1rem!important;
+}
+.customers-page main .testimonials-section .perspectives-controls{
+  bottom:clamp(10.9rem,13vw,14rem)!important;
+}
+
+/* Browser request: use supplied avatar image in testimonial thumbnails. */
+.customers-page main .testimonials-section .testimonial-avatar-icon{
+  display:none!important;
+}
+.customers-page main .testimonials-section .perspectives-thumb .testimonial-avatar-image{
+  display:block!important;
+  width:100%!important;
+  height:100%!important;
+  object-fit:cover!important;
+  object-position:center!important;
+  filter:none!important;
+  opacity:1!important;
+}
+.customers-page main .testimonials-section .perspectives-thumb{
+  color:inherit!important;
+  overflow:hidden!important;
+}
+.customers-page main .testimonials-section .perspectives-thumb.is-active .testimonial-avatar-image{
+  mix-blend-mode:screen!important;
+  opacity:.96!important;
+}
+
+/* Browser request: keep supplied avatar image inside the original blue/white thumbnail style. */
+.customers-page main .testimonials-section .perspectives-thumb .testimonial-avatar-image{
+  width:60%!important;
+  height:60%!important;
+  object-fit:contain!important;
+  object-position:center!important;
+}
+.customers-page main .testimonials-section .perspectives-thumb:not(.is-active) .testimonial-avatar-image{
+  opacity:.62!important;
+  filter:none!important;
+}
+.customers-page main .testimonials-section .perspectives-thumb.is-active{
+  background:var(--accent)!important;
+  border-color:var(--accent)!important;
+}
+.customers-page main .testimonials-section .perspectives-thumb.is-active .testimonial-avatar-image{
+  mix-blend-mode:screen!important;
+  filter:brightness(0) invert(1)!important;
+  opacity:1!important;
+}
+
+/* Browser request: transparent silhouette avatar image, no white square background. */
+.customers-page main .testimonials-section .perspectives-thumb .testimonial-avatar-image{
+  width:68%!important;
+  height:68%!important;
+  object-fit:contain!important;
+  object-position:center!important;
+  background:transparent!important;
+}
+.customers-page main .testimonials-section .perspectives-thumb:not(.is-active) .testimonial-avatar-image{
+  opacity:.82!important;
+  filter:none!important;
+  mix-blend-mode:normal!important;
+}
+.customers-page main .testimonials-section .perspectives-thumb.is-active .testimonial-avatar-image{
+  filter:brightness(0) invert(1)!important;
+  mix-blend-mode:normal!important;
+  opacity:1!important;
+}
+
+/* Browser request: remove excess blank space below testimonial thumbnails. */
+.customers-page main .testimonials-section{
+  min-height:auto!important;
+  align-items:flex-start!important;
+}
+.customers-page main .testimonials-section .perspectives-layout{
+  min-height:auto!important;
+  padding-top:clamp(3.2rem,5vw,5rem)!important;
+  padding-bottom:clamp(3.2rem,5vw,5rem)!important;
+}
+.customers-page main .testimonials-section .perspectives-stage{
+  min-height:auto!important;
+  padding-bottom:0!important;
+}
+.customers-page main .testimonials-section .perspectives-thumbs{
+  margin-top:clamp(2rem,3vw,2.8rem)!important;
+}
+.customers-page main .testimonials-section .perspectives-controls{
+  bottom:clamp(5rem,6vw,6.5rem)!important;
+}
+@media(max-width:980px){
+  .customers-page main .testimonials-section .perspectives-layout{
+    padding-top:3rem!important;
+    padding-bottom:3rem!important;
+  }
+}
+
+/* Browser request: remove gap after testimonials before closing image section. */
+.customers-page main .testimonials-section + .customers-closing{
+  margin-top:0!important;
+}
+.customers-page main .customers-closing{
+  margin-top:0!important;
+}
+.customers-page main .testimonials-section .perspectives-layout{
+  padding-bottom:clamp(2rem,3.3vw,3.2rem)!important;
+}
