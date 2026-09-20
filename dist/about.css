@@ -7945,3 +7945,61 @@ html:has(body.about-page),
 body.about-page{
   overflow-x:hidden!important;
 }
+
+/* Browser review: large-screen About timeline uses clean two-column card layout. */
+@media(min-width:1181px){
+  body.about-page main .story-tilton-section#story-title .story-tilton-shell,
+  body.about-page main .story-tilton-section#story-title .story-tilton-shell.is-visible{
+    width:min(100% - 7rem,1420px)!important;
+    max-width:1420px!important;
+    margin-inline:auto!important;
+    height:auto!important;
+    background:transparent!important;
+  }
+  body.about-page main .story-tilton-section#story-title .story-tilton-shell .story-tilton-stage{
+    display:grid!important;
+    grid-template-columns:minmax(360px,.92fr) minmax(380px,.98fr)!important;
+    gap:0!important;
+    align-items:stretch!important;
+    width:min(100%,930px)!important;
+    margin-inline:0 auto!important;
+    background:transparent!important;
+  }
+  body.about-page main .story-tilton-section#story-title .story-tilton-shell .story-tilton-image-left{
+    display:block!important;
+    width:100%!important;
+    min-width:0!important;
+    min-height:clamp(30rem,31vw,36rem)!important;
+    height:auto!important;
+    border-radius:18px 0 0 18px!important;
+    overflow:hidden!important;
+    background:#d8e2e8!important;
+  }
+  body.about-page main .story-tilton-section#story-title .story-tilton-shell .story-tilton-image-left img{
+    width:100%!important;
+    height:100%!important;
+    object-fit:cover!important;
+  }
+  body.about-page main .story-tilton-section#story-title .story-tilton-shell .story-tilton-card,
+  body.about-page main .story-tilton-section#story-title .story-tilton-shell .story-tilton-card.is-site-visible{
+    display:flex!important;
+    flex-direction:column!important;
+    justify-content:center!important;
+    width:100%!important;
+    min-width:0!important;
+    min-height:clamp(30rem,31vw,36rem)!important;
+    padding:clamp(2.2rem,3vw,3.4rem)!important;
+    border:1px solid rgba(23,77,142,.12)!important;
+    border-left:0!important;
+    border-radius:0 18px 18px 0!important;
+    background:#fff!important;
+    box-shadow:0 1.2rem 3rem rgba(0,45,83,.06)!important;
+  }
+  body.about-page main .story-tilton-section#story-title .story-tilton-shell .story-tilton-image-next{
+    display:none!important;
+  }
+  body.about-page main .story-tilton-section#story-title .story-tilton-years{
+    width:min(100%,930px)!important;
+    margin-top:clamp(3.6rem,4.8vw,5.5rem)!important;
+  }
+}

@@ -2288,3 +2288,50 @@ body.contact-page main .contact-details h2{
 .portfolio-popup-copy:not(:has(.portfolio-contact-block))::before{
   display:none!important;
 }
+
+/* Browser comment: restore Contact ADURE button in project popup actions. */
+.portfolio-popup-copy .portfolio-detail-actions .portfolio-contact-button,
+.portfolio-page .portfolio-project-detail .portfolio-detail-actions .portfolio-contact-button{
+  display:inline-flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  width:max-content!important;
+  min-width:150px!important;
+  min-height:46px!important;
+  padding:0 22px!important;
+  border:1px solid #d5e0ec!important;
+  border-radius:999px!important;
+  background:#fff!important;
+  color:var(--accent)!important;
+  font-size:13px!important;
+  font-weight:500!important;
+  line-height:1!important;
+  text-decoration:none!important;
+}
+.portfolio-popup-copy .portfolio-detail-actions{
+  gap:.8rem!important;
+}
+.portfolio-popup-copy .portfolio-contact-block{
+  margin-top:.25rem!important;
+}
+
+/* Browser request: place project action buttons after address details. */
+.portfolio-popup-copy .portfolio-detail-actions,
+.portfolio-page .portfolio-project-detail .portfolio-detail-actions{
+  display:flex!important;
+  flex-direction:column!important;
+  align-items:flex-start!important;
+  gap:1rem!important;
+}
+.portfolio-popup-copy .portfolio-action-buttons,
+.portfolio-page .portfolio-project-detail .portfolio-action-buttons{
+  display:flex!important;
+  flex-direction:column!important;
+  align-items:flex-start!important;
+  gap:.7rem!important;
+  margin-top:.2rem!important;
+}
+.portfolio-popup-copy .portfolio-action-buttons .btn,
+.portfolio-page .portfolio-project-detail .portfolio-action-buttons .btn{
+  width:150px!important;
+}

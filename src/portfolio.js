@@ -154,12 +154,15 @@ function popupMarkup(project){
     <span class="portfolio-detail-line" aria-hidden="true"></span>
     <p>${escapeHtml(description)}</p>
     <div class="portfolio-detail-actions">
-      <a class="btn primary" href="properties.html">Explore properties</a>
       <div class="portfolio-contact-block" aria-label="Abu Dhabi Office contact details">
         <h4>Abu Dhabi Office</h4>
         <p>Abu Dhabi,<br>United Arab Emirates</p>
         <p><a href="tel:+971505321440">+971 50 532 1440</a></p>
         <p><a href="mailto:Abudhabileasing@adu-re.com">Abudhabileasing@adu-re.com</a></p>
+      </div>
+      <div class="portfolio-action-buttons">
+        <a class="btn primary" href="properties.html">Explore properties</a>
+        <a class="btn portfolio-contact-button" href="contact.html">Contact ADURE</a>
       </div>
     </div>
   </div>
