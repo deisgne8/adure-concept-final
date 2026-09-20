@@ -2793,3 +2793,13 @@ body.customers-page main .customers-closing .customers-closing-card h2#closing-t
 .customers-page main .testimonials-section .perspectives-layout{
   padding-bottom:clamp(2rem,3.3vw,3.2rem)!important;
 }
+
+/* Browser comment: add more space between government and private-sector logo sections. */
+.customers-page main .customer-group-grid{
+  row-gap:clamp(4.5rem,7vw,7rem)!important;
+}
+@media(max-width:760px){
+  .customers-page main .customer-group-grid{
+    row-gap:3.2rem!important;
+  }
+}
