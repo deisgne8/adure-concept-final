@@ -8190,3 +8190,1106 @@ body.about-page main .story-tilton-section#story-title .story-tilton-shell .stor
     aspect-ratio:1.08!important;
   }
 }
+
+
+/* About history: restore cards to normal flow so they are not clipped below the section. */
+body.about-page main .story-tilton-section#story-title{
+  overflow:visible!important;
+}
+body.about-page main .story-tilton-section#story-title .story-tilton-shell,
+body.about-page main .story-tilton-section#story-title .story-tilton-shell.is-visible{
+  position:relative!important;
+  height:auto!important;
+  min-height:0!important;
+  overflow:visible!important;
+}
+body.about-page main .story-tilton-section#story-title .story-tilton-shell .story-tilton-stage,
+body.about-page main .story-tilton-section#story-title .story-tilton-shell .story-tilton-stage.is-visible{
+  position:relative!important;
+  inset:auto!important;
+  left:auto!important;
+  top:auto!important;
+  right:auto!important;
+  bottom:auto!important;
+  transform:none!important;
+}
+body.about-page main .story-tilton-section#story-title .story-tilton-years{
+  position:relative!important;
+  inset:auto!important;
+  left:auto!important;
+  right:auto!important;
+  bottom:auto!important;
+  top:auto!important;
+}
+
+
+/* About history: remove empty next-preview slot after restoring card flow. */
+body.about-page main .story-tilton-section#story-title .story-tilton-shell .story-tilton-image-next{
+  display:none!important;
+}
+body.about-page main .story-tilton-section#story-title .story-tilton-shell .story-tilton-stage{
+  grid-template-columns:minmax(0,1fr) minmax(0,1fr)!important;
+}
+
+
+/* About history: remove leftover pseudo preview panel from the card stage. */
+body.about-page main .story-tilton-section#story-title .story-tilton-stage::after{
+  content:none!important;
+  display:none!important;
+}
+
+/* Browser review: make the history milestone image/card feel connected at desktop sizes. */
+@media(min-width:1001px){
+  body.about-page main .story-tilton-section#story-title .story-tilton-shell,
+  body.about-page main .story-tilton-section#story-title .story-tilton-shell.is-visible{
+    width:min(100% - clamp(2rem,4vw,4rem),1180px)!important;
+  }
+  body.about-page main .story-tilton-section#story-title .story-tilton-shell .story-tilton-stage{
+    grid-template-columns:minmax(0,1.02fr) minmax(420px,.88fr)!important;
+    align-items:center!important;
+  }
+  body.about-page main .story-tilton-section#story-title .story-tilton-shell .story-tilton-image-left{
+    min-height:clamp(26rem,36vw,31rem)!important;
+    border-radius:18px!important;
+    box-shadow:none!important;
+    z-index:1!important;
+  }
+  body.about-page main .story-tilton-section#story-title .story-tilton-shell .story-tilton-card,
+  body.about-page main .story-tilton-section#story-title .story-tilton-shell .story-tilton-card.is-site-visible{
+    width:calc(100% + clamp(2rem,4vw,3.25rem))!important;
+    min-height:clamp(23rem,31vw,28rem)!important;
+    margin-left:calc(clamp(2rem,4vw,3.25rem) * -1)!important;
+    padding:clamp(2.4rem,4.4vw,4.25rem)!important;
+    border:1px solid rgba(23,77,142,.10)!important;
+    border-radius:16px!important;
+    box-shadow:0 1.6rem 4.5rem rgba(0,45,83,.08)!important;
+    z-index:2!important;
+  }
+  html body.about-page main section.story-tilton-section#story-title .story-tilton-card .story-tilton-year{
+    font-size:clamp(4.4rem,7vw,6.2rem)!important;
+    line-height:.88!important;
+    margin:0 0 clamp(3rem,5.2vw,5.4rem)!important;
+  }
+  body.about-page main .story-tilton-section#story-title .story-tilton-card h2{
+    max-width:8.5em!important;
+    font-size:clamp(2.1rem,3.35vw,3.6rem)!important;
+    line-height:.98!important;
+    margin-bottom:clamp(1.25rem,2vw,1.8rem)!important;
+  }
+  body.about-page main .story-tilton-section#story-title .story-tilton-card p:not(.story-tilton-year):not(.about-eyebrow){
+    max-width:31rem!important;
+    font-size:clamp(.98rem,1.05vw,1.08rem)!important;
+    line-height:1.55!important;
+  }
+}
+
+/* Browser request: compact three-column history design with left image, center copy and right preview image. */
+body.about-page main .story-tilton-section#story-title{
+  --history-image-radius:6px;
+}
+@media(min-width:1001px){
+  body.about-page main .story-tilton-section#story-title .story-tilton-shell,
+  body.about-page main .story-tilton-section#story-title .story-tilton-shell.is-visible{
+    width:min(100% - clamp(2rem,7vw,7rem),1120px)!important;
+    max-width:1120px!important;
+  }
+  body.about-page main .story-tilton-section#story-title .story-tilton-shell .story-tilton-stage{
+    display:grid!important;
+    grid-template-columns:minmax(260px,.92fr) minmax(230px,.74fr) minmax(260px,.92fr)!important;
+    gap:clamp(1.5rem,3.1vw,3.4rem)!important;
+    align-items:center!important;
+    min-height:0!important;
+    margin:0!important;
+  }
+  body.about-page main .story-tilton-section#story-title .story-tilton-shell .story-tilton-image-left,
+  body.about-page main .story-tilton-section#story-title .story-tilton-shell .story-tilton-image-next{
+    display:block!important;
+    width:100%!important;
+    min-height:0!important;
+    height:auto!important;
+    aspect-ratio:1.62!important;
+    border:0!important;
+    border-radius:var(--history-image-radius)!important;
+    background:#dbe7ef!important;
+    box-shadow:none!important;
+    overflow:hidden!important;
+    z-index:1!important;
+  }
+  body.about-page main .story-tilton-section#story-title .story-tilton-shell .story-tilton-image-left img,
+  body.about-page main .story-tilton-section#story-title .story-tilton-shell .story-tilton-image-next img{
+    width:100%!important;
+    height:100%!important;
+    object-fit:cover!important;
+    filter:none!important;
+    opacity:1!important;
+  }
+  body.about-page main .story-tilton-section#story-title .story-tilton-shell .story-tilton-card,
+  body.about-page main .story-tilton-section#story-title .story-tilton-shell .story-tilton-card.is-site-visible{
+    display:flex!important;
+    flex-direction:column!important;
+    justify-content:center!important;
+    width:100%!important;
+    min-height:0!important;
+    margin:0!important;
+    padding:0!important;
+    border:0!important;
+    border-radius:0!important;
+    background:transparent!important;
+    box-shadow:none!important;
+    color:var(--accent)!important;
+  }
+  html body.about-page main section.story-tilton-section#story-title .story-tilton-card .story-tilton-year{
+    display:block!important;
+    color:var(--accent)!important;
+    font-family:var(--font-body,var(--body))!important;
+    font-size:clamp(1rem,1.45vw,1.35rem)!important;
+    font-weight:500!important;
+    line-height:1!important;
+    letter-spacing:0!important;
+    margin:0 0 clamp(1.4rem,2.9vw,2.75rem)!important;
+  }
+  body.about-page main .story-tilton-section#story-title .story-tilton-card h2{
+    max-width:9em!important;
+    margin:0 0 .7rem!important;
+    color:var(--accent)!important;
+    font-family:var(--font-display,var(--display))!important;
+    font-size:clamp(1.55rem,2.4vw,2.35rem)!important;
+    font-weight:700!important;
+    line-height:.98!important;
+    letter-spacing:-.055em!important;
+    text-transform:none!important;
+  }
+  body.about-page main .story-tilton-section#story-title .story-tilton-card p:not(.story-tilton-year):not(.about-eyebrow){
+    max-width:20rem!important;
+    margin:0!important;
+    color:#152536!important;
+    font-size:clamp(.72rem,.78vw,.82rem)!important;
+    font-weight:500!important;
+    line-height:1.45!important;
+  }
+  body.about-page main .story-tilton-section#story-title .story-tilton-years{
+    width:100%!important;
+    margin:clamp(2rem,3.8vw,3rem) 0 0!important;
+  }
+}
+@media(max-width:1000px){
+  body.about-page main .story-tilton-section#story-title .story-tilton-shell .story-tilton-image-next{
+    display:none!important;
+  }
+}
+
+/* Browser request: soften About history milestone transitions. */
+body.about-page main .story-tilton-section#story-title .story-tilton-stage{
+  will-change:opacity,transform;
+  backface-visibility:hidden;
+}
+body.about-page main .story-tilton-section#story-title .story-tilton-image img{
+  transition:transform .7s cubic-bezier(.22,1,.36,1), opacity .35s ease!important;
+}
+body.about-page main .story-tilton-section#story-title .story-tilton-card h2,
+body.about-page main .story-tilton-section#story-title .story-tilton-card p,
+body.about-page main .story-tilton-section#story-title .story-tilton-year{
+  transition:color .25s ease!important;
+}
+
+/* Browser request: Tilton-style large horizontal milestone card with next card peeking. */
+body.about-page main .story-tilton-section#story-title{
+  overflow:hidden!important;
+  padding-top:clamp(80px,6vw,110px)!important;
+  padding-bottom:clamp(70px,5vw,90px)!important;
+}
+body.about-page main .story-tilton-section#story-title .story-tilton-rail-label,
+body.about-page main .story-tilton-section#story-title .story-tilton-controls{
+  display:none!important;
+}
+@media(min-width:1001px){
+  body.about-page main .story-tilton-section#story-title .story-tilton-shell,
+  body.about-page main .story-tilton-section#story-title .story-tilton-shell.is-visible{
+    width:100%!important;
+    max-width:none!important;
+    margin:0!important;
+    padding-left:clamp(60px,5vw,100px)!important;
+    padding-right:0!important;
+    overflow:hidden!important;
+  }
+  body.about-page main .story-tilton-section#story-title .story-tilton-shell .story-tilton-stage,
+  body.about-page main .story-tilton-section#story-title .story-tilton-shell .story-tilton-stage.is-visible{
+    position:relative!important;
+    display:grid!important;
+    grid-template-columns:50% 50%!important;
+    gap:0!important;
+    align-items:stretch!important;
+    width:clamp(900px,64vw,1150px)!important;
+    max-width:none!important;
+    height:clamp(490px,28vw,540px)!important;
+    min-height:0!important;
+    margin:0!important;
+    overflow:visible!important;
+    border-radius:20px!important;
+    background:#fff!important;
+    box-shadow:none!important;
+  }
+  body.about-page main .story-tilton-section#story-title .story-tilton-shell .story-tilton-image-left{
+    grid-column:1!important;
+    grid-row:1!important;
+    display:block!important;
+    width:100%!important;
+    height:100%!important;
+    min-height:0!important;
+    aspect-ratio:auto!important;
+    margin:0!important;
+    border:0!important;
+    border-radius:20px 0 0 20px!important;
+    background:#dbe7ef!important;
+    overflow:hidden!important;
+    box-shadow:none!important;
+    z-index:1!important;
+  }
+  body.about-page main .story-tilton-section#story-title .story-tilton-shell .story-tilton-image-left img{
+    width:100%!important;
+    height:100%!important;
+    object-fit:cover!important;
+    filter:none!important;
+    opacity:1!important;
+  }
+  body.about-page main .story-tilton-section#story-title .story-tilton-shell .story-tilton-card,
+  body.about-page main .story-tilton-section#story-title .story-tilton-shell .story-tilton-card.is-site-visible{
+    grid-column:2!important;
+    grid-row:1!important;
+    display:flex!important;
+    flex-direction:column!important;
+    justify-content:flex-start!important;
+    width:100%!important;
+    height:100%!important;
+    min-height:0!important;
+    margin:0!important;
+    padding:clamp(40px,3.1vw,52px) clamp(36px,2.9vw,48px) clamp(36px,2.7vw,44px)!important;
+    border:0!important;
+    border-radius:0 20px 20px 0!important;
+    background:#fff!important;
+    box-shadow:none!important;
+    overflow:hidden!important;
+    z-index:1!important;
+  }
+  html body.about-page main section.story-tilton-section#story-title .story-tilton-card .story-tilton-year{
+    display:block!important;
+    color:var(--accent)!important;
+    font-family:var(--font-display,var(--display))!important;
+    font-size:clamp(80px,7vw,135px)!important;
+    font-weight:300!important;
+    line-height:.9!important;
+    letter-spacing:-.055em!important;
+    margin:0!important;
+  }
+  body.about-page main .story-tilton-section#story-title .story-tilton-card h2{
+    margin:auto 0 12px!important;
+    max-width:9em!important;
+    color:var(--accent)!important;
+    font-family:var(--font-display,var(--display))!important;
+    font-size:clamp(30px,2.1vw,38px)!important;
+    font-weight:500!important;
+    line-height:1.02!important;
+    letter-spacing:-.05em!important;
+    text-transform:none!important;
+  }
+  body.about-page main .story-tilton-section#story-title .story-tilton-card p:not(.story-tilton-year):not(.about-eyebrow){
+    max-width:30rem!important;
+    margin:0!important;
+    color:#24384a!important;
+    font-size:clamp(16px,.95vw,18px)!important;
+    font-weight:400!important;
+    line-height:1.45!important;
+  }
+  body.about-page main .story-tilton-section#story-title .story-tilton-shell .story-tilton-image-next{
+    position:absolute!important;
+    left:calc(100% + 70px)!important;
+    top:0!important;
+    display:block!important;
+    width:100%!important;
+    height:100%!important;
+    min-height:0!important;
+    aspect-ratio:auto!important;
+    margin:0!important;
+    border:0!important;
+    border-radius:20px!important;
+    background:#fff!important;
+    overflow:hidden!important;
+    box-shadow:none!important;
+    z-index:0!important;
+  }
+  body.about-page main .story-tilton-section#story-title .story-tilton-shell .story-tilton-image-next img{
+    position:absolute!important;
+    left:0!important;
+    top:0!important;
+    width:50%!important;
+    height:100%!important;
+    object-fit:cover!important;
+    filter:none!important;
+    opacity:1!important;
+  }
+  body.about-page main .story-tilton-section#story-title .story-tilton-shell .story-tilton-image-next::after{
+    content:attr(data-next-year) "\A\A" attr(data-next-title)!important;
+    white-space:pre-line!important;
+    position:absolute!important;
+    inset:0 0 0 50%!important;
+    display:flex!important;
+    align-items:flex-start!important;
+    justify-content:flex-start!important;
+    padding:clamp(40px,3.1vw,52px) clamp(36px,2.9vw,48px)!important;
+    background:#fff!important;
+    color:var(--accent)!important;
+    font-family:var(--font-display,var(--display))!important;
+    font-size:clamp(34px,3vw,58px)!important;
+    font-weight:300!important;
+    line-height:.95!important;
+    letter-spacing:-.055em!important;
+    opacity:.55!important;
+  }
+  body.about-page main .story-tilton-section#story-title .story-tilton-years{
+    width:clamp(900px,64vw,1150px)!important;
+    max-width:none!important;
+    margin:clamp(45px,3.1vw,60px) 0 0!important;
+    padding:0!important;
+    display:grid!important;
+    grid-template-columns:repeat(3,minmax(0,1fr))!important;
+    border:0!important;
+    list-style:none!important;
+    overflow:visible!important;
+  }
+  body.about-page main .story-tilton-section#story-title .story-tilton-years li{
+    position:relative!important;
+    min-height:54px!important;
+    padding:0!important;
+    border:0!important;
+  }
+  body.about-page main .story-tilton-section#story-title .story-tilton-years li::before{
+    content:''!important;
+    position:absolute!important;
+    left:0!important;
+    right:0!important;
+    top:32px!important;
+    height:1px!important;
+    width:auto!important;
+    border-radius:0!important;
+    background:rgba(0,71,137,.26)!important;
+    transform:none!important;
+    z-index:0!important;
+  }
+  body.about-page main .story-tilton-section#story-title .story-tilton-years li:last-child::before{
+    right:-33%!important;
+  }
+  body.about-page main .story-tilton-section#story-title .story-tilton-years button{
+    position:relative!important;
+    display:block!important;
+    width:100%!important;
+    min-height:54px!important;
+    padding:0!important;
+    border:0!important;
+    background:transparent!important;
+    color:rgba(0,71,137,.45)!important;
+    text-align:left!important;
+    cursor:pointer!important;
+    z-index:1!important;
+  }
+  body.about-page main .story-tilton-section#story-title .story-tilton-years strong{
+    display:block!important;
+    margin:0 0 15px!important;
+    color:inherit!important;
+    font-family:var(--font-display,var(--display))!important;
+    font-size:clamp(18px,1.25vw,22px)!important;
+    font-weight:400!important;
+    line-height:1!important;
+    letter-spacing:-.02em!important;
+  }
+  body.about-page main .story-tilton-section#story-title .story-tilton-years small{
+    display:none!important;
+  }
+  body.about-page main .story-tilton-section#story-title .story-tilton-years button::after{
+    content:''!important;
+    position:absolute!important;
+    left:0!important;
+    top:25px!important;
+    width:8px!important;
+    height:8px!important;
+    border-radius:50%!important;
+    background:#7fa2c5!important;
+    box-shadow:none!important;
+    transform:translateX(-50%)!important;
+    z-index:2!important;
+  }
+  body.about-page main .story-tilton-section#story-title .story-tilton-years li:first-child button::after{
+    transform:none!important;
+  }
+  body.about-page main .story-tilton-section#story-title .story-tilton-years li.is-active button{
+    color:var(--accent)!important;
+  }
+  body.about-page main .story-tilton-section#story-title .story-tilton-years li.is-active button::after{
+    top:20px!important;
+    width:18px!important;
+    height:18px!important;
+    background:var(--accent)!important;
+    box-shadow:0 0 0 8px rgba(0,71,137,.10)!important;
+  }
+}
+@media(max-width:1000px){
+  body.about-page main .story-tilton-section#story-title{
+    padding-top:64px!important;
+    padding-bottom:64px!important;
+  }
+}
+
+/* Browser request: make the milestone carousel the visible history section, matching the reference. */
+body.about-page main .story-tilton-section#story-title .story-intro-shell{
+  display:none!important;
+}
+body.about-page main .story-tilton-section#story-title{
+  min-height:0!important;
+}
+
+/* Browser request: ensure the next milestone card visibly peeks beside the active card. */
+@media(min-width:1001px){
+  body.about-page main .story-tilton-section#story-title .story-tilton-shell .story-tilton-image-next{
+    z-index:3!important;
+  }
+}
+@media(min-width:1001px) and (max-width:1500px){
+  body.about-page main .story-tilton-section#story-title .story-tilton-shell .story-tilton-stage,
+  body.about-page main .story-tilton-section#story-title .story-tilton-years{
+    width:clamp(820px,70vw,920px)!important;
+  }
+  body.about-page main .story-tilton-section#story-title .story-tilton-shell .story-tilton-image-next{
+    left:calc(100% + 46px)!important;
+  }
+}
+
+/* Browser request: force the next milestone preview to keep active-card dimensions. */
+@media(min-width:1001px){
+  body.about-page main .story-tilton-section#story-title .story-tilton-shell .story-tilton-stage{
+    --history-active-card-width:clamp(820px,70vw,920px);
+  }
+  body.about-page main .story-tilton-section#story-title .story-tilton-shell .story-tilton-image-next{
+    left:calc(var(--history-active-card-width) + 46px)!important;
+    width:var(--history-active-card-width)!important;
+    max-width:none!important;
+  }
+}
+@media(min-width:1501px){
+  body.about-page main .story-tilton-section#story-title .story-tilton-shell .story-tilton-stage{
+    --history-active-card-width:clamp(1050px,64vw,1150px);
+  }
+  body.about-page main .story-tilton-section#story-title .story-tilton-shell .story-tilton-image-next{
+    left:calc(var(--history-active-card-width) + 70px)!important;
+  }
+}
+
+/* Browser request: anchor absolute next preview from the active card origin, not the old third grid column. */
+@media(min-width:1001px){
+  body.about-page main .story-tilton-section#story-title .story-tilton-shell .story-tilton-image-next{
+    grid-column:1 / 2!important;
+    grid-row:1!important;
+  }
+}
+
+/* Browser request: restore the history section heading above the milestone card. */
+body.about-page main .story-tilton-section#story-title .story-intro-shell,
+body.about-page main .story-tilton-section#story-title .story-intro-shell.is-site-visible{
+  display:block!important;
+  width:clamp(900px,64vw,1150px)!important;
+  max-width:none!important;
+  margin:0 0 clamp(28px,3vw,44px)!important;
+  padding:0!important;
+  opacity:1!important;
+  transform:none!important;
+}
+body.about-page main .story-tilton-section#story-title .story-intro-title,
+body.about-page main .story-tilton-section#story-title .story-intro-title.is-site-visible{
+  display:block!important;
+  max-width:680px!important;
+  opacity:1!important;
+  transform:none!important;
+}
+body.about-page main .story-tilton-section#story-title .story-intro-title h2{
+  margin:0!important;
+  color:var(--accent)!important;
+  font-family:var(--font-display,var(--display))!important;
+  font-size:clamp(44px,4vw,76px)!important;
+  font-weight:600!important;
+  line-height:.96!important;
+  letter-spacing:-.055em!important;
+  text-transform:none!important;
+}
+body.about-page main .story-tilton-section#story-title .story-intro-copy{
+  display:none!important;
+}
+@media(max-width:1000px){
+  body.about-page main .story-tilton-section#story-title .story-intro-shell,
+  body.about-page main .story-tilton-section#story-title .story-intro-shell.is-site-visible{
+    width:100%!important;
+    margin-bottom:24px!important;
+    padding:0 20px!important;
+  }
+  body.about-page main .story-tilton-section#story-title .story-intro-title h2{
+    font-size:clamp(34px,9vw,52px)!important;
+  }
+}
+
+/* Browser request: align restored history heading with the milestone card edge. */
+body.about-page main .story-tilton-section#story-title .story-intro-shell,
+body.about-page main .story-tilton-section#story-title .story-intro-shell.is-site-visible{
+  width:100%!important;
+  max-width:none!important;
+  box-sizing:border-box!important;
+  padding-left:clamp(60px,5vw,100px)!important;
+  padding-right:0!important;
+}
+@media(max-width:1000px){
+  body.about-page main .story-tilton-section#story-title .story-intro-shell,
+  body.about-page main .story-tilton-section#story-title .story-intro-shell.is-site-visible{
+    padding-left:20px!important;
+    padding-right:20px!important;
+  }
+}
+
+/* Browser request: restore the history intro paragraph beside the heading. */
+body.about-page main .story-tilton-section#story-title .story-intro-shell,
+body.about-page main .story-tilton-section#story-title .story-intro-shell.is-site-visible{
+  display:grid!important;
+  grid-template-columns:minmax(300px,420px) minmax(420px,650px)!important;
+  gap:clamp(70px,9vw,170px)!important;
+  align-items:start!important;
+  padding-left:clamp(60px,5vw,100px)!important;
+  padding-right:clamp(40px,4vw,80px)!important;
+}
+body.about-page main .story-tilton-section#story-title .story-intro-copy,
+body.about-page main .story-tilton-section#story-title .story-intro-copy.is-site-visible{
+  display:block!important;
+  max-width:650px!important;
+  margin:0!important;
+  padding:0!important;
+  color:#3d5063!important;
+  font-size:clamp(17px,1.05vw,20px)!important;
+  font-weight:400!important;
+  line-height:1.55!important;
+  opacity:1!important;
+  transform:none!important;
+}
+body.about-page main .story-tilton-section#story-title .story-intro-copy p{
+  margin:0!important;
+  color:inherit!important;
+  font:inherit!important;
+  line-height:inherit!important;
+}
+body.about-page main .story-tilton-section#story-title .story-intro-copy p + p{
+  margin-top:22px!important;
+}
+@media(max-width:1000px){
+  body.about-page main .story-tilton-section#story-title .story-intro-shell,
+  body.about-page main .story-tilton-section#story-title .story-intro-shell.is-site-visible{
+    display:block!important;
+    padding-left:20px!important;
+    padding-right:20px!important;
+  }
+  body.about-page main .story-tilton-section#story-title .story-intro-copy,
+  body.about-page main .story-tilton-section#story-title .story-intro-copy.is-site-visible{
+    max-width:none!important;
+    margin-top:20px!important;
+    font-size:16px!important;
+  }
+}
+
+
+/* Browser request: keep About history content inside the section container width. */
+body.about-page main .story-tilton-section#story-title{
+  overflow:hidden!important;
+}
+body.about-page main .story-tilton-section#story-title .story-intro-shell,
+body.about-page main .story-tilton-section#story-title .story-intro-shell.is-site-visible,
+body.about-page main .story-tilton-section#story-title .story-tilton-shell,
+body.about-page main .story-tilton-section#story-title .story-tilton-shell.is-site-visible{
+  width:min(100%, 1440px)!important;
+  max-width:1440px!important;
+  margin-left:auto!important;
+  margin-right:auto!important;
+  box-sizing:border-box!important;
+  padding-left:clamp(48px,5vw,96px)!important;
+  padding-right:clamp(48px,5vw,96px)!important;
+}
+@media(min-width:1001px){
+  body.about-page main .story-tilton-section#story-title .story-tilton-shell .story-tilton-stage,
+  body.about-page main .story-tilton-section#story-title .story-tilton-years{
+    width:min(clamp(820px,64vw,1050px), calc(100vw - (clamp(48px,5vw,96px) * 2) - 210px))!important;
+  }
+  body.about-page main .story-tilton-section#story-title .story-tilton-shell .story-tilton-image-next{
+    left:calc(100% + clamp(36px,4vw,64px))!important;
+    width:min(clamp(820px,64vw,1050px), calc(100vw - (clamp(48px,5vw,96px) * 2) - 210px))!important;
+  }
+}
+@media(min-width:1501px){
+  body.about-page main .story-tilton-section#story-title .story-tilton-shell .story-tilton-stage,
+  body.about-page main .story-tilton-section#story-title .story-tilton-years{
+    width:min(1150px, calc(100vw - (clamp(48px,5vw,96px) * 2) - 420px))!important;
+  }
+  body.about-page main .story-tilton-section#story-title .story-tilton-shell .story-tilton-image-next{
+    left:calc(100% + 64px)!important;
+    width:min(1150px, calc(100vw - (clamp(48px,5vw,96px) * 2) - 420px))!important;
+  }
+}
+@media(max-width:1000px){
+  body.about-page main .story-tilton-section#story-title .story-intro-shell,
+  body.about-page main .story-tilton-section#story-title .story-intro-shell.is-site-visible,
+  body.about-page main .story-tilton-section#story-title .story-tilton-shell,
+  body.about-page main .story-tilton-section#story-title .story-tilton-shell.is-site-visible{
+    width:100%!important;
+    max-width:none!important;
+    padding-left:20px!important;
+    padding-right:20px!important;
+  }
+}
+
+/* Browser request: prevent the preview card from overlapping while keeping it clipped inside the history section. */
+body.about-page main .story-tilton-section#story-title .story-tilton-shell,
+body.about-page main .story-tilton-section#story-title .story-tilton-shell.is-site-visible{
+  width:min(100vw, 1440px)!important;
+  max-width:1440px!important;
+  margin-inline:auto!important;
+  padding-left:clamp(48px,5vw,96px)!important;
+  padding-right:clamp(48px,5vw,96px)!important;
+  overflow:hidden!important;
+}
+@media(min-width:1001px){
+  body.about-page main .story-tilton-section#story-title .story-tilton-shell .story-tilton-stage{
+    --history-contained-card-width:min(clamp(820px,64vw,1050px), calc(100vw - (clamp(48px,5vw,96px) * 2) - 210px));
+    width:var(--history-contained-card-width)!important;
+  }
+  body.about-page main .story-tilton-section#story-title .story-tilton-years{
+    width:var(--history-contained-card-width)!important;
+  }
+  body.about-page main .story-tilton-section#story-title .story-tilton-shell .story-tilton-image-next{
+    grid-column:1 / 2!important;
+    left:calc(var(--history-contained-card-width) + clamp(36px,4vw,64px))!important;
+    width:var(--history-contained-card-width)!important;
+  }
+}
+@media(min-width:1501px){
+  body.about-page main .story-tilton-section#story-title .story-tilton-shell .story-tilton-stage{
+    --history-contained-card-width:min(1150px, calc(100vw - (clamp(48px,5vw,96px) * 2) - 420px));
+  }
+  body.about-page main .story-tilton-section#story-title .story-tilton-shell .story-tilton-image-next{
+    left:calc(var(--history-contained-card-width) + 64px)!important;
+  }
+}
+
+/* Browser request: final container guard for About history shell and timeline rail. */
+body.about-page main .story-tilton-section#story-title{
+  --history-contained-card-width:min(clamp(820px,64vw,1050px), calc(100vw - (clamp(48px,5vw,96px) * 2) - 210px));
+}
+body.about-page main .story-tilton-section#story-title .story-tilton-years{
+  width:var(--history-contained-card-width)!important;
+}
+@media(min-width:1501px){
+  body.about-page main .story-tilton-section#story-title{
+    --history-contained-card-width:min(1150px, calc(100vw - (clamp(48px,5vw,96px) * 2) - 420px));
+  }
+  body.about-page main .story-tilton-section#story-title .story-intro-shell,
+  body.about-page main .story-tilton-section#story-title .story-intro-shell.is-site-visible,
+  body.about-page main .story-tilton-section#story-title .story-tilton-shell,
+  body.about-page main .story-tilton-section#story-title .story-tilton-shell.is-site-visible{
+    width:1440px!important;
+    max-width:1440px!important;
+  }
+}
+@media(min-width:1001px) and (max-width:1500px){
+  body.about-page main .story-tilton-section#story-title .story-intro-shell,
+  body.about-page main .story-tilton-section#story-title .story-intro-shell.is-site-visible,
+  body.about-page main .story-tilton-section#story-title .story-tilton-shell,
+  body.about-page main .story-tilton-section#story-title .story-tilton-shell.is-site-visible{
+    width:100%!important;
+    max-width:100%!important;
+  }
+}
+
+/* Browser request: target the visible history shell state that was keeping full viewport width. */
+body.about-page main .story-tilton-section#story-title .story-tilton-shell.is-visible{
+  width:min(100vw, 1440px)!important;
+  max-width:1440px!important;
+  margin-left:auto!important;
+  margin-right:auto!important;
+  padding-left:clamp(48px,5vw,96px)!important;
+  padding-right:clamp(48px,5vw,96px)!important;
+  overflow:hidden!important;
+}
+@media(min-width:1501px){
+  body.about-page main .story-tilton-section#story-title .story-tilton-shell.is-visible{
+    width:1440px!important;
+    max-width:1440px!important;
+  }
+}
+
+/* Browser request: remove the visible anchor focus line from the history section wrapper. */
+body.about-page main .story-tilton-section#story-title:focus,
+body.about-page main .story-tilton-section#story-title:focus-visible{
+  outline:0!important;
+}
+
+/* Browser request: normalize About history spacing with neighboring sections. */
+body.about-page main .story-tilton-section#story-title{
+  margin:0!important;
+  padding-top:clamp(5rem,7vw,7rem)!important;
+  padding-bottom:clamp(5rem,7vw,7rem)!important;
+}
+body.about-page main .story-tilton-section#story-title .story-intro-shell,
+body.about-page main .story-tilton-section#story-title .story-intro-shell.is-site-visible,
+body.about-page main .story-tilton-section#story-title .story-tilton-shell,
+body.about-page main .story-tilton-section#story-title .story-tilton-shell.is-visible,
+body.about-page main .story-tilton-section#story-title .story-tilton-shell.is-site-visible{
+  width:100%!important;
+  max-width:1600px!important;
+  margin-left:auto!important;
+  margin-right:auto!important;
+  padding-left:clamp(1.5rem,4.5vw,5rem)!important;
+  padding-right:clamp(1.5rem,4.5vw,5rem)!important;
+  box-sizing:border-box!important;
+}
+body.about-page main .story-tilton-section#story-title .story-intro-shell,
+body.about-page main .story-tilton-section#story-title .story-intro-shell.is-site-visible{
+  margin-bottom:clamp(2.5rem,4vw,4rem)!important;
+}
+@media(min-width:1501px){
+  body.about-page main .story-tilton-section#story-title .story-intro-shell,
+  body.about-page main .story-tilton-section#story-title .story-intro-shell.is-site-visible,
+  body.about-page main .story-tilton-section#story-title .story-tilton-shell,
+  body.about-page main .story-tilton-section#story-title .story-tilton-shell.is-visible,
+  body.about-page main .story-tilton-section#story-title .story-tilton-shell.is-site-visible{
+    width:100%!important;
+    max-width:1600px!important;
+  }
+}
+@media(max-width:640px){
+  body.about-page main .story-tilton-section#story-title{
+    padding-top:4rem!important;
+    padding-bottom:4rem!important;
+  }
+}
+
+/* Browser request: restore history shells to the same desktop inset as other About sections. */
+@media(min-width:1180px){
+  body.about-page main .story-tilton-section#story-title .story-intro-shell,
+  body.about-page main .story-tilton-section#story-title .story-intro-shell.is-site-visible,
+  body.about-page main .story-tilton-section#story-title .story-tilton-shell,
+  body.about-page main .story-tilton-section#story-title .story-tilton-shell.is-visible,
+  body.about-page main .story-tilton-section#story-title .story-tilton-shell.is-site-visible{
+    width:min(calc(100% - (var(--gutter,56px) * 2)),var(--container))!important;
+    max-width:var(--container)!important;
+    margin-left:auto!important;
+    margin-right:auto!important;
+    padding-left:clamp(1.5rem,4.5vw,5rem)!important;
+    padding-right:clamp(1.5rem,4.5vw,5rem)!important;
+  }
+}
+
+
+/* About history timeline: fix year label, dot and connector spacing. */
+body.about-page main .story-tilton-section#story-title .story-tilton-years{
+  display:grid!important;
+  grid-template-columns:repeat(3,minmax(0,1fr))!important;
+  gap:0!important;
+  width:100%!important;
+  max-width:100%!important;
+  margin:clamp(3.1rem,4.6vw,4.5rem) 0 0!important;
+  padding:0!important;
+  list-style:none!important;
+  overflow:visible!important;
+  border:0!important;
+  background:transparent!important;
+}
+body.about-page main .story-tilton-section#story-title .story-tilton-years li,
+body.about-page main .story-tilton-section#story-title .story-tilton-years li.is-active{
+  position:relative!important;
+  min-height:4.3rem!important;
+  padding:0!important;
+  border:0!important;
+  background:transparent!important;
+  color:rgba(0,71,137,.48)!important;
+}
+body.about-page main .story-tilton-section#story-title .story-tilton-years button,
+body.about-page main .story-tilton-section#story-title .story-tilton-years button:hover,
+body.about-page main .story-tilton-section#story-title .story-tilton-years button:focus-visible,
+body.about-page main .story-tilton-section#story-title .story-tilton-years li.is-active button{
+  position:relative!important;
+  display:block!important;
+  width:100%!important;
+  height:4.3rem!important;
+  padding:0!important;
+  border:0!important;
+  background:transparent!important;
+  box-shadow:none!important;
+  text-align:left!important;
+}
+body.about-page main .story-tilton-section#story-title .story-tilton-years strong{
+  position:absolute!important;
+  left:0!important;
+  top:0!important;
+  display:block!important;
+  margin:0!important;
+  color:inherit!important;
+  font-family:var(--font-body,var(--body))!important;
+  font-size:clamp(1.05rem,1.45vw,1.35rem)!important;
+  font-weight:400!important;
+  line-height:1!important;
+  letter-spacing:-.035em!important;
+}
+body.about-page main .story-tilton-section#story-title .story-tilton-years small,
+body.about-page main .story-tilton-section#story-title .story-tilton-years .story-thumb{
+  display:none!important;
+}
+body.about-page main .story-tilton-section#story-title .story-tilton-years button::after{
+  content:""!important;
+  position:absolute!important;
+  left:0!important;
+  top:2.05rem!important;
+  width:7px!important;
+  height:7px!important;
+  display:block!important;
+  border:0!important;
+  border-radius:50%!important;
+  background:rgba(0,71,137,.48)!important;
+  box-shadow:none!important;
+  transform:none!important;
+}
+body.about-page main .story-tilton-section#story-title .story-tilton-years button::before{
+  content:""!important;
+  position:absolute!important;
+  left:1.35rem!important;
+  right:0!important;
+  top:2.25rem!important;
+  height:1px!important;
+  display:block!important;
+  border:0!important;
+  background:rgba(0,71,137,.28)!important;
+  transform:none!important;
+}
+body.about-page main .story-tilton-section#story-title .story-tilton-years li:last-child button::before{
+  right:calc(-1 * clamp(1.5rem,4.5vw,5rem))!important;
+}
+body.about-page main .story-tilton-section#story-title .story-tilton-years li.is-active,
+body.about-page main .story-tilton-section#story-title .story-tilton-years li.is-active strong{
+  color:var(--accent)!important;
+}
+body.about-page main .story-tilton-section#story-title .story-tilton-years li.is-active button::after,
+body.about-page main .story-tilton-section#story-title .story-tilton-years button.is-active::after{
+  top:1.85rem!important;
+  width:18px!important;
+  height:18px!important;
+  background:var(--accent)!important;
+  box-shadow:0 0 0 8px rgba(0,71,137,.1)!important;
+}
+body.about-page main .story-tilton-section#story-title .story-tilton-years li.is-active button::before,
+body.about-page main .story-tilton-section#story-title .story-tilton-years button.is-active::before{
+  left:2rem!important;
+  right:0!important;
+}
+@media(max-width:760px){
+  body.about-page main .story-tilton-section#story-title .story-tilton-years{
+    grid-template-columns:repeat(3,minmax(7rem,1fr))!important;
+    overflow-x:auto!important;
+    padding-bottom:.5rem!important;
+  }
+  body.about-page main .story-tilton-section#story-title .story-tilton-years strong{
+    font-size:1rem!important;
+  }
+}
+
+
+/* About history timeline: align active dot with year label anchor. */
+html body.about-page main section.story-tilton-section#story-title .story-tilton-years li button::after,
+html body.about-page main section.story-tilton-section#story-title .story-tilton-years li.is-active button::after,
+html body.about-page main section.story-tilton-section#story-title .story-tilton-years button.is-active::after{
+  left:0!important;
+}
+html body.about-page main section.story-tilton-section#story-title .story-tilton-years li.is-active button::before,
+html body.about-page main section.story-tilton-section#story-title .story-tilton-years button.is-active::before{
+  left:1.65rem!important;
+}
+
+/* Browser request: remove reveal translation from the history section so spacing matches document flow. */
+body.about-page main .story-tilton-section#story-title,
+body.about-page main .story-tilton-section#story-title.is-site-visible{
+  transform:none!important;
+  opacity:1!important;
+}
+
+/* Browser request: keep timeline hover state from creating a second active dot. */
+body.about-page main .story-tilton-section#story-title .story-tilton-years li:not(.is-active) button:hover,
+body.about-page main .story-tilton-section#story-title .story-tilton-years li:not(.is-active) button:focus-visible{
+  color:rgba(0,71,137,.6)!important;
+  background:transparent!important;
+  box-shadow:none!important;
+  outline:0!important;
+}
+body.about-page main .story-tilton-section#story-title .story-tilton-years li:not(.is-active) button:hover::after,
+body.about-page main .story-tilton-section#story-title .story-tilton-years li:not(.is-active) button:focus-visible::after{
+  top:25px!important;
+  width:8px!important;
+  height:8px!important;
+  background:#7fa2c5!important;
+  box-shadow:none!important;
+}
+body.about-page main .story-tilton-section#story-title .story-tilton-years li:not(.is-active) button:hover::before,
+body.about-page main .story-tilton-section#story-title .story-tilton-years li:not(.is-active) button:focus-visible::before{
+  background:rgba(0,71,137,.26)!important;
+  height:1px!important;
+}
+body.about-page main .story-tilton-section#story-title .story-tilton-years li.is-active button:hover::after,
+body.about-page main .story-tilton-section#story-title .story-tilton-years li.is-active button:focus-visible::after{
+  top:20px!important;
+  width:18px!important;
+  height:18px!important;
+  background:var(--accent)!important;
+  box-shadow:0 0 0 8px rgba(0,71,137,.10)!important;
+}
+
+/* Browser request: smooth timeline hover without active-dot jump. */
+body.about-page main .story-tilton-section#story-title .story-tilton-years button,
+body.about-page main .story-tilton-section#story-title .story-tilton-years strong,
+body.about-page main .story-tilton-section#story-title .story-tilton-years button::before,
+body.about-page main .story-tilton-section#story-title .story-tilton-years button::after{
+  transition:color .22s ease, background-color .22s ease, opacity .22s ease, box-shadow .22s ease, transform .22s ease!important;
+}
+body.about-page main .story-tilton-section#story-title .story-tilton-years li:not(.is-active) button::after{
+  width:8px!important;
+  height:8px!important;
+  top:25px!important;
+  transform:translateX(-50%) scale(1)!important;
+  transform-origin:center!important;
+  background:#7fa2c5!important;
+  box-shadow:none!important;
+}
+body.about-page main .story-tilton-section#story-title .story-tilton-years li:first-child:not(.is-active) button::after{
+  transform:scale(1)!important;
+}
+body.about-page main .story-tilton-section#story-title .story-tilton-years li:not(.is-active) button:hover::after,
+body.about-page main .story-tilton-section#story-title .story-tilton-years li:not(.is-active) button:focus-visible::after{
+  width:8px!important;
+  height:8px!important;
+  top:25px!important;
+  transform:translateX(-50%) scale(1.25)!important;
+  background:#5f8fbd!important;
+  box-shadow:none!important;
+}
+body.about-page main .story-tilton-section#story-title .story-tilton-years li:first-child:not(.is-active) button:hover::after,
+body.about-page main .story-tilton-section#story-title .story-tilton-years li:first-child:not(.is-active) button:focus-visible::after{
+  transform:scale(1.25)!important;
+}
+body.about-page main .story-tilton-section#story-title .story-tilton-years li:not(.is-active) button:hover strong,
+body.about-page main .story-tilton-section#story-title .story-tilton-years li:not(.is-active) button:focus-visible strong{
+  color:rgba(0,71,137,.72)!important;
+}
+body.about-page main .story-tilton-section#story-title .story-tilton-years li.is-active button::after,
+body.about-page main .story-tilton-section#story-title .story-tilton-years li.is-active button:hover::after,
+body.about-page main .story-tilton-section#story-title .story-tilton-years li.is-active button:focus-visible::after{
+  width:18px!important;
+  height:18px!important;
+  top:20px!important;
+  transform:translateX(-50%) scale(1)!important;
+  background:var(--accent)!important;
+  box-shadow:0 0 0 8px rgba(0,71,137,.10)!important;
+}
+body.about-page main .story-tilton-section#story-title .story-tilton-years li:first-child.is-active button::after,
+body.about-page main .story-tilton-section#story-title .story-tilton-years li:first-child.is-active button:hover::after,
+body.about-page main .story-tilton-section#story-title .story-tilton-years li:first-child.is-active button:focus-visible::after{
+  transform:scale(1)!important;
+}
+
+/* Browser request: final timeline hover fix, no dot animation on hover. */
+body.about-page main .story-tilton-section#story-title .story-tilton-years button::after{
+  transition:background-color .18s ease!important;
+}
+body.about-page main .story-tilton-section#story-title .story-tilton-years li:not(.is-active) button:hover::after,
+body.about-page main .story-tilton-section#story-title .story-tilton-years li:not(.is-active) button:focus-visible::after{
+  width:8px!important;
+  height:8px!important;
+  top:25px!important;
+  transform:translateX(-50%) scale(1)!important;
+  background:#7fa2c5!important;
+  box-shadow:none!important;
+}
+body.about-page main .story-tilton-section#story-title .story-tilton-years li:first-child:not(.is-active) button:hover::after,
+body.about-page main .story-tilton-section#story-title .story-tilton-years li:first-child:not(.is-active) button:focus-visible::after{
+  transform:scale(1)!important;
+}
+body.about-page main .story-tilton-section#story-title .story-tilton-years li:not(.is-active) button:hover::before,
+body.about-page main .story-tilton-section#story-title .story-tilton-years li:not(.is-active) button:focus-visible::before{
+  height:1px!important;
+  background:rgba(0,71,137,.26)!important;
+}
+
+/* Browser request: align timeline dots under their year labels. */
+body.about-page main .story-tilton-section#story-title .story-tilton-years{
+  --timeline-year-dot-x:1.02em;
+}
+html body.about-page main section.story-tilton-section#story-title .story-tilton-years li button::after,
+html body.about-page main section.story-tilton-section#story-title .story-tilton-years li.is-active button::after,
+html body.about-page main section.story-tilton-section#story-title .story-tilton-years button.is-active::after{
+  left:var(--timeline-year-dot-x)!important;
+  transform:translateX(-50%) scale(1)!important;
+  transform-origin:center!important;
+}
+html body.about-page main section.story-tilton-section#story-title .story-tilton-years li:not(.is-active) button:hover::after,
+html body.about-page main section.story-tilton-section#story-title .story-tilton-years li:not(.is-active) button:focus-visible::after{
+  left:var(--timeline-year-dot-x)!important;
+  transform:translateX(-50%) scale(1)!important;
+}
+html body.about-page main section.story-tilton-section#story-title .story-tilton-years li button::before{
+  left:calc(var(--timeline-year-dot-x) + 1.2rem)!important;
+}
+html body.about-page main section.story-tilton-section#story-title .story-tilton-years li.is-active button::before,
+html body.about-page main section.story-tilton-section#story-title .story-tilton-years button.is-active::before{
+  left:calc(var(--timeline-year-dot-x) + 1.2rem)!important;
+}
+
+/* Browser request: center the first active timeline dot under 2002 too. */
+html body.about-page main section.story-tilton-section#story-title .story-tilton-years li:first-child.is-active button::after,
+html body.about-page main section.story-tilton-section#story-title .story-tilton-years li:first-child.is-active button:hover::after,
+html body.about-page main section.story-tilton-section#story-title .story-tilton-years li:first-child.is-active button:focus-visible::after{
+  left:var(--timeline-year-dot-x)!important;
+  transform:translateX(-50%) scale(1)!important;
+}
+
+/* Browser request: align timeline connector through dot centers and lift year labels. */
+body.about-page main .story-tilton-section#story-title .story-tilton-years{
+  --timeline-label-top:-4px;
+  --timeline-dot-top:30px;
+  --timeline-line-top:38.5px;
+  --timeline-small-dot:8px;
+  --timeline-active-dot:18px;
+}
+body.about-page main .story-tilton-section#story-title .story-tilton-years strong{
+  top:var(--timeline-label-top)!important;
+}
+html body.about-page main section.story-tilton-section#story-title .story-tilton-years li button::after{
+  top:var(--timeline-dot-top)!important;
+  width:var(--timeline-small-dot)!important;
+  height:var(--timeline-small-dot)!important;
+}
+html body.about-page main section.story-tilton-section#story-title .story-tilton-years li.is-active button::after,
+html body.about-page main section.story-tilton-section#story-title .story-tilton-years button.is-active::after,
+html body.about-page main section.story-tilton-section#story-title .story-tilton-years li.is-active button:hover::after,
+html body.about-page main section.story-tilton-section#story-title .story-tilton-years li.is-active button:focus-visible::after{
+  top:calc(var(--timeline-line-top) - (var(--timeline-active-dot) / 2))!important;
+  width:var(--timeline-active-dot)!important;
+  height:var(--timeline-active-dot)!important;
+}
+html body.about-page main section.story-tilton-section#story-title .story-tilton-years li:not(.is-active) button:hover::after,
+html body.about-page main section.story-tilton-section#story-title .story-tilton-years li:not(.is-active) button:focus-visible::after{
+  top:calc(var(--timeline-line-top) - (var(--timeline-small-dot) / 2))!important;
+  width:var(--timeline-small-dot)!important;
+  height:var(--timeline-small-dot)!important;
+}
+html body.about-page main section.story-tilton-section#story-title .story-tilton-years li button::before,
+html body.about-page main section.story-tilton-section#story-title .story-tilton-years li.is-active button::before,
+html body.about-page main section.story-tilton-section#story-title .story-tilton-years button.is-active::before,
+html body.about-page main section.story-tilton-section#story-title .story-tilton-years li:not(.is-active) button:hover::before,
+html body.about-page main section.story-tilton-section#story-title .story-tilton-years li:not(.is-active) button:focus-visible::before{
+  top:var(--timeline-line-top)!important;
+  height:1px!important;
+}

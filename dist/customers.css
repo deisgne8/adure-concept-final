@@ -1476,7 +1476,23 @@ body.portfolio-page .desktop-nav .nav-dropdown-menu a:focus-visible{
   color:var(--inverse-muted)!important;
 }
 .customers-page .customers-hero-cta{
-  display:none!important;
+  display:inline-flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  gap:.85rem!important;
+  margin-top:1.65rem!important;
+  min-height:3.25rem!important;
+  padding:0 1.35rem!important;
+  border-radius:999px!important;
+  background:var(--accent)!important;
+  color:#fff!important;
+  font-family:var(--font-body)!important;
+  font-size:.82rem!important;
+  font-weight:700!important;
+  letter-spacing:.04em!important;
+  text-transform:none!important;
+  text-decoration:none!important;
+  box-shadow:0 1rem 2.4rem rgba(0,45,83,.22)!important;
 }
 @media(max-width:640px){
   .customers-page .customers-hero h1{
@@ -2840,4 +2856,27 @@ body.customers-page main .customers-closing .customers-closing-card h2#closing-t
 }
 .customers-page main .testimonials-section .perspectives-thumb.is-active .testimonial-avatar-image{
   display:block!important;
+}
+
+
+/* Customers testimonials: show supporting intro paragraph under the heading. */
+.customers-page main .testimonials-section .perspectives-intro>p{
+  display:block!important;
+  max-width:30rem!important;
+  margin:1.35rem 0 0!important;
+  color:#526476!important;
+  font-size:clamp(1rem,1.1vw,1.12rem)!important;
+  line-height:1.58!important;
+}
+
+
+/* Customers testimonials: hide inactive thumbnail boxes; keep only the active avatar visible. */
+.customers-page main .testimonials-section .perspectives-thumbs{
+  gap:0!important;
+}
+.customers-page main .testimonials-section .perspectives-thumb:not(.is-active){
+  display:none!important;
+}
+.customers-page main .testimonials-section .perspectives-thumb.is-active{
+  display:grid!important;
 }

@@ -37,9 +37,9 @@ export function matchCollections(filters) {
   );
 }
 export const portfolio = [
-  {id:'sunrise-residence-3',caption:'Sunrise Residence 3',detail:'Residential · Qaryat Al Hidd, Saadiyat Island',image:'portfolio-reference/sunrise-residence-3-v2',alt:'Sunrise Residence 3 at Qaryat Al Hidd, Saadiyat Island'},
+  {id:'sunrise-residence-3',caption:'Sunrise Residence 3',detail:'Residential · Hidd Al Saadiyat, Saadiyat Island',image:'portfolio-reference/sunrise-residence-3-v2',alt:'Sunrise Residence 3 at Hidd Al Saadiyat, Saadiyat Island'},
   {id:'48-burj-gate',caption:'48 Burj Gate',detail:'Retail · Sheikh Zayed Road, Dubai',image:'portfolio-reference/48-burj-gate-v2',alt:'48 Burj Gate on Sheikh Zayed Road in Dubai'},
-  {id:'qaryat-al-hidd',caption:'Qaryat Al Hidd',detail:'Residential · Saadiyat Island',image:'portfolio-reference/qaryat-al-hidd-v2',alt:'Qaryat Al Hidd waterfront community on Saadiyat Island'},
+  {id:'qaryat-al-hidd',caption:'Hidd Al Saadiyat',detail:'Residential · Saadiyat Island',image:'portfolio-reference/qaryat-al-hidd-v2',alt:'Hidd Al Saadiyat waterfront community on Saadiyat Island'},
   {id:'al-mushrif-villas',caption:'Al Mushrif Villas',detail:'Residential · Al Mushrif, Abu Dhabi',image:'portfolio-reference/al-mushrif-villas-v2',alt:'Al Mushrif Villas in Abu Dhabi'},
   {id:'ghantoot-complex',caption:'Ghantoot Complex',detail:'Residential · Mohammed Bin Zayed City',image:'portfolio-reference/ghantoot-complex-v2',alt:'Ghantoot Complex residential community in Abu Dhabi'}
 ];

@@ -82,9 +82,9 @@ if(storySection && $('.story-tilton-years', storySection) && $('.story-tilton-pr
     {
           year:'2021',
           title:'Growing Our Portfolio',
-          summary:'Qaryat Al Hidd added',
+          summary:'Hidd Al Saadiyat added',
           body:[
-            'Added Qaryat Al Hidd at Hidd Al Saadiyat, a waterfront residential community, to its portfolio.'
+            'Added Hidd Al Saadiyat, a waterfront residential community.'
           ],
           left:'assets/hidd-al-saadiyat/saadiyat-aerial-beach.webp',
           right:'assets/hidd-al-saadiyat/golden-waterfront.webp'
@@ -122,8 +122,14 @@ if(storySection && $('.story-tilton-years', storySection) && $('.story-tilton-pr
     }
     if(nextImage){
       const nextItem=milestones[(nextIndex+1)%milestones.length];
+      const nextFigure=nextImage.closest('.story-tilton-image-next');
       nextImage.src=nextItem.left||item.right||item.left;
       nextImage.alt='';
+      if(nextFigure){
+        nextFigure.dataset.nextYear=nextItem.year;
+        nextFigure.dataset.nextTitle=nextItem.title;
+        nextFigure.dataset.nextText=nextItem.body?.[0]||'';
+      }
     }
     paragraphs.forEach((paragraph,i)=>{paragraph.textContent=item.body[i]||''; paragraph.hidden=!item.body[i];});
     railItems.forEach((li,i)=>{
@@ -136,20 +142,30 @@ if(storySection && $('.story-tilton-years', storySection) && $('.story-tilton-pr
     next.disabled=nextIndex===milestones.length-1;
     index=nextIndex;
   }
-  function go(nextIndex){
+  async function go(nextIndex){
     if(locked||nextIndex===index||nextIndex<0||nextIndex>=milestones.length)return;
     locked=true;
-    const direction=nextIndex>index?'next':'prev';
-    storySection.classList.add(direction==='next'?'is-moving-next':'is-moving-prev');
-    window.setTimeout(()=>{
+    const direction=nextIndex>index?1:-1;
+    const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if(reduce){paint(nextIndex);locked=false;return;}
+    const outDistance=direction>0?-22:22;
+    const inDistance=direction>0?22:-22;
+    try{
+      await stage.animate([
+        {opacity:1,transform:'translate3d(0,0,0)'},
+        {opacity:0,transform:`translate3d(${outDistance}px,0,0)`}
+      ],{duration:260,easing:'cubic-bezier(.4,0,.2,1)',fill:'forwards'}).finished;
       paint(nextIndex);
-      storySection.classList.remove('is-moving-next','is-moving-prev');
-      stage.animate([
-        {transform:`translateX(${direction==='next'?'10vw':'-10vw'})`,opacity:.62},
-        {transform:'translateX(0)',opacity:1}
-      ],{duration:620,easing:'cubic-bezier(.22,1,.36,1)'});
-      window.setTimeout(()=>{locked=false;},640);
-    },360);
+      await stage.animate([
+        {opacity:0,transform:`translate3d(${inDistance}px,0,0)`},
+        {opacity:1,transform:'translate3d(0,0,0)'}
+      ],{duration:420,easing:'cubic-bezier(.22,1,.36,1)',fill:'forwards'}).finished;
+      stage.getAnimations().forEach(animation=>animation.cancel());
+    }finally{
+      stage.style.opacity='';
+      stage.style.transform='';
+      locked=false;
+    }
   }
   prev?.addEventListener('click',()=>go(index-1));
   next?.addEventListener('click',()=>go(index+1));

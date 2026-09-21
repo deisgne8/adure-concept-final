@@ -12,8 +12,8 @@
   <link rel="preload" href="assets/fonts/source-sans-pro-400.ttf" as="font" type="font/ttf" crossorigin>
   <link rel="stylesheet" href="design-tokens.css?v=visual-cohesion-1">
   <link rel="stylesheet" href="primitives.css?v=customer-menu-3">
-  <link rel="stylesheet" href="properties.css?v=amenities-only-2">
-  <script type="module" src="properties.js?v=amenities-only-2"></script>
+  <link rel="stylesheet" href="properties.css?v=residence-type-1">
+  <script type="module" src="properties.js?v=residence-type-1"></script>
 <link rel="stylesheet" href="site-motion.css?v=site-motion-1"></head>
 <body class="properties-page">
   <a class="skip-link" href="#properties-main">Skip to content</a>
@@ -86,7 +86,7 @@
         <span class="properties-eyebrow"><b>01</b> Properties</span>
         <h1 id="properties-title">Properties</h1>
         <p>Find a place to call home or grow your business.</p>
-        <span class="hero-location-line" aria-hidden="true">Abu Dhabi&nbsp;&nbsp;·&nbsp;&nbsp;Dubai&nbsp;&nbsp;·&nbsp;&nbsp;Al Ain</span>
+        <span class="hero-location-line" aria-hidden="true">Abu Dhabi&nbsp;&nbsp;·&nbsp;&nbsp;Dubai&nbsp;&nbsp;·&nbsp;&nbsp;Al Ain&nbsp;&nbsp;·&nbsp;&nbsp;Hidd Al Saadiyat</span>
       </div>
     </section>
 
@@ -101,9 +101,9 @@
               <button class="tab active is-active" type="button" data-intent="buy" aria-pressed="true">Buy</button>
               <button class="tab" type="button" data-intent="lease" aria-pressed="false">Lease</button>
             </div>
-            <label class="search-field field search-location"><span>Location</span><select name="location"><option value="all">All locations</option><option>Abu Dhabi</option><option>Dubai</option><option>Al Ain</option></select></label>
-            <label class="search-field field search-community"><span>Building / Community</span><select name="community"><option value="all">All communities</option><option>Qaryat Al Hidd</option><option>Saadiyat Island</option><option>Al Mushrif</option><option>Sheikh Zayed Road</option><option>Al Ain</option></select></label>
-            <label class="search-field field search-type"><span>Property type</span><select name="type"><option value="all">All types</option><option>Apartment</option><option>Villa</option><option>Commercial</option></select></label>
+            <label class="search-field field search-location"><span>Location</span><select name="location"><option value="all">All locations</option><option>Abu Dhabi</option><option>Dubai</option><option>Al Ain</option><option>Hidd Al Saadiyat</option></select></label>
+            <label class="search-field field search-type"><span>Property type</span><select name="type"><option value="all">All types</option><option>Residential</option><option>Commercial</option></select></label>
+            <label class="search-field field search-community"><span>Residence Type</span><select name="subtype"><option value="all">All subtypes</option><option>Apartment</option><option>Villa</option><option>Penthouse</option><option>Duplex</option></select></label>
             <label class="search-field field search-beds"><span>Bedrooms</span><select name="beds"><option value="all">Any bedrooms</option><option value="1">1 bedroom</option><option value="2">2 bedrooms</option><option value="3">3 bedrooms</option><option value="4">4+ bedrooms</option></select></label>
             <label class="search-field field search-price"><span id="hero-price-label">Price range</span><select name="price"><option value="all">Any price</option><option value="under-150">Under AED 150K</option><option value="150-250">AED 150K–250K</option><option value="250-plus">AED 250K+</option></select></label>
             <div class="more-filters"><button class="mobile-filter-trigger more-filters-toggle" type="button" aria-controls="filter-dialog"><span class="more-filters-label"><span class="more-filters-symbol" aria-hidden="true"></span><span>More Filters</span></span><small>Facilities &amp; Amenities</small></button></div>
@@ -131,10 +131,10 @@
           <div class="filter-home" id="filter-home">
             <aside class="filter-panel" id="filter-panel" aria-label="Property filters">
               <div class="filter-heading"><h3>Refine Your Search</h3><button type="button" data-clear-filters>Clear all</button></div>
-              <fieldset data-filter-group="city"><legend>Location</legend><label><input type="checkbox" value="Abu Dhabi"> Abu Dhabi <span data-count="city:Abu Dhabi">0</span></label><label><input type="checkbox" value="Dubai"> Dubai <span data-count="city:Dubai">0</span></label><label><input type="checkbox" value="Al Ain"> Al Ain <span data-count="city:Al Ain">0</span></label></fieldset>
-              <fieldset data-filter-group="community"><legend>Project / Community</legend><label><input type="checkbox" value="Qaryat Al Hidd"> Qaryat Al Hidd <span data-count="community:Qaryat Al Hidd">0</span></label><label><input type="checkbox" value="Saadiyat Island"> Saadiyat Island <span data-count="community:Saadiyat Island">0</span></label><label><input type="checkbox" value="Al Mushrif"> Al Mushrif <span data-count="community:Al Mushrif">0</span></label><label><input type="checkbox" value="Sheikh Zayed Road"> Sheikh Zayed Road <span data-count="community:Sheikh Zayed Road">0</span></label></fieldset>
+              <fieldset data-filter-group="city"><legend>Location</legend><label><input type="checkbox" value="Abu Dhabi"> Abu Dhabi <span data-count="city:Abu Dhabi">0</span></label><label><input type="checkbox" value="Dubai"> Dubai <span data-count="city:Dubai">0</span></label><label><input type="checkbox" value="Al Ain"> Al Ain <span data-count="city:Al Ain">0</span></label><label><input type="checkbox" value="Hidd Al Saadiyat"> Hidd Al Saadiyat <span data-count="city:Hidd Al Saadiyat">0</span></label></fieldset>
+              <fieldset data-filter-group="community"><legend>Project / Community</legend><label><input type="checkbox" value="Hidd Al Saadiyat"> Hidd Al Saadiyat <span data-count="community:Hidd Al Saadiyat">0</span></label><label><input type="checkbox" value="Saadiyat Island"> Saadiyat Island <span data-count="community:Saadiyat Island">0</span></label><label><input type="checkbox" value="Al Mushrif"> Al Mushrif <span data-count="community:Al Mushrif">0</span></label><label><input type="checkbox" value="Sheikh Zayed Road"> Sheikh Zayed Road <span data-count="community:Sheikh Zayed Road">0</span></label></fieldset>
               <fieldset data-filter-group="building"><legend>Building</legend><input id="building-search" class="building-search" type="search" placeholder="Search buildings" autocomplete="off"><div class="building-options"></div></fieldset>
-              <fieldset data-filter-group="type"><legend>Property Type</legend><label><input type="checkbox" value="Apartment"> Apartment <span data-count="type:Apartment">0</span></label><label><input type="checkbox" value="Villa"> Villa <span data-count="type:Villa">0</span></label><label><input type="checkbox" value="Commercial"> Commercial <span data-count="type:Commercial">0</span></label></fieldset>
+              <fieldset data-filter-group="type"><legend>Property Type</legend><label><input type="checkbox" value="Residential"> Residential <span data-count="type:Residential">0</span></label><label><input type="checkbox" value="Commercial"> Commercial <span data-count="type:Commercial">0</span></label></fieldset>
               <fieldset data-filter-group="beds"><legend>Bedrooms</legend><div class="bedroom-options"><label><input type="checkbox" value="1"><span>1</span></label><label><input type="checkbox" value="2"><span>2</span></label><label><input type="checkbox" value="3"><span>3</span></label><label><input type="checkbox" value="4"><span>4+</span></label></div></fieldset>
               <fieldset><legend>Price Range</legend><div class="price-range"><label><span>Minimum</span><select id="price-min"><option value="0">No minimum</option><option value="100000">AED 100K</option><option value="150000">AED 150K</option><option value="200000">AED 200K</option><option value="250000">AED 250K</option><option value="1000000">AED 1M</option></select></label><label><span>Maximum</span><select id="price-max"><option value="99999999">No maximum</option><option value="200000">AED 200K</option><option value="250000">AED 250K</option><option value="300000">AED 300K</option><option value="3000000">AED 3M</option><option value="5000000">AED 5M</option></select></label></div></fieldset>
               <fieldset data-filter-group="status"><legend>Availability</legend><label><input type="checkbox" value="Available"> Available <span data-count="status:Available">0</span></label><label><input type="checkbox" value="Reserved"> Reserved <span data-count="status:Reserved">0</span></label><label><input type="checkbox" value="Leased"> Leased <span data-count="status:Leased">0</span></label></fieldset>

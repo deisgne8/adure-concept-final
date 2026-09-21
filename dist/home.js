@@ -1,4 +1,4 @@
-import './portfolio-carousel.js?v=portfolio-filter-position-2';
+import './portfolio-carousel.js?v=portfolio-location-filter-1';
 import './transition-carousel.js';
 import './philosophy-story.js';
 import './management-carousel.js?v=title-case-1';
@@ -174,3 +174,36 @@ if(sellForm)sellForm.addEventListener('submit',event=>{
   ].join('\n');
   location.href=`mailto:inquiries@adu-re.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 });
+
+function updateHomeTestimonial(slider,index){
+  const slides=Array.from(slider.querySelectorAll('[data-home-testimonial-slide]'));
+  const thumbs=Array.from(slider.querySelectorAll('[data-home-testimonial-thumb]'));
+  if(!slides.length)return;
+  const nextIndex=(index+slides.length)%slides.length;
+  slides.forEach((slide,i)=>slide.classList.toggle('is-active',i===nextIndex));
+  thumbs.forEach((thumb,i)=>{
+    const isActive=i===nextIndex;
+    thumb.classList.toggle('is-active',isActive);
+    thumb.setAttribute('aria-current',isActive?'true':'false');
+  });
+}
+function initialiseHomeTestimonials(){
+  document.querySelectorAll('[data-home-testimonial-slider]').forEach(slider=>updateHomeTestimonial(slider,0));
+}
+document.addEventListener('click',event=>{
+  const control=event.target.closest('[data-home-testimonial-prev],[data-home-testimonial-next],[data-home-testimonial-thumb]');
+  if(!control)return;
+  const slider=control.closest('[data-home-testimonial-slider]');
+  if(!slider)return;
+  const slides=Array.from(slider.querySelectorAll('[data-home-testimonial-slide]'));
+  const thumbs=Array.from(slider.querySelectorAll('[data-home-testimonial-thumb]'));
+  const current=Math.max(0,slides.findIndex(slide=>slide.classList.contains('is-active')));
+  if(control.matches('[data-home-testimonial-prev]'))updateHomeTestimonial(slider,current-1);
+  else if(control.matches('[data-home-testimonial-next]'))updateHomeTestimonial(slider,current+1);
+  else updateHomeTestimonial(slider,Math.max(0,thumbs.indexOf(control)));
+});
+if(document.readyState==='loading'){
+  document.addEventListener('DOMContentLoaded',initialiseHomeTestimonials,{once:true});
+}else{
+  initialiseHomeTestimonials();
+}

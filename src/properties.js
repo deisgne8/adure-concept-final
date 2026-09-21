@@ -5,20 +5,20 @@ const shareIcon='<svg class="share-icon" viewBox="0 0 24 24" aria-hidden="true" 
 const heartIcon='<svg class="heart-icon" viewBox="0 0 512 512" aria-hidden="true" focusable="false"><path d="m256.001 477.407c-2.59 0-5.179-.669-7.499-2.009-2.52-1.454-62.391-36.216-123.121-88.594-35.994-31.043-64.726-61.833-85.396-91.513-26.748-38.406-40.199-75.348-39.982-109.801.254-40.09 14.613-77.792 40.435-106.162 26.258-28.848 61.3-44.734 98.673-44.734 47.897 0 91.688 26.83 116.891 69.332 25.203-42.501 68.994-69.332 116.891-69.332 35.308 0 68.995 14.334 94.859 40.362 28.384 28.563 44.511 68.921 44.247 110.724-.218 34.393-13.921 71.279-40.728 109.632-20.734 29.665-49.426 60.441-85.279 91.475-60.508 52.373-119.949 87.134-122.45 88.588-2.331 1.354-4.937 2.032-7.541 2.032z"></path></svg>';
 
 const properties=[
-  {id:'adu-502',intent:'lease',title:'Two-Bedroom Sea-View Apartment',building:'Sunrise Residence 2',unit:'Unit 502',community:'Qaryat Al Hidd',city:'Abu Dhabi',type:'Apartment',beds:2,baths:4,area:246.97,price:280000,status:'Available',date:12,image:'assets/portfolio-reference/sunrise-residence-3-v2.webp',map:[69,37]},
-  {id:'adu-207',intent:'lease',title:'Waterfront Residence with Open Living',building:'Sunset Residence 1',unit:'Unit 207',community:'Qaryat Al Hidd',city:'Abu Dhabi',type:'Apartment',beds:2,baths:4,area:180,price:170888,status:'Available',date:11,image:'assets/hidd-al-saadiyat/waterfront-view.webp',map:[63,44]},
-  {id:'adu-110',intent:'lease',title:'Three-Bedroom Family Residence',building:'Sunrise Residence 5',unit:'Unit 110',community:'Qaryat Al Hidd',city:'Abu Dhabi',type:'Apartment',beds:3,baths:5,area:195.29,price:280000,status:'Available',date:10,image:'assets/hidd-al-saadiyat/curved-residences.webp',map:[72,49]},
-  {id:'adu-306',intent:'lease',title:'Garden-Facing One-Bedroom Home',building:'Garden Residences 5',unit:'Unit 306',community:'Qaryat Al Hidd',city:'Abu Dhabi',type:'Apartment',beds:1,baths:2,area:84.98,price:110000,status:'Available',date:9,image:'assets/hidd-al-saadiyat/landscaped-community.webp',map:[59,52]},
-  {id:'adu-612',intent:'lease',title:'High-Floor Apartment with Sea View',building:'Sunrise Residence 2',unit:'Unit 612',community:'Qaryat Al Hidd',city:'Abu Dhabi',type:'Apartment',beds:2,baths:3,area:145.53,price:245000,status:'Reserved',date:8,image:'assets/hidd-al-saadiyat/golden-waterfront.webp',map:[67,32]},
-  {id:'adu-105',intent:'lease',title:'One-Bedroom Community Residence',building:'Sunset Residence 2',unit:'Unit 105',community:'Qaryat Al Hidd',city:'Abu Dhabi',type:'Apartment',beds:1,baths:2,area:84.64,price:160000,status:'Available',date:7,image:'assets/portfolio-reference/qaryat-al-hidd-v2.webp',map:[76,42]},
+  {id:'adu-502',intent:'lease',title:'Two-Bedroom Sea-View Apartment',building:'Sunrise Residence 2',unit:'Unit 502',community:'Hidd Al Saadiyat',city:'Abu Dhabi',type:'Apartment',beds:2,baths:4,area:246.97,price:280000,status:'Available',date:12,image:'assets/portfolio-reference/sunrise-residence-3-v2.webp',map:[69,37]},
+  {id:'adu-207',intent:'lease',title:'Waterfront Residence with Open Living',building:'Sunset Residence 1',unit:'Unit 207',community:'Hidd Al Saadiyat',city:'Abu Dhabi',type:'Apartment',beds:2,baths:4,area:180,price:170888,status:'Available',date:11,image:'assets/hidd-al-saadiyat/waterfront-view.webp',map:[63,44]},
+  {id:'adu-110',intent:'lease',title:'Three-Bedroom Family Residence',building:'Sunrise Residence 5',unit:'Unit 110',community:'Hidd Al Saadiyat',city:'Abu Dhabi',type:'Apartment',beds:3,baths:5,area:195.29,price:280000,status:'Available',date:10,image:'assets/hidd-al-saadiyat/curved-residences.webp',map:[72,49]},
+  {id:'adu-306',intent:'lease',title:'Garden-Facing One-Bedroom Home',building:'Garden Residences 5',unit:'Unit 306',community:'Hidd Al Saadiyat',city:'Abu Dhabi',type:'Apartment',beds:1,baths:2,area:84.98,price:110000,status:'Available',date:9,image:'assets/hidd-al-saadiyat/landscaped-community.webp',map:[59,52]},
+  {id:'adu-612',intent:'lease',title:'High-Floor Apartment with Sea View',building:'Sunrise Residence 2',unit:'Unit 612',community:'Hidd Al Saadiyat',city:'Abu Dhabi',type:'Apartment',beds:2,baths:3,area:145.53,price:245000,status:'Reserved',date:8,image:'assets/hidd-al-saadiyat/golden-waterfront.webp',map:[67,32]},
+  {id:'adu-105',intent:'lease',title:'One-Bedroom Community Residence',building:'Sunset Residence 2',unit:'Unit 105',community:'Hidd Al Saadiyat',city:'Abu Dhabi',type:'Apartment',beds:1,baths:2,area:84.64,price:160000,status:'Available',date:7,image:'assets/portfolio-reference/qaryat-al-hidd-v2.webp',map:[76,42]},
   {id:'adu-404',intent:'lease',title:'Bright Two-Bedroom Waterfront Home',building:'Sunrise Residence 2',unit:'Unit 404',community:'Saadiyat Island',city:'Abu Dhabi',type:'Apartment',beds:2,baths:4,area:136.34,price:235000,status:'Available',date:6,image:'assets/hidd-al-saadiyat/hero-wave-facade.webp',map:[81,28]},
   {id:'adu-103',intent:'lease',title:'Two-Bedroom Residence Near the Beach',building:'Sunrise Residence 5',unit:'Unit 103',community:'Saadiyat Island',city:'Abu Dhabi',type:'Apartment',beds:2,baths:4,area:147.04,price:240000,status:'Leased',date:5,image:'assets/hidd-al-saadiyat/promenade-mixed-use.webp',map:[84,35]},
   {id:'adu-v12',intent:'lease',title:'Four-Bedroom Villa with Private Garden',building:'Al Mushrif Villas',unit:'Villa 12',community:'Al Mushrif',city:'Abu Dhabi',type:'Villa',beds:4,baths:5,area:418,price:320000,status:'Available',date:4,image:'assets/portfolio-reference/al-mushrif-villas-v2.webp',map:[31,48]},
   {id:'dxb-48b',intent:'lease',title:'Contemporary Office with City Access',building:'48 Burj Gate',unit:'Suite 1704',community:'Sheikh Zayed Road',city:'Dubai',type:'Commercial',beds:0,baths:2,area:210,price:295000,status:'Available',date:3,image:'assets/portfolio-reference/48-burj-gate-v2.webp',map:[21,24]},
   {id:'ain-g02',intent:'lease',title:'Landscaped Three-Bedroom Villa',building:'Garden Community',unit:'Villa G02',community:'Al Ain',city:'Al Ain',type:'Villa',beds:3,baths:4,area:312,price:185000,status:'Available',date:2,image:'assets/portfolio-reference/ghantoot-complex-v2.webp',map:[18,68]},
   {id:'adu-p18',intent:'lease',title:'One-Bedroom Promenade Apartment',building:'Marina View Residences',unit:'Unit 318',community:'Saadiyat Island',city:'Abu Dhabi',type:'Apartment',beds:1,baths:2,area:92.5,price:145000,status:'Available',date:1,image:'assets/hidd-al-saadiyat/saadiyat-beach.webp',map:[78,56]},
-  {id:'sale-sr3',intent:'buy',title:'Three-Bedroom Waterfront Residence',building:'Sunrise Residence 3',unit:'Residence 302',community:'Qaryat Al Hidd',city:'Abu Dhabi',type:'Apartment',beds:3,baths:4,area:238,price:3850000,status:'Available',date:12,image:'assets/portfolio-reference/sunrise-residence-3-v2.webp',map:[69,37]},
-  {id:'sale-qr7',intent:'buy',title:'Two-Bedroom Home by the Water',building:'Qaryat Al Hidd',unit:'Residence 507',community:'Qaryat Al Hidd',city:'Abu Dhabi',type:'Apartment',beds:2,baths:3,area:164,price:2750000,status:'Available',date:10,image:'assets/portfolio-reference/qaryat-al-hidd-v2.webp',map:[74,45]},
+  {id:'sale-sr3',intent:'buy',title:'Three-Bedroom Waterfront Residence',building:'Sunrise Residence 3',unit:'Residence 302',community:'Hidd Al Saadiyat',city:'Abu Dhabi',type:'Apartment',beds:3,baths:4,area:238,price:3850000,status:'Available',date:12,image:'assets/portfolio-reference/sunrise-residence-3-v2.webp',map:[69,37]},
+  {id:'sale-qr7',intent:'buy',title:'Two-Bedroom Home by the Water',building:'Hidd Al Saadiyat',unit:'Residence 507',community:'Hidd Al Saadiyat',city:'Abu Dhabi',type:'Apartment',beds:2,baths:3,area:164,price:2750000,status:'Available',date:10,image:'assets/portfolio-reference/qaryat-al-hidd-v2.webp',map:[74,45]},
   {id:'sale-mv5',intent:'buy',title:'Five-Bedroom Villa in Al Mushrif',building:'Al Mushrif Villas',unit:'Villa 5',community:'Al Mushrif',city:'Abu Dhabi',type:'Villa',beds:5,baths:6,area:510,price:7200000,status:'Reserved',date:8,image:'assets/portfolio-reference/al-mushrif-villas-v2.webp',map:[31,48]},
   {id:'sale-bg8',intent:'buy',title:'Investment Office on Sheikh Zayed Road',building:'48 Burj Gate',unit:'Office 804',community:'Sheikh Zayed Road',city:'Dubai',type:'Commercial',beds:0,baths:2,area:188,price:4900000,status:'Available',date:6,image:'assets/portfolio-reference/48-burj-gate-v2.webp',map:[21,24]},
   {id:'sale-ai4',intent:'buy',title:'Four-Bedroom Garden Villa',building:'Garden Community',unit:'Villa 14',community:'Al Ain',city:'Al Ain',type:'Villa',beds:4,baths:5,area:430,price:3100000,status:'Available',date:4,image:'assets/portfolio-reference/ghantoot-complex-v2.webp',map:[18,68]},
@@ -27,7 +27,7 @@ const properties=[
 
 const $=(selector,scope=document)=>scope.querySelector(selector);
 const $$=(selector,scope=document)=>[...scope.querySelectorAll(selector)];
-const state={intent:new URLSearchParams(location.search).get('intent')==='lease'?'lease':'buy',view:'grid',sort:'recommended',quick:'all',page:1,pageSize:6,filters:{city:[],community:[],building:[],type:[],beds:[],status:[],min:0,max:99999999},hero:{location:'all',query:'',community:'all',type:'all',beds:'all',price:'all'}};
+const state={intent:new URLSearchParams(location.search).get('intent')==='lease'?'lease':'buy',view:'grid',sort:'recommended',quick:'all',page:1,pageSize:6,filters:{city:[],community:[],building:[],type:[],beds:[],status:[],min:0,max:99999999},hero:{location:'all',query:'',community:'all',subtype:'all',type:'all',beds:'all',price:'all'}};
 const saved=new Set(JSON.parse(localStorage.getItem('adure-property-favourites')||'[]'));
 const grid=$('#property-grid'),empty=$('#empty-state'),pagination=$('.pagination'),filterPanel=$('#filter-panel'),filterHome=$('#filter-home'),filterDialog=$('#filter-dialog');
 let selectedMapAreaId=null;
@@ -55,10 +55,10 @@ const propertyCoordinates={
 };
 const mapAreas=[
   {id:'dubai',name:'Dubai',coords:[25.198,55.274],match:property=>property.city==='Dubai'},
-  {id:'qaryat',name:'Qaryat Al Hidd',coords:[24.548,54.452],match:property=>property.community==='Qaryat Al Hidd'},
+  {id:'qaryat',name:'Hidd Al Saadiyat',coords:[24.548,54.452],match:property=>property.community==='Hidd Al Saadiyat'},
   {id:'saadiyat',name:'Saadiyat Island',coords:[24.555,54.461],match:property=>property.community==='Saadiyat Island'},
   {id:'mushrif',name:'Al Mushrif',coords:[24.444,54.386],match:property=>property.community==='Al Mushrif'},
-  {id:'abu-dhabi',name:'Abu Dhabi',coords:[24.4539,54.3773],match:property=>property.city==='Abu Dhabi'&&!['Qaryat Al Hidd','Saadiyat Island','Al Mushrif'].includes(property.community)},
+  {id:'abu-dhabi',name:'Abu Dhabi',coords:[24.4539,54.3773],match:property=>property.city==='Abu Dhabi'&&!['Hidd Al Saadiyat','Saadiyat Island','Al Mushrif'].includes(property.community)},
   {id:'al-ain',name:'Al Ain',coords:[24.207,55.744],match:property=>property.city==='Al Ain'}
 ];
 
@@ -99,12 +99,18 @@ function readSidebar(){
   state.page=1;
 }
 
+
+function isHiddLocation(property){
+  return ['Hidd Al Saadiyat','Saadiyat Island'].includes(property.community)||/hidd|saadiyat/i.test(`${property.community} ${property.building} ${property.title}`);
+}
+
 function matchesHero(property){
   const h=state.hero;
-  if(h.location!=='all'&&property.city!==h.location)return false;
+  if(h.location!=='all'&&(h.location==='Hidd Al Saadiyat'?!isHiddLocation(property):property.city!==h.location))return false;
   if(h.query&&!`${property.city} ${property.community} ${property.building} ${property.title}`.toLowerCase().includes(h.query.toLowerCase()))return false;
   if(h.community!=='all'&&property.community!==h.community)return false;
-  if(h.type!=='all'&&property.type!==h.type)return false;
+  if(h.subtype!=='all'&&property.type!==h.subtype)return false;
+  if(h.type!=='all'&&(h.type==='Residential'?!['Apartment','Villa'].includes(property.type):property.type!==h.type))return false;
   if(h.beds!=='all'&&(h.beds==='4'?property.beds<4:property.beds!==Number(h.beds)))return false;
   if(h.price==='under-150'&&property.price>=150000)return false;
   if(h.price==='150-250'&&(property.price<150000||property.price>250000))return false;
@@ -114,7 +120,9 @@ function matchesHero(property){
 
 function matchesSidebar(property){
   const f=state.filters;
-  for(const key of ['city','community','building','type','status'])if(f[key].length&&!f[key].includes(property[key]))return false;
+  if(f.city.length&&!f.city.some(value=>value==='Hidd Al Saadiyat'?isHiddLocation(property):property.city===value))return false;
+  for(const key of ['community','building','status'])if(f[key].length&&!f[key].includes(property[key]))return false;
+  if(f.type.length&&!f.type.some(value=>value==='Residential'?['Apartment','Villa'].includes(property.type):property.type===value))return false;
   if(f.beds.length&&!f.beds.some(value=>value==='4'?property.beds>=4:property.beds===Number(value)))return false;
   return property.price>=f.min&&property.price<=f.max;
 }
@@ -122,7 +130,7 @@ function matchesSidebar(property){
 function results(){
   const list=properties.filter(property=>property.intent===state.intent&&matchesHero(property)&&matchesSidebar(property)&&(
     state.quick==='all'||
-    (state.quick==='waterfront'&&['Qaryat Al Hidd','Saadiyat Island'].includes(property.community))||
+    (state.quick==='waterfront'&&['Hidd Al Saadiyat','Saadiyat Island'].includes(property.community))||
     (state.quick==='villa'&&property.type==='Villa')||
     (state.quick==='commercial'&&property.type==='Commercial')
   ));
@@ -327,7 +335,7 @@ function setView(view){
 
 function clearFilters(){
   state.filters={city:[],community:[],building:[],type:[],beds:[],status:[],min:0,max:99999999};
-  state.hero={location:'all',query:'',community:'all',type:'all',beds:'all',price:'all'};state.quick='all';
+  state.hero={location:'all',query:'',community:'all',subtype:'all',type:'all',beds:'all',price:'all'};state.quick='all';
   $('#hero-property-search').reset();
   $$('input[type=checkbox]',filterPanel).forEach(input=>input.checked=false);
   $('#price-min').value='0';$('#price-max').value='99999999';$('#building-search').value='';
@@ -336,12 +344,12 @@ function clearFilters(){
 
 function applyHeroSearch(){
   const data=new FormData($('#hero-property-search'));
-  state.hero={location:data.get('location'),query:'',community:data.get('community'),type:data.get('type'),beds:data.get('beds'),price:data.get('price')};
+  state.hero={location:data.get('location'),query:'',community:data.get('community')||'all',subtype:data.get('subtype')||'all',type:data.get('type'),beds:data.get('beds'),price:data.get('price')};
   state.page=1;render();$('#results').scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'});
 }
 
 function setIntent(intent){
-  state.intent=intent;state.page=1;state.quick='all';state.hero={location:'all',query:'',community:'all',type:'all',beds:'all',price:'all'};state.filters={city:[],community:[],building:[],type:[],beds:[],status:[],min:0,max:99999999};
+  state.intent=intent;state.page=1;state.quick='all';state.hero={location:'all',query:'',community:'all',subtype:'all',type:'all',beds:'all',price:'all'};state.filters={city:[],community:[],building:[],type:[],beds:[],status:[],min:0,max:99999999};
   $('#hero-property-search').reset();syncIntentButtons();buildBuildingFilters();$$('input[type=checkbox]',filterPanel).forEach(input=>input.checked=false);$('#price-min').value='0';$('#price-max').value='99999999';render();
   history.replaceState(null,'',`${location.pathname}?intent=${intent}#results`);
 }

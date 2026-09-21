@@ -15,7 +15,6 @@ if(portfolioRoot&&portfolioRoot.dataset.portfolioReady!=='true'){
       {id:'julphar-residence-al-reem',title:'Julphar Residence, Al Reem',city:'Abu Dhabi',type:'Residential',location:'Al Reem Island, Abu Dhabi',image:'assets/hidd-al-saadiyat/urban-mixed-use.webp',alt:'Urban mixed-use residential property',description:'A concise two- to three-line introduction for Julphar Residence, Al Reem will appear here once ADURE confirms the final project description.'},
       {id:'park-view-al-reem',title:'Park View, Al Reem',city:'Abu Dhabi',type:'Residential',location:'Al Reem Island, Abu Dhabi',image:'assets/hidd-al-saadiyat/waterfront-view.webp',alt:'Waterfront residential view',description:'A concise two- to three-line introduction for Park View, Al Reem will appear here once ADURE confirms the final project description.'},
       {id:'al-raha-gardens',title:'Al Raha Gardens',city:'Abu Dhabi',type:'Residential',location:'Al Raha, Abu Dhabi',image:'assets/hidd-al-saadiyat/promenade-mixed-use.webp',alt:'Promenade residential community',description:'A concise two- to three-line introduction for Al Raha Gardens will appear here once ADURE confirms the final project description.'},
-      {id:'hidd-saadiyat-villas',title:'Hidd Saadiyat Villas',city:'Abu Dhabi',type:'Residential',location:'Saadiyat Island',image:'assets/portfolio-reference/qaryat-al-hidd-v2.webp',alt:'Hidd Saadiyat waterfront community',description:'A concise two- to three-line introduction for Hidd Saadiyat Villas will appear here once ADURE confirms the final project description.'}
     ],
     dubai:[
       {id:'48-burj-gate',title:'48 Burj Gate',city:'Dubai',type:'Retail',location:'Sheikh Zayed Road, Dubai',image:'assets/portfolio-reference/48-burj-gate-v2.webp',alt:'48 Burj Gate on Sheikh Zayed Road in Dubai',description:'A concise two- to three-line introduction for 48 Burj Gate will appear here once ADURE confirms the final project description.'},
@@ -24,28 +23,22 @@ if(portfolioRoot&&portfolioRoot.dataset.portfolioReady!=='true'){
     'al-ain':[
       {id:'al-ain-residential',title:'Al Ain Residential Community',city:'Al Ain',type:'Residential',location:'Al Ain',image:'assets/portfolio-reference/ghantoot-complex-v2.webp',alt:'Residential community buildings in the UAE',description:'A concise two- to three-line introduction for this Al Ain property will appear here once ADURE confirms the final project description.'},
       {id:'al-ain-villas',title:'Al Ain Villas',city:'Al Ain',type:'Residential',location:'Al Ain',image:'assets/portfolio-modern-villa-v2.png',alt:'Modern villa exterior in a landscaped setting',description:'A concise two- to three-line introduction for Al Ain Villas will appear here once ADURE confirms the final project description.'}
+    ],
+    'hidd-al-saadiyat':[
+      {id:'hidd-saadiyat-villas',title:'Hidd Saadiyat Villas',city:'Hidd Al Saadiyat',type:'Residential',location:'Hidd Al Saadiyat',image:'assets/portfolio-reference/qaryat-al-hidd-v2.webp',alt:'Hidd Saadiyat waterfront community',description:'A concise two- to three-line introduction for Hidd Saadiyat Villas will appear here once ADURE confirms the final project description.'}
     ]
   };
-  const labels={'abu-dhabi':'ABU DHABI',dubai:'DUBAI','al-ain':'AL AIN'};
+  const labels={'abu-dhabi':'ABU DHABI',dubai:'DUBAI','al-ain':'AL AIN','hidd-al-saadiyat':'HIDD AL SAADIYAT'};
   const tabs=[...portfolioRoot.querySelectorAll('.portfolio-city-tabs button')];
   const grid=portfolioRoot.querySelector('#portfolio-card-grid');
   const detail=portfolioRoot.querySelector('#portfolio-expanded-card');
   const kicker=portfolioRoot.querySelector('#portfolio-city-kicker');
   const allProjects=Object.values(projects).flat();
-  const filterHost=document.createElement('div');
-  filterHost.className='portfolio-type-filters';
-  filterHost.setAttribute('role','group');
-  filterHost.setAttribute('aria-label','Filter portfolio by property type');
-  filterHost.innerHTML=`
-    <button class="is-active" type="button" data-portfolio-filter="all" aria-pressed="true">All</button>
-    <button type="button" data-portfolio-filter="Residential" aria-pressed="false">Residential</button>
-    <button type="button" data-portfolio-filter="Retail" aria-pressed="false">Retail</button>`;
-  portfolioRoot.querySelector('.portfolio-intro')?.append(filterHost);
-  let activeCity='all';
-  let activeFilter='all';
-  let visibleProjects=allProjects;
+  const filterHost=null;
+  let activeCity='abu-dhabi';
+  let visibleProjects=projects[activeCity];
   let activeProject=visibleProjects[0];
-  const filteredProjects=()=>activeFilter==='all'?allProjects:allProjects.filter(project=>project.type===activeFilter);
+  const filteredProjects=()=>projects[activeCity]||[];
   const renderCards=()=>{
     visibleProjects=filteredProjects();
     if(!visibleProjects.some(project=>project.id===activeProject?.id))activeProject=visibleProjects[0];
@@ -85,21 +78,11 @@ if(portfolioRoot&&portfolioRoot.dataset.portfolioReady!=='true'){
       detail.animate([{opacity:.45,transform:'translateY(12px)'},{opacity:1,transform:'translateY(0)'}],{duration:340,easing:'cubic-bezier(.22,.61,.36,1)'});
     }
   };
-  const setFilter=filter=>{
-    activeFilter=filter;
-    filterHost.querySelectorAll('button').forEach(button=>{
-      const active=button.dataset.portfolioFilter===filter;
-      button.classList.toggle('is-active',active);
-      button.setAttribute('aria-pressed',String(active));
-    });
-    renderCards();
-    renderDetail();
-  };
   const selectCity=city=>{
     activeCity=city;
-    activeProject=(city==='all'?allProjects:projects[city])[0];
-    if(kicker)kicker.textContent=city==='all'?'PORTFOLIO':labels[city];
-    grid.setAttribute('aria-labelledby',city==='all'?'portfolio':'portfolio-city-'+city);
+    activeProject=(projects[city]||[])[0];
+    if(kicker)kicker.textContent=labels[city]||'';
+    grid.setAttribute('aria-labelledby','portfolio-city-'+city);
     tabs.forEach(tab=>{
       const active=tab.dataset.city===city;
       tab.classList.toggle('is-active',active);
@@ -108,10 +91,6 @@ if(portfolioRoot&&portfolioRoot.dataset.portfolioReady!=='true'){
     renderCards();
     renderDetail();
   };
-  filterHost.addEventListener('click',event=>{
-    const button=event.target.closest('[data-portfolio-filter]');
-    if(button)setFilter(button.dataset.portfolioFilter);
-  });
   tabs.forEach(tab=>tab.addEventListener('click',()=>selectCity(tab.dataset.city)));
   grid.addEventListener('click',event=>{
     if(grid.classList.contains('is-dragging'))return;

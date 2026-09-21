@@ -24,3 +24,10 @@
   will-change:transform;
 }
 @media(prefers-reduced-motion:reduce){.guides-values[data-site-parallax]::after{transform:none!important}}
+
+/* Homepage: keep chapter backgrounds opaque so the sticky hero video cannot flash through while scrolling. */
+#home > .section[data-site-reveal],
+#home > .section.is-site-visible{
+  opacity:1!important;
+  transform:none!important;
+}
