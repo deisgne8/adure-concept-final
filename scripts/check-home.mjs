@@ -97,8 +97,8 @@ for (const [id, heading] of Object.entries({
 }
 ['With You Across Every Stage','A Record That Speaks For Itself','A Considered Start','Trusted Across Sectors.'].forEach(copy=>assert.ok(!localHome.includes(copy),`Superseded copy remains: ${copy}`));
 const ids=[...localHome.matchAll(/<section class="[^"]* section" id="([^"]+)"/g)].map(m=>m[1]);
-assert.deepEqual(ids,['hero','journeys','discovery','management','proof','portfolio','transition','sell','trust','conversation']);
-assert.equal((html.match(/<select /g)||[]).length,5);
+assert.deepEqual(ids,['hero','journeys','discovery','management','proof','portfolio','transition','home-testimonials','sell','trust','conversation']);
+assert.equal((html.match(/<select /g)||[]).length,6);
 assert.equal((html.match(/<h1>/g)||[]).length,1);
 assert.ok(localHome.includes('<h1><span>Creating Value</span> <span>Beyond Property</span></h1>'),'Hero heading does not match the requested copy');
 for(const m of html.matchAll(/(?:src|href)="(assets\/[^"#]+|[a-z-]+\.(?:css|js))"/g))assert.ok(existsSync(new URL('../dist/'+m[1],import.meta.url)),m[1]);

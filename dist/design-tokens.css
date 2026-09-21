@@ -181,7 +181,7 @@
   :root{
   --text-card:1.125rem;
   --line-card:1.22222;
-  --page-gutter:1.5rem;
+  --page-gutter:1.25rem;
   --section-space:4rem;
   --section-gap:2.5rem;
   --grid-column-gap:2rem

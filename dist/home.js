@@ -85,6 +85,21 @@ if(!reducedMotion.matches&&'IntersectionObserver' in window){
   });
 }
 
+
+// Reveal the proof metrics as a horizontal line with a staggered motion.
+const proofLineSection=$('#proof');
+if(proofLineSection&&!reducedMotion.matches&&'IntersectionObserver' in window){
+  proofLineSection.classList.add('proof-line-reveal-ready');
+  const proofLineObserver=new IntersectionObserver(entries=>{
+    if(!entries.some(entry=>entry.isIntersecting))return;
+    proofLineSection.classList.add('proof-line-visible');
+    proofLineObserver.disconnect();
+  },{threshold:.2,rootMargin:'0px 0px -12% 0px'});
+  proofLineObserver.observe(proofLineSection);
+}else if(proofLineSection){
+  proofLineSection.classList.add('proof-line-visible');
+}
+
 // Let the conversation landscape establish first, then bring in the panel and its content.
 const conversationSection=$('#conversation');
 if(conversationSection&&!reducedMotion.matches&&'IntersectionObserver' in window){

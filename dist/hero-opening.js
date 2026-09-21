@@ -60,6 +60,11 @@ document.addEventListener('visibilitychange',playback);
 reduced.addEventListener('change',()=>{if(reduced.matches)finish();playback();});
 new IntersectionObserver(([entry])=>{visible=entry.isIntersecting;if(done)playback();}).observe(hero);
 window.adureFinishOpening=finish;
+function restoreBackgroundIfOpeningEnded(){
+  if(!intro?.hidden||root.dataset.opening)return;
+  background.forEach((element,index)=>element.inert=previous[index]);
+}
+new MutationObserver(restoreBackgroundIfOpeningEnded).observe(intro,{attributes:true,attributeFilter:['hidden']});
 
 async function open(){
   if(!root.dataset.opening||reduced.matches){finish();return;}

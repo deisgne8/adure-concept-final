@@ -2335,3 +2335,26 @@ body.contact-page main .contact-details h2{
 .portfolio-page .portfolio-project-detail .portfolio-action-buttons .btn{
   width:150px!important;
 }
+/* Responsive QA pass: portfolio asset carousel and mobile grid. */
+.portfolio-page .portfolio-asset-sectors{overflow:hidden!important;}
+.portfolio-page .portfolio-asset-sectors .asset-carousel-viewport{overflow:hidden!important;}
+.portfolio-page .asset-carousel-dot{min-width:2.75rem!important;min-height:2.75rem!important;width:2.75rem!important;height:2.75rem!important;position:relative!important;background:transparent!important;}
+.portfolio-page .asset-carousel-dot::after{content:"";position:absolute;left:50%;top:50%;width:.55rem;height:.55rem;border-radius:999px;background:#b8c6d1;transform:translate(-50%,-50%);transition:width .28s ease,background .28s ease;}
+.portfolio-page .asset-carousel-dot.is-active::after{width:2rem;background:var(--accent);}
+@media(max-width:760px){
+  .portfolio-page .portfolio-asset-sectors .section-shell{width:100%!important;max-width:none!important;padding-inline:var(--gutter)!important;}
+  .portfolio-page .portfolio-asset-sectors .customer-section-intro{max-width:100%!important;margin:0 0 1.5rem!important;}
+  .portfolio-page .portfolio-asset-sectors .customer-section-intro :is(h2,p){max-width:100%!important;}
+  .portfolio-page .asset-carousel{width:100%!important;max-width:100%!important;overflow:hidden!important;}
+  .portfolio-page .asset-carousel-track{gap:1rem!important;}
+  .portfolio-page .asset-story-card-feature{flex-basis:calc(100vw - (var(--gutter) * 2))!important;min-height:auto!important;grid-template-columns:1fr!important;}
+  .portfolio-page .asset-story-card-feature.is-active{display:grid!important;}
+  .portfolio-page .asset-story-card-feature .asset-story-feature-image{grid-column:1!important;grid-row:1!important;min-height:auto!important;aspect-ratio:1.22!important;}
+  .portfolio-page .asset-story-feature-copy{grid-column:1!important;grid-row:2!important;padding:1.25rem!important;}
+  .portfolio-page .asset-carousel-controls{display:flex!important;justify-content:space-between!important;gap:.75rem!important;}
+  .portfolio-page .asset-carousel-dots{flex:1!important;justify-content:center!important;gap:.1rem!important;}
+  .portfolio-page .asset-carousel-arrow{width:3rem!important;height:3rem!important;min-width:3rem!important;}
+  .portfolio-page .portfolio-city-tabs{display:flex!important;overflow-x:auto!important;scrollbar-width:none!important;gap:.35rem!important;padding:.25rem!important;}
+  .portfolio-page .portfolio-city-tabs::-webkit-scrollbar{display:none!important;}
+  .portfolio-page .portfolio-city-tabs button{flex:0 0 auto!important;white-space:nowrap!important;min-height:3rem!important;}
+}

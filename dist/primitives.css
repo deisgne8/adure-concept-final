@@ -837,3 +837,102 @@ dialog:not(.mobile-menu){
   border-color:var(--accent-hover)!important;
   color:#fff!important;
 }
+
+
+/* Responsive QA pass: mobile header and grid stability. */
+@media(max-width:1023.98px){
+  .site-header{height:var(--nav-height)!important;}
+  .site-header .container.header-inner,
+  .container.header-inner{
+    width:100%!important;
+    max-width:none!important;
+    padding-inline:var(--gutter)!important;
+    display:flex!important;
+    align-items:center!important;
+    justify-content:space-between!important;
+    gap:var(--space-sm)!important;
+  }
+  .site-header .desktop-nav,
+  .site-header .header-cta{
+    display:none!important;
+  }
+  .site-header .site-logo{
+    min-width:0!important;
+    max-width:calc(100% - 3.25rem)!important;
+  }
+  .site-header .site-logo img{
+    width:auto!important;
+    max-width:min(13rem,calc(100vw - 5.75rem))!important;
+    height:clamp(2.75rem,10vw,3.35rem)!important;
+    max-height:calc(var(--nav-height) - .45rem)!important;
+  }
+  .site-header .menu-toggle{
+    display:grid!important;
+    place-content:center!important;
+    flex:0 0 2.75rem!important;
+    width:2.75rem!important;
+    min-width:2.75rem!important;
+    height:2.75rem!important;
+    min-height:2.75rem!important;
+    margin-left:auto!important;
+    padding:.5rem!important;
+    color:currentColor!important;
+  }
+  .site-header .menu-toggle span{
+    width:1.75rem!important;
+    margin-block:.22rem!important;
+  }
+  .mobile-menu{
+    width:100vw!important;
+    max-width:100vw!important;
+    height:100dvh!important;
+    max-height:100dvh!important;
+    overflow:auto!important;
+    padding:1.25rem var(--gutter) 2rem!important;
+  }
+  .mobile-menu nav>a,
+  .mobile-menu summary{
+    min-height:3rem;
+    display:flex;
+    align-items:center;
+  }
+}
+@media(max-width:767.98px){
+  .section-shell,
+  .container{
+    padding-inline:var(--gutter)!important;
+  }
+}
+
+
+/* Responsive QA pass: footer and touch targets. */
+@media(max-width:767.98px){
+  .footer{padding:2.75rem 0 1.5rem!important;overflow:hidden!important;}
+  .footer .container{max-width:none!important;width:100%!important;padding-inline:var(--gutter)!important;}
+  .footer-grid{display:grid!important;grid-template-columns:1fr!important;gap:1.6rem!important;padding-bottom:1.75rem!important;}
+  .footer-grid>div{grid-column:auto!important;min-width:0!important;}
+  .footer .logo img{height:auto!important;width:min(11rem,56vw)!important;max-width:100%!important;}
+  .footer-grid>div>a:not(.logo){min-height:2.75rem!important;display:flex!important;align-items:center!important;margin:0!important;}
+  .footer-bottom{display:grid!important;grid-template-columns:1fr!important;gap:.7rem!important;padding-top:1.25rem!important;}
+}
+@media(min-width:768px) and (max-width:1023.98px){
+  .footer .container{padding-inline:var(--gutter)!important;}
+  .footer-grid{grid-template-columns:1.2fr 1fr 1fr!important;gap:2rem!important;}
+  .footer-grid>div:first-child{grid-column:1/-1!important;}
+}
+
+/* Responsive QA pass: keep the mobile dialog close control above the dialog surface. */
+.mobile-menu .menu-top,
+.mobile-menu .menu-close{
+  position:relative;
+  z-index:3;
+}
+.mobile-menu .menu-close{
+  pointer-events:auto;
+  min-width:2.75rem;
+  min-height:2.75rem;
+}
+.mobile-menu[open]{
+  border-radius:0!important;
+  inset:0!important;
+}

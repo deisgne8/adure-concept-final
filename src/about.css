@@ -9423,3 +9423,17 @@ body.about-page main #who-we-are #who-title{
   line-height:.96!important;
   letter-spacing:-.055em!important;
 }
+/* Responsive QA pass: about mobile carousel/tablet CEO clipping. */
+.about-page .team-section{overflow:hidden!important;}
+.about-page .team-card-grid{max-width:100%!important;}
+.about-page .ceo-message-section{overflow:hidden!important;}
+.about-page .ceo-message-light-layout{max-width:100%!important;}
+@media(max-width:720px){
+  .about-page .team-card-grid{display:flex!important;overflow-x:auto!important;overflow-y:hidden!important;scroll-snap-type:x mandatory!important;padding-bottom:1rem!important;}
+  .about-page .team-card{flex:0 0 min(82%,20rem)!important;scroll-snap-align:start!important;}
+  .about-page .team-controls button{width:2.75rem!important;height:2.75rem!important;min-width:2.75rem!important;}
+}
+@media(max-width:900px){
+  .about-page .ceo-message-section.ceo-message-light .ceo-message-light-layout{grid-template-columns:1fr!important;align-items:end!important;}
+  .about-page .ceo-message-section.ceo-message-light .ceo-message-light-copy{grid-column:1!important;margin:0!important;max-width:100%!important;background:linear-gradient(180deg,rgba(4,15,25,.15),rgba(4,15,25,.62))!important;}
+}
