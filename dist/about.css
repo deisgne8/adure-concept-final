@@ -9293,3 +9293,57 @@ html body.about-page main section.story-tilton-section#story-title .story-tilton
   top:var(--timeline-line-top)!important;
   height:1px!important;
 }
+
+/* Browser request: align inactive timeline dots to the connector centerline. */
+html body.about-page main section.story-tilton-section#story-title .story-tilton-years li:not(.is-active) button::after{
+  top:calc(var(--timeline-line-top) - (var(--timeline-small-dot) / 2))!important;
+  width:var(--timeline-small-dot)!important;
+  height:var(--timeline-small-dot)!important;
+}
+
+/* Browser request: align 2026 marker with the active card right edge and extend the rail. */
+@media(min-width:1001px){
+  body.about-page main .story-tilton-section#story-title .story-tilton-years{
+    width:var(--history-contained-card-width)!important;
+    max-width:var(--history-contained-card-width)!important;
+    grid-template-columns:16.32px 1fr 16.32px 1fr 16.32px!important;
+  }
+  body.about-page main .story-tilton-section#story-title .story-tilton-years li{
+    width:auto!important;
+    min-width:0!important;
+  }
+  body.about-page main .story-tilton-section#story-title .story-tilton-years li:nth-child(1){grid-column:1 / 3!important;}
+  body.about-page main .story-tilton-section#story-title .story-tilton-years li:nth-child(2){grid-column:3 / 5!important;}
+  body.about-page main .story-tilton-section#story-title .story-tilton-years li:nth-child(3){grid-column:5 / 6!important;}
+  body.about-page main .story-tilton-section#story-title .story-tilton-years li:nth-child(1) button,
+  body.about-page main .story-tilton-section#story-title .story-tilton-years li:nth-child(2) button{
+    width:100%!important;
+  }
+  body.about-page main .story-tilton-section#story-title .story-tilton-years li:nth-child(3) button{
+    width:auto!important;
+    min-width:16.32px!important;
+  }
+  body.about-page main .story-tilton-section#story-title .story-tilton-years li:nth-child(3) strong{
+    left:auto!important;
+    right:0!important;
+    transform:translateX(calc(50% - var(--timeline-year-dot-x)))!important;
+    text-align:center!important;
+  }
+  html body.about-page main section.story-tilton-section#story-title .story-tilton-years li:nth-child(2) button::before{
+    right:0!important;
+  }
+  html body.about-page main section.story-tilton-section#story-title .story-tilton-years li:nth-child(3) button::before{
+    content:none!important;
+    display:none!important;
+  }
+}
+
+/* Browser request: center the 2026 label over the right-edge timeline dot. */
+@media(min-width:1001px){
+  body.about-page main .story-tilton-section#story-title .story-tilton-years li:nth-child(3) strong{
+    left:var(--timeline-year-dot-x)!important;
+    right:auto!important;
+    transform:translateX(-50%)!important;
+    text-align:center!important;
+  }
+}
