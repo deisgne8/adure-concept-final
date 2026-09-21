@@ -76,7 +76,7 @@ if(storySection && $('.story-tilton-years', storySection) && $('.story-tilton-pr
           body:[
             'Established in Abu Dhabi to manage and operate residential and commercial property.'
           ],
-          left:'assets/hidd-al-saadiyat/curved-residences.webp',
+          left:'assets/about/timeline-foundation-building.webp',
           right:'assets/hidd-al-saadiyat/landscaped-community.webp'
         },
     {

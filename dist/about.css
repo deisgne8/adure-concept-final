@@ -8838,7 +8838,7 @@ body.about-page main .story-tilton-section#story-title .story-tilton-shell.is-si
   body.about-page main .story-tilton-section#story-title .story-intro-shell,
   body.about-page main .story-tilton-section#story-title .story-intro-shell.is-site-visible,
   body.about-page main .story-tilton-section#story-title .story-tilton-shell,
-  body.about-page main .story-tilton-section#story-title .story-tilton-shell.is-visible{
+  body.about-page main .story-tilton-section#story-title .story-tilton-shell.is-site-visible{
     width:100%!important;
     max-width:none!important;
     padding-left:20px!important;
@@ -9346,4 +9346,80 @@ html body.about-page main section.story-tilton-section#story-title .story-tilton
     transform:translateX(-50%)!important;
     text-align:center!important;
   }
+}
+
+/* Typography review cascade fix: beat earlier ID-specific grouped heading rules. */
+body.about-page main #about-title{
+  font-size:clamp(48px,5vw,72px)!important;
+  line-height:.98!important;
+  letter-spacing:-.06em!important;
+}
+body.about-page main #who-title,
+body.about-page main .story-intro-title h2,
+body.about-page main #guides-title,
+body.about-page main #leadership-title{
+  font-size:clamp(42px,4vw,64px)!important;
+  line-height:1.03!important;
+  letter-spacing:-.055em!important;
+}
+body.about-page main #story-title #story-heading{
+  font-size:clamp(34px,3.2vw,48px)!important;
+  line-height:1.03!important;
+  letter-spacing:-.055em!important;
+}
+body.about-page main #story-title .story-tilton-card p:not(.story-tilton-year),
+body.about-page main #story-title .story-intro-copy p,
+body.about-page main #who-we-are .about-copy-stack p,
+body.about-page main .team-intro p{
+  font-size:clamp(16px,1.2vw,18px)!important;
+  line-height:1.6!important;
+}
+body.about-page main .guides-beliefs article p,
+body.about-page main .guides-values-grid article p,
+body.about-page main .team-card p{
+  font-size:clamp(15px,1vw,16px)!important;
+  line-height:1.5!important;
+}
+body.about-page main .guides-beliefs article span:not(.value-icon),
+body.about-page main .guides-values-grid article h3,
+body.about-page main .team-card h3{
+  font-size:clamp(19px,1.5vw,24px)!important;
+  line-height:1.15!important;
+}
+@media(max-width:640px){
+  body.about-page main #about-title{
+    font-size:clamp(38px,10.5vw,48px)!important;
+  }
+  body.about-page main #who-title,
+  body.about-page main .story-intro-title h2,
+  body.about-page main #guides-title,
+  body.about-page main #leadership-title{
+    font-size:clamp(32px,8.8vw,42px)!important;
+    line-height:1.08!important;
+  }
+  body.about-page main #story-title #story-heading{
+    font-size:clamp(28px,7.8vw,36px)!important;
+  }
+}
+
+/* Typography review cascade fix: values card specific states. */
+body.about-page main .guides-section .guides-values-grid article h3,
+body.about-page main .guides-section .guides-values-grid article.is-featured h3,
+body.about-page main .guides-section .guides-values-grid article.is-active h3{
+  font-size:clamp(19px,1.5vw,24px)!important;
+  line-height:1.15!important;
+}
+body.about-page main .guides-section .guides-values-grid article p,
+body.about-page main .guides-section .guides-values-grid article.is-featured p,
+body.about-page main .guides-section .guides-values-grid article.is-active p{
+  font-size:clamp(15px,1vw,16px)!important;
+  line-height:1.5!important;
+}
+
+/* Browser request: match the intro heading to the timeline intro heading weight and scale. */
+body.about-page main #who-we-are #who-title{
+  font-size:clamp(42px,4vw,64px)!important;
+  font-weight:600!important;
+  line-height:.96!important;
+  letter-spacing:-.055em!important;
 }
