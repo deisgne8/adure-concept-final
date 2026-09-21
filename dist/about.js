@@ -96,7 +96,7 @@ if(storySection && $('.story-tilton-years', storySection) && $('.story-tilton-pr
           body:[
             'Continue to expand across the region, managing over 1800+ units, and staying true to our commitment of creating value that goes beyond property.'
           ],
-          left:'assets/hidd-al-saadiyat/golden-waterfront.webp',
+          left:'assets/about/timeline-promise-building.webp',
           right:'assets/hidd-al-saadiyat/saadiyat-aerial-beach.webp'
         }
   ];  const stage=$('.story-tilton-stage',storySection);
