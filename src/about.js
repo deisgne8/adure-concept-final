@@ -86,7 +86,7 @@ if(storySection && $('.story-tilton-years', storySection) && $('.story-tilton-pr
           body:[
             'Added Hidd Al Saadiyat, a waterfront residential community.'
           ],
-          left:'assets/hidd-al-saadiyat/saadiyat-aerial-beach.webp',
+          left:'assets/about/timeline-growing-portfolio-building.webp',
           right:'assets/hidd-al-saadiyat/golden-waterfront.webp'
         },
     {
