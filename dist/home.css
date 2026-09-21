@@ -3478,3 +3478,117 @@ body.contact-page main .contact-details h2{
     grid-column:auto!important;
   }
 }
+
+/* Homepage filter: align select value text directly under its label. */
+.home-v2 #filter-home .search-box>.field{
+  align-items:stretch!important;
+}
+.home-v2 #filter-home .search-box>.field label,
+.home-v2 #filter-home .search-box>.field select{
+  margin-left:0!important;
+  padding-left:0!important;
+  text-indent:0!important;
+}
+.home-v2 #filter-home .search-box>.field select{
+  display:block!important;
+}
+
+/* Homepage filter: icon-only circular search submit button. */
+.home-v2 #filter-home .search-box>.search-primary{
+  justify-self:end!important;
+  width:66px!important;
+  min-width:66px!important;
+  max-width:66px!important;
+  height:66px!important;
+  min-height:66px!important;
+  padding:0!important;
+  border-radius:50%!important;
+  gap:0!important;
+  font-size:0!important;
+  line-height:1!important;
+}
+.home-v2 #filter-home .search-box>.search-primary span{
+  display:block!important;
+  color:#fff!important;
+  font-size:24px!important;
+  line-height:1!important;
+  transform:translateY(-1px)!important;
+}
+.home-v2 #filter-home .search-box>.search-primary::after{
+  content:none!important;
+}
+@media(min-width:901px) and (max-width:1180px){
+  .home-v2 #filter-home .search-box>.search-primary{
+    justify-self:end!important;
+    width:66px!important;
+  }
+}
+@media(max-width:900px){
+  .home-v2 #filter-home .search-box>.search-primary{
+    width:66px!important;
+    justify-self:end!important;
+  }
+}
+
+/* Homepage filter: center circular search icon inside the filter shell. */
+@media(min-width:1181px){
+  .home-v2 #filter-home .search-box,
+  .home-v2 #filter-home .search-box.is-more-open{
+    grid-template-columns:170px 144px 144px 144px 144px 144px 156px 74px!important;
+    padding-right:8px!important;
+  }
+  .home-v2 #filter-home .search-box>.more-filters{
+    width:156px!important;
+  }
+  .home-v2 #filter-home .search-box>.search-primary{
+    justify-self:center!important;
+    align-self:center!important;
+  }
+}
+
+/* Homepage filter: align search icon to the far right of the pill with even inset. */
+@media(min-width:1181px){
+  .home-v2 #filter-home .search-box,
+  .home-v2 #filter-home .search-box.is-more-open{
+    grid-template-columns:170px 144px 144px 144px 144px 144px 132px 98px!important;
+  }
+  .home-v2 #filter-home .search-box>.more-filters{
+    width:132px!important;
+  }
+  .home-v2 #filter-home .search-box>.search-primary{
+    justify-self:end!important;
+  }
+}
+
+/* Homepage filter: let the search icon column absorb remaining width and pin the circle right. */
+@media(min-width:1181px){
+  .home-v2 #filter-home .search-box,
+  .home-v2 #filter-home .search-box.is-more-open{
+    grid-template-columns:170px repeat(5,144px) 132px minmax(98px,1fr)!important;
+  }
+}
+
+/* Homepage testimonials: remove radius from testimonial text area. */
+.home-testimonial,
+.home-testimonial.is-active{
+  border-radius:0!important;
+  overflow:visible!important;
+}
+
+
+/* Homepage filter: use the supplied search icon style inside the circular button. */
+.home-v2 #filter-home .search-box>.search-primary{
+  display:inline-flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+}
+.home-v2 #filter-home .search-box>.search-primary .search-primary-icon{
+  display:block!important;
+  width:20px!important;
+  height:20px!important;
+  color:#fff!important;
+  flex:0 0 auto!important;
+}
+.home-v2 #filter-home .search-box>.search-primary span{
+  display:none!important;
+}
